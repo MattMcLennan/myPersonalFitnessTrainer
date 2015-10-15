@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content black-text">
+        <span class="card-title">Workout A</span>
+        <table class="responsive-table">
+          <tr>
+            <th>Exercise</th>
+            <th>Sets x Reps</th>
+            <th>Session #1</th>
+            <th>Session #3</th>
+            <th>Session #5</th>
+            <th>Session #7</th>
+            <th>Session #9</th>
+          </tr>
+          <tr>
+            <td>Squats</td>
+            <td>3 x 5</td>
+            <td><%= @exercise.squat %> lbs</td>
+            <% 4.times do %>
+              <td><%= @exercise.squat += 5 %> lbs</td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Bench</td>
+            <td>3 x 5</td>
+            <td><%= @exercise.bench %> lbs</td>
+            <% 4.times do %>
+              <td><%= @exercise.bench += 5 %> lbs</td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Barbell Row</td>
+            <td>3 x 5</td>
+            <td><%= @exercise.barbell_row %> lbs</td>
+            <% 4.times do %>
+              <td><%= @exercise.barbell_row += 5 %> lbs</td>
+            <% end %>
+          </tr>
+          <th>Accessories</th>
+          <tr>
+            <td>Tricep Extension</td>
+            <td>3 x 12</td>
+          </tr>
+          <tr>
+            <td>Calf Raise</td>
+            <td>3 x 15</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content black-text">
+        <span class="card-title">Workout B</span>
+        <table class="responsive-table">
+          <tr>
+            <th>Exercise</th>
+            <th>Sets x Reps</th>
+            <th>Working Weight</th>
+            <th>Session #2</th>
+            <th>Session #4</th>
+            <th>Session #6</th>
+            <th>Session #8</th>
+            <th>Session #10</th>
+          </tr>
+          <tr>
+            <td>Deadlift</td>
+            <td>3 x 5</td>
+            <td><%= @exercise.deadlift %> lbs</td>
+            <% 5.times do %>
+              <td><%= @exercise.deadlift += 5 %> lbs</td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Overhead Press</td>
+            <td>3 x 5</td>
+            <td><%= @exercise.overhead_press %> lbs</td>
+            <% 5.times do %>
+              <td><%= @exercise.overhead_press += 5 %> lbs</td>
+            <% end %>
+          </tr>
+          <th>Accessories</th>
+          <tr>
+            <td>Pullups</td>
+            <td>3 x 8</td>
+          </tr>
+          <tr>
+            <td>Biceps Curls</td>
+            <td>3 x 12</td>
+          </tr>
+          <tr>
+            <td>Cable Crunches</td>
+            <td>3 x 15</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

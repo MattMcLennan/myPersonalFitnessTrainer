@@ -18,7 +18,7 @@ $(function(){
         barbell_row.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].barbell_row]);
         bench.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].bench]);
         deadlift.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].deadlift]);
-        overhead_press.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].overhead_press]);
+        overhead_press.push([Date.UTC(date.getFullYear()+1,date.getMonth(),date.getDate()), results[i].overhead_press]);
         squat.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].squat]);
     }
 
@@ -46,8 +46,7 @@ $(function(){
         title: {
           text: 'Weight (lbs)'
         },
-        min: 0,
-        max: 1000
+        min: 0
       },
       tooltip: {
         headerFormat: '<b>{series.name}</b><br>',
@@ -79,6 +78,4 @@ $(function(){
       }]
     });
   });
-
-
 });

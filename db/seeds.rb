@@ -14,7 +14,6 @@ csv.each do |row|
   Meal.create!(row.to_hash)
 end
 
-
 # 30.times do
 #   User.create!(
 #     name: Faker::Name.name,
