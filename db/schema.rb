@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104190724) do
+ActiveRecord::Schema.define(version: 20151104204536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "exercises", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "bench"
+    t.integer  "deadlift"
+    t.integer  "squat"
+    t.integer  "overhead_press"
+    t.integer  "barbell_row"
+    t.integer  "barbell_shrug"
+    t.integer  "tricep_extension"
+    t.integer  "barbell_curl"
+    t.integer  "close_grip_bench"
+    t.integer  "cable_crunches"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "exercises", ["user_id"], name: "index_exercises_on_user_id", using: :btree
 
   create_table "meals", force: true do |t|
     t.string   "food_name"
