@@ -19,13 +19,17 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
+  <div>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
     <%= f.label :goal %><br>
-    <%= f.text_field :goal %>
+    <%= f.select :goal, options_for_select(User::GOALS) %>
   </div>
   <div class="field">
     <%= f.label :fitBit_ID %><br>
