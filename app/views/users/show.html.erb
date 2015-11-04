@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @user.password_digest %>
+</p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @user.goal %>
+</p>
+
+<p>
+  <strong>Fitbit id:</strong>
+  <%= @user.fitBit_ID %>
+</p>
+
+<p>
+  <strong>Fitbit auth:</strong>
+  <%= @user.fitBit_auth %>
+</p>
+
+<p>
+  <strong>Fatsecret id:</strong>
+  <%= @user.fatSecret_ID %>
+</p>
+
+<p>
+  <strong>Fatsecret auth:</strong>
+  <%= @user.fatSecret_auth %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
