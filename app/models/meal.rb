@@ -22,32 +22,44 @@ class Meal < ActiveRecord::Base
       item1: {
         name: breakfast_list[0].food,
         grams: ((breakfast_list[0].per_grams / breakfast_list[0].calories.to_f) * (breakfast_target * 0.80)).round(-1)
-      }
+      },
       item2: {
         name: breakfast_list[1].food,
-        grams: (breakfast_list[1].calories / breakfast_list[1].per_grams) * (breakfast_target * 0.2),
+        grams: ((breakfast_list[1].per_grams / breakfast_list[1].calories.to_f) * (breakfast_target * 0.20)).round(-1)
       }
     }
 
-    # Populating item1 breakfast
-    breakfast_plan[:item1][:calories] = ((breakfast_list[0].calories / breakfast_list[0].per_grams.to_f) * breakfast_plan[:item1][:grams]).round(-1)
-    breakfast_plan[:item1][:protein] = ((breakfast_list[0].protein / breakfast_list[0].per_grams.to_f) * breakfast_plan[:item1][:grams]).round(-1)
-    breakfast_plan[:item1][:carbs] = ((breakfast_list[0].carbs / breakfast_list[0].per_grams.to_f) * breakfast_plan[:item1][:grams]).round(-1)
-    breakfast_plan[:item1][:fat] = ((breakfast_list[0].fat / breakfast_list[0].per_grams.to_f) * breakfast_plan[:item1][:grams]).round(-1)
+    breakfast_item1 = 0
+    breakfast_item2 = 1
 
-    # Populating item2 breakfast
-    breakfast_plan[:items1][:calories] = ((breakfast_list[0].calories / breakfast_list[0].per_grams.to_f) * breakfast_plan[:items1][:grams]).round(-1)
-    breakfast_plan[:items1][:protein] = ((breakfast_list[0].protein / breakfast_list[0].per_grams.to_f) * breakfast_plan[:items1][:grams]).round(-1)
-    breakfast_plan[:items1][:carbs] = ((breakfast_list[0].carbs / breakfast_list[0].per_grams.to_f) * breakfast_plan[:items1][:grams]).round(-1)
-    breakfast_plan[:items1][:fat] = ((breakfast_list[0].fat / breakfast_list[0].per_grams.to_f) * breakfast_plan[:items1][:grams]).round(-1)
+    self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "calories", breakfast_item1)
+    self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "calories", breakfast_item2)
+
+    # Snack 1
+    snack1_list = Meal.where("category LIKE ?","Snack 1")
+    snack1_item1 = Random.rand(snack1_list.length)
+    snack1_item2 = Random.rand(snack1_list.length)
+
+    snack1_plan = {
+      item1: {
+        name: snack1_list[snack1_item1].food,
+        grams: ((snack1_list[snack1_item1].per_grams / snack1_list[snack1_item1].calories.to_f) * (snack1_target * 0.5)).round(-1)
+      },
+      item2: {
+        name: snack1_list[snack1_item2].food,
+        grams: ((snack1_list[snack1_item2].per_grams / snack1_list[snack1_item2].calories.to_f) * (snack1_target * 0.5)).round(-1)
+      }
+    }
+
+    self.generate_meal_category(snack1_list, snack1_plan, "item1", "calories", snack1_item1)
+    self.generate_meal_category(snack1_list, snack1_plan, "item2", "calories", snack1_item2)
 
 
-
-
-
-
-
-
-
+    binding.pry
   end
+
+  def self.generate_meal_category(food_list, meal_category, item_key, nutrition_category, category_item) 
+    meal_category[item_key.to_sym][nutrition_category.to_sym] = ((food_list[category_item][nutrition_category.to_sym] / food_list[category_item]["per_grams"].to_f) * meal_category[item_key.to_sym][:grams]).round(-1)
+  end 
+
 end
