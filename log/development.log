@@ -3606,3 +3606,304 @@ Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:47:05 +0000
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by MealsController#index as HTML
   [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 2303445ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:25:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 33ms
+
+SyntaxError (/vagrant/finalProject/app/models/meal.rb:41: syntax error, unexpected '}', expecting ')'
+...rams) * breakfast_plan[:grams]},
+...                               ^
+/vagrant/finalProject/app/models/meal.rb:42: syntax error, unexpected '}', expecting ')'
+/vagrant/finalProject/app/models/meal.rb:54: syntax error, unexpected keyword_end, expecting ')'):
+  app/models/meal.rb:41: syntax error, unexpected '}', expecting ')'
+  app/models/meal.rb:42: syntax error, unexpected '}', expecting ')'
+  app/models/meal.rb:54: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.9ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:26:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.7ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 112572ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:28:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 34ms
+
+SyntaxError (/vagrant/finalProject/app/models/meal.rb:53: syntax error, unexpected tSTRING_DEND, expecting keyword_end):
+  app/models/meal.rb:53: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.2ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:28:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (1.1ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed 500 Internal Server Error in 64ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/meal.rb:39:in `algo'
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.8ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:29:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  Rendered meals/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 123415ms (Views: 280.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 19:31:36 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 19:31:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 19:31:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 19:31:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 19:31:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 19:31:36 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 19:31:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 19:31:36 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:31:39 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+Completed   in 8477ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:31:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  Rendered meals/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 96270ms (Views: 286.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 19:33:31 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 19:33:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 19:33:31 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 19:33:31 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 19:33:31 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 19:33:31 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 19:33:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 19:33:31 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:33:35 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+Completed   in 178790ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:36:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 49836ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:37:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed 500 Internal Server Error in 57ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/meal.rb:39:in `algo'
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.5ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 19:39:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 2867791ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:27:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 31ms
+
+SyntaxError (/vagrant/finalProject/app/models/meal.rb:50: syntax error, unexpected tSTRING_DEND, expecting keyword_end):
+  app/models/meal.rb:50: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.1ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:27:49 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  Rendered meals/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23374ms (Views: 287.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:28:13 +0000
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 13ms
+
+SyntaxError (/vagrant/finalProject/app/models/meal.rb:39: syntax error, unexpected '}', expecting =>):
+  app/models/meal.rb:39: syntax error, unexpected '}', expecting =>
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:29:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  Rendered meals/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 71074ms (Views: 272.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 20:30:18 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 20:30:18 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 20:30:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 20:30:18 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 20:30:18 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 20:30:18 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 20:30:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 20:30:18 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:30:26 +0000
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 11ms
+
+SyntaxError (/vagrant/finalProject/app/models/meal.rb:53: syntax error, unexpected tIDENTIFIER, expecting '}'
+    binding.pry
+           ^):
+  app/models/meal.rb:53: syntax error, unexpected tIDENTIFIER, expecting '}'
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.7ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:30:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed 500 Internal Server Error in 58ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/meal.rb:39:in `algo'
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:31:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.7ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 97409ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:33:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 76218ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:34:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 85574ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 20:36:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
