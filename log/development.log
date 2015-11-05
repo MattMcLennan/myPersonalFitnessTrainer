@@ -2555,3 +2555,582 @@ Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 16:19:55 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 16:19:55 +0000
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20151104185947)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "goal" character varying(255), "fitBit_ID" character varying(255), "fitBit_auth" character varying(255), "fatSecret_ID" character varying(255), "fatSecret_auth" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151104185947"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateExercises (20151104204536)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "exercises" ("id" serial primary key, "user_id" integer, "bench" integer, "deadlift" integer, "squat" integer, "overhead_press" integer, "barbell_row" integer, "barbell_shrug" integer, "tricep_extension" integer, "barbell_curl" integer, "close_grip_bench" integer, "cable_crunches" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_exercises_on_user_id" ON "exercises"  ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151104204536"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddUidToUsers (20151105020017)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" character varying(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105020017"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddProviderToUsers (20151105020040)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "provider" character varying(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105020040"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateMeals (20151105141209)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.5ms)[0m  CREATE TABLE "meals" ("id" serial primary key, "food" character varying(255), "calories" integer, "protein" integer, "carbs" integer, "fat" integer, "per_grams" integer, "diet_name" character varying(255), "category" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105141209"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 170], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.703865"], ["diet_name", "Paleo"], ["fat", 5], ["food", "Turkey"], ["per_grams", 100], ["protein", 29], ["updated_at", "2015-11-05 16:35:13.703865"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 165], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.711124"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Chicken breast"], ["per_grams", 100], ["protein", 31], ["updated_at", "2015-11-05 16:35:13.711124"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 143], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.713269"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Pork tenderloin"], ["per_grams", 100], ["protein", 26], ["updated_at", "2015-11-05 16:35:13.713269"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 157], ["carbs", 1], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.715167"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Pork chops"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-05 16:35:13.715167"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 194], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.717509"], ["diet_name", "Paleo"], ["fat", 9], ["food", "Steak"], ["per_grams", 100], ["protein", 28], ["updated_at", "2015-11-05 16:35:13.717509"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 172], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.719236"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Veal"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-05 16:35:13.719236"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 242], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.721068"], ["diet_name", "Paleo"], ["fat", 14], ["food", "Pork"], ["per_grams", 100], ["protein", 27], ["updated_at", "2015-11-05 16:35:13.721068"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 332], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.722952"], ["diet_name", "Paleo"], ["fat", 30], ["food", "Ground beef"], ["per_grams", 100], ["protein", 14], ["updated_at", "2015-11-05 16:35:13.722952"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 177], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.724326"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Chicken thigh"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-05 16:35:13.724326"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 239], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.726412"], ["diet_name", "Paleo"], ["fat", 14], ["food", "Chicken leg"], ["per_grams", 100], ["protein", 27], ["updated_at", "2015-11-05 16:35:13.726412"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 294], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.728233"], ["diet_name", "Paleo"], ["fat", 21], ["food", "Lamb"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-05 16:35:13.728233"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 99], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.730096"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Shrimp"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-05 16:35:13.730096"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 89], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.731980"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Lobster"], ["per_grams", 100], ["protein", 19], ["updated_at", "2015-11-05 16:35:13.731980"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 148], ["carbs", 5], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.733835"], ["diet_name", "Paleo"], ["fat", 2], ["food", "Clams"], ["per_grams", 100], ["protein", 26], ["updated_at", "2015-11-05 16:35:13.733835"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 208], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.735695"], ["diet_name", "Paleo"], ["fat", 13], ["food", "Salmon"], ["per_grams", 100], ["protein", 20], ["updated_at", "2015-11-05 16:35:13.735695"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 294], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.737505"], ["diet_name", "Paleo"], ["fat", 21], ["food", "Lamb chops"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-05 16:35:13.737505"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 173], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.740018"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Rabbit"], ["per_grams", 100], ["protein", 33], ["updated_at", "2015-11-05 16:35:13.740018"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 155], ["carbs", 1], ["category", "Breakfast"], ["created_at", "2015-11-05 16:35:13.741998"], ["diet_name", "Paleo"], ["fat", 11], ["food", "Eggs"], ["per_grams", 100], ["protein", 13], ["updated_at", "2015-11-05 16:35:13.741998"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 184], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.743936"], ["diet_name", "Paleo"], ["fat", 6], ["food", "Tuna"], ["per_grams", 100], ["protein", 30], ["updated_at", "2015-11-05 16:35:13.743936"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 208], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.745784"], ["diet_name", "Paleo"], ["fat", 11], ["food", "Sardines"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-05 16:35:13.745784"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 138], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.747849"], ["diet_name", "Paleo"], ["fat", 5], ["food", "Trout"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-05 16:35:13.747849"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 83], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.749818"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Crab"], ["per_grams", 100], ["protein", 18], ["updated_at", "2015-11-05 16:35:13.749818"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 20], ["carbs", 4], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.751713"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Asparagus"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-05 16:35:13.751713"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 160], ["carbs", 9], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.753563"], ["diet_name", "Paleo"], ["fat", 15], ["food", "Avocado"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-05 16:35:13.753563"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 43], ["carbs", 9], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.755291"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Brussel sprouts"], ["per_grams", 100], ["protein", 3], ["updated_at", "2015-11-05 16:35:13.755291"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 41], ["carbs", 10], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.764940"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Carrots"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.764940"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 23], ["carbs", 4], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.767001"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Spinach"], ["per_grams", 100], ["protein", 3], ["updated_at", "2015-11-05 16:35:13.767001"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 16], ["carbs", 3], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.769402"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Celery"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.769402"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 34], ["carbs", 7], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.771263"], ["diet_name", "Paleo"], ["fat", 3], ["food", "Broccoli"], ["per_grams", 100], ["protein", 0], ["updated_at", "2015-11-05 16:35:13.771263"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 25], ["carbs", 6], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.773212"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Cabbage"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.773212"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 86], ["carbs", 20], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.775057"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Sweet Potato"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-05 16:35:13.775057"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 576], ["carbs", 22], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.776323"], ["diet_name", "Paleo"], ["fat", 49], ["food", "Almonds"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-05 16:35:13.776323"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 553], ["carbs", 30], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.778150"], ["diet_name", "Paleo"], ["fat", 44], ["food", "Cashews"], ["per_grams", 100], ["protein", 18], ["updated_at", "2015-11-05 16:35:13.778150"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 654], ["carbs", 14], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.780275"], ["diet_name", "Paleo"], ["fat", 65], ["food", "Walnuts"], ["per_grams", 100], ["protein", 15], ["updated_at", "2015-11-05 16:35:13.780275"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 628], ["carbs", 17], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.782125"], ["diet_name", "Paleo"], ["fat", 61], ["food", "Hazelnuts"], ["per_grams", 100], ["protein", 15], ["updated_at", "2015-11-05 16:35:13.782125"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 690], ["carbs", 14], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.783996"], ["diet_name", "Paleo"], ["fat", 72], ["food", "Pecans"], ["per_grams", 100], ["protein", 9], ["updated_at", "2015-11-05 16:35:13.783996"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 673], ["carbs", 13], ["category", "Snack 2"], ["created_at", "2015-11-05 16:35:13.785889"], ["diet_name", "Paleo"], ["fat", 68], ["food", "Pine nuts"], ["per_grams", 100], ["protein", 14], ["updated_at", "2015-11-05 16:35:13.785889"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 52], ["carbs", 14], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.787697"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Apple"], ["per_grams", 100], ["protein", 0], ["updated_at", "2015-11-05 16:35:13.787697"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 43], ["carbs", 10], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.789531"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Blackberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.789531"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 39], ["carbs", 10], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.792143"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Peaches"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.792143"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 46], ["carbs", 11], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.794084"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Plums"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.794084"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 60], ["carbs", 15], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.795977"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Mango"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.795977"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 57], ["carbs", 14], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.797928"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Blueberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.797928"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 67], ["carbs", 17], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.799692"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Grapes"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.799692"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 33], ["carbs", 8], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.801568"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Strawberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.801568"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 30], ["carbs", 8], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.803255"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Watermelon"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.803255"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 53], ["carbs", 12], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.805135"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Raspberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.805135"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 34], ["carbs", 8], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.806976"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Cantaloupe"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.806976"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 53], ["carbs", 13], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.809155"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Tangerine"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.809155"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 47], ["carbs", 12], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.811025"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Oranges"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.811025"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 89], ["carbs", 23], ["category", "Snack 1"], ["created_at", "2015-11-05 16:35:13.812327"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Bananas"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:35:13.812327"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 382], ["carbs", 3], ["category", "Breakfast"], ["created_at", "2015-11-05 16:35:13.814128"], ["diet_name", "Paleo"], ["fat", 28], ["food", "Turkey Bacon"], ["per_grams", 100], ["protein", 30], ["updated_at", "2015-11-05 16:35:13.814128"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 120], ["carbs", 25], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.815903"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Basmati rice"], ["per_grams", 100], ["protein", 4], ["updated_at", "2015-11-05 16:35:13.815903"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 130], ["carbs", 21], ["category", "Lunch"], ["created_at", "2015-11-05 16:35:13.817825"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Blackberry Greek yogurt"], ["per_grams", 150], ["protein", 11], ["updated_at", "2015-11-05 16:35:13.817825"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calories", 120], ["carbs", 4], ["created_at", "2015-11-05 16:35:13.819673"], ["diet_name", "Snack3"], ["fat", 2], ["food", "Protein Shake"], ["per_grams", 0], ["protein", 7], ["updated_at", "2015-11-05 16:35:13.819673"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 16:41:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"
+  Rendered meals/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 4777ms (Views: 282.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 16:41:57 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 16:41:57 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 16:41:57 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 16:41:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 16:41:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 16:41:57 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 16:41:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 16:41:57 +0000
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20151104185947)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "goal" character varying(255), "fitBit_ID" character varying(255), "fitBit_auth" character varying(255), "fatSecret_ID" character varying(255), "fatSecret_auth" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151104185947"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateExercises (20151104204536)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "exercises" ("id" serial primary key, "user_id" integer, "bench" integer, "deadlift" integer, "squat" integer, "overhead_press" integer, "barbell_row" integer, "barbell_shrug" integer, "tricep_extension" integer, "barbell_curl" integer, "close_grip_bench" integer, "cable_crunches" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE  INDEX  "index_exercises_on_user_id" ON "exercises"  ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151104204536"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddUidToUsers (20151105020017)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" character varying(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105020017"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to AddProviderToUsers (20151105020040)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "provider" character varying(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105020040"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateMeals (20151105141209)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "meals" ("id" serial primary key, "food" character varying(255), "calories" integer, "protein" integer, "carbs" integer, "fat" integer, "per_grams" integer, "diet_name" character varying(255), "category" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105141209"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (8.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20151104185947)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "goal" character varying(255), "fitBit_ID" character varying(255), "fitBit_auth" character varying(255), "fatSecret_ID" character varying(255), "fatSecret_auth" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151104185947"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateExercises (20151104204536)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "exercises" ("id" serial primary key, "user_id" integer, "bench" integer, "deadlift" integer, "squat" integer, "overhead_press" integer, "barbell_row" integer, "barbell_shrug" integer, "tricep_extension" integer, "barbell_curl" integer, "close_grip_bench" integer, "cable_crunches" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_exercises_on_user_id" ON "exercises"  ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151104204536"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddUidToUsers (20151105020017)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" character varying(255)
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105020017"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddProviderToUsers (20151105020040)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "provider" character varying(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105020040"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Migrating to CreateMeals (20151105141209)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "meals" ("id" serial primary key, "food" character varying(255), "calories" integer, "protein" integer, "carbs" integer, "fat" integer, "per_grams" integer, "diet_name" character varying(255), "category" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151105141209"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 170], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.349552"], ["diet_name", "Paleo"], ["fat", 5], ["food", "Turkey"], ["per_grams", 100], ["protein", 29], ["updated_at", "2015-11-05 16:49:26.349552"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 165], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.356657"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Chicken breast"], ["per_grams", 100], ["protein", 31], ["updated_at", "2015-11-05 16:49:26.356657"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 143], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.359115"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Pork tenderloin"], ["per_grams", 100], ["protein", 26], ["updated_at", "2015-11-05 16:49:26.359115"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 157], ["carbs", 1], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.361204"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Pork chops"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-05 16:49:26.361204"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 194], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.363071"], ["diet_name", "Paleo"], ["fat", 9], ["food", "Steak"], ["per_grams", 100], ["protein", 28], ["updated_at", "2015-11-05 16:49:26.363071"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 172], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.364347"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Veal"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-05 16:49:26.364347"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 242], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.366217"], ["diet_name", "Paleo"], ["fat", 14], ["food", "Pork"], ["per_grams", 100], ["protein", 27], ["updated_at", "2015-11-05 16:49:26.366217"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 332], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.368830"], ["diet_name", "Paleo"], ["fat", 30], ["food", "Ground beef"], ["per_grams", 100], ["protein", 14], ["updated_at", "2015-11-05 16:49:26.368830"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 177], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.370934"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Chicken thigh"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-05 16:49:26.370934"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 239], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.372428"], ["diet_name", "Paleo"], ["fat", 14], ["food", "Chicken leg"], ["per_grams", 100], ["protein", 27], ["updated_at", "2015-11-05 16:49:26.372428"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 294], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.374496"], ["diet_name", "Paleo"], ["fat", 21], ["food", "Lamb"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-05 16:49:26.374496"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 99], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.376256"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Shrimp"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-05 16:49:26.376256"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 89], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.378181"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Lobster"], ["per_grams", 100], ["protein", 19], ["updated_at", "2015-11-05 16:49:26.378181"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 148], ["carbs", 5], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.380751"], ["diet_name", "Paleo"], ["fat", 2], ["food", "Clams"], ["per_grams", 100], ["protein", 26], ["updated_at", "2015-11-05 16:49:26.380751"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 208], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.382615"], ["diet_name", "Paleo"], ["fat", 13], ["food", "Salmon"], ["per_grams", 100], ["protein", 20], ["updated_at", "2015-11-05 16:49:26.382615"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 294], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.384309"], ["diet_name", "Paleo"], ["fat", 21], ["food", "Lamb chops"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-05 16:49:26.384309"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 173], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.386189"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Rabbit"], ["per_grams", 100], ["protein", 33], ["updated_at", "2015-11-05 16:49:26.386189"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 155], ["carbs", 1], ["category", "Breakfast"], ["created_at", "2015-11-05 16:49:26.387966"], ["diet_name", "Paleo"], ["fat", 11], ["food", "Eggs"], ["per_grams", 100], ["protein", 13], ["updated_at", "2015-11-05 16:49:26.387966"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 184], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.389942"], ["diet_name", "Paleo"], ["fat", 6], ["food", "Tuna"], ["per_grams", 100], ["protein", 30], ["updated_at", "2015-11-05 16:49:26.389942"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 208], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.399927"], ["diet_name", "Paleo"], ["fat", 11], ["food", "Sardines"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-05 16:49:26.399927"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 138], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.401833"], ["diet_name", "Paleo"], ["fat", 5], ["food", "Trout"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-05 16:49:26.401833"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 83], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.403903"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Crab"], ["per_grams", 100], ["protein", 18], ["updated_at", "2015-11-05 16:49:26.403903"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 20], ["carbs", 4], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.405892"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Asparagus"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-05 16:49:26.405892"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 160], ["carbs", 9], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.407848"], ["diet_name", "Paleo"], ["fat", 15], ["food", "Avocado"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-05 16:49:26.407848"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 43], ["carbs", 9], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.409723"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Brussel sprouts"], ["per_grams", 100], ["protein", 3], ["updated_at", "2015-11-05 16:49:26.409723"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 41], ["carbs", 10], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.411387"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Carrots"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.411387"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 23], ["carbs", 4], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.413308"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Spinach"], ["per_grams", 100], ["protein", 3], ["updated_at", "2015-11-05 16:49:26.413308"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 16], ["carbs", 3], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.415133"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Celery"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.415133"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 34], ["carbs", 7], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.416750"], ["diet_name", "Paleo"], ["fat", 3], ["food", "Broccoli"], ["per_grams", 100], ["protein", 0], ["updated_at", "2015-11-05 16:49:26.416750"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 25], ["carbs", 6], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.418941"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Cabbage"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.418941"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 86], ["carbs", 20], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.421420"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Sweet Potato"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-05 16:49:26.421420"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 576], ["carbs", 22], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.423221"], ["diet_name", "Paleo"], ["fat", 49], ["food", "Almonds"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-05 16:49:26.423221"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 553], ["carbs", 30], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.425095"], ["diet_name", "Paleo"], ["fat", 44], ["food", "Cashews"], ["per_grams", 100], ["protein", 18], ["updated_at", "2015-11-05 16:49:26.425095"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 654], ["carbs", 14], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.427269"], ["diet_name", "Paleo"], ["fat", 65], ["food", "Walnuts"], ["per_grams", 100], ["protein", 15], ["updated_at", "2015-11-05 16:49:26.427269"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 628], ["carbs", 17], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.429374"], ["diet_name", "Paleo"], ["fat", 61], ["food", "Hazelnuts"], ["per_grams", 100], ["protein", 15], ["updated_at", "2015-11-05 16:49:26.429374"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 690], ["carbs", 14], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.431686"], ["diet_name", "Paleo"], ["fat", 72], ["food", "Pecans"], ["per_grams", 100], ["protein", 9], ["updated_at", "2015-11-05 16:49:26.431686"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 673], ["carbs", 13], ["category", "Snack 2"], ["created_at", "2015-11-05 16:49:26.433792"], ["diet_name", "Paleo"], ["fat", 68], ["food", "Pine nuts"], ["per_grams", 100], ["protein", 14], ["updated_at", "2015-11-05 16:49:26.433792"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 52], ["carbs", 14], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.435749"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Apple"], ["per_grams", 100], ["protein", 0], ["updated_at", "2015-11-05 16:49:26.435749"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 43], ["carbs", 10], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.437748"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Blackberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.437748"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 39], ["carbs", 10], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.439614"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Peaches"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.439614"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 46], ["carbs", 11], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.441781"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Plums"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.441781"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 60], ["carbs", 15], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.443805"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Mango"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.443805"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 57], ["carbs", 14], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.445610"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Blueberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.445610"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 67], ["carbs", 17], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.447248"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Grapes"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.447248"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 33], ["carbs", 8], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.449169"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Strawberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.449169"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 30], ["carbs", 8], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.450954"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Watermelon"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.450954"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 53], ["carbs", 12], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.453435"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Raspberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.453435"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 34], ["carbs", 8], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.455212"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Cantaloupe"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.455212"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 53], ["carbs", 13], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.456956"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Tangerine"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.456956"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 47], ["carbs", 12], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.458668"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Oranges"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.458668"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 89], ["carbs", 23], ["category", "Snack 1"], ["created_at", "2015-11-05 16:49:26.460460"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Bananas"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-05 16:49:26.460460"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 382], ["carbs", 3], ["category", "Breakfast"], ["created_at", "2015-11-05 16:49:26.462157"], ["diet_name", "Paleo"], ["fat", 28], ["food", "Turkey Bacon"], ["per_grams", 100], ["protein", 30], ["updated_at", "2015-11-05 16:49:26.462157"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 120], ["carbs", 25], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.463874"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Basmati rice"], ["per_grams", 100], ["protein", 4], ["updated_at", "2015-11-05 16:49:26.463874"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 130], ["carbs", 21], ["category", "Lunch"], ["created_at", "2015-11-05 16:49:26.465787"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Blackberry Greek yogurt"], ["per_grams", 150], ["protein", 11], ["updated_at", "2015-11-05 16:49:26.465787"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 120], ["carbs", 4], ["category", "Snack3"], ["created_at", "2015-11-05 16:49:26.467487"], ["diet_name", "Paleo"], ["fat", 2], ["food", "Protein Shake"], ["per_grams", 29], ["protein", 7], ["updated_at", "2015-11-05 16:49:26.467487"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 16:49:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"
+  Rendered meals/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 9470ms (Views: 283.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 16:49:52 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 16:49:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 16:49:53 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 16:49:53 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 16:49:53 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 16:49:53 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 16:49:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 16:49:53 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 16:52:50 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.4ms)[0m  [1mSELECT "meals".* FROM "meals"[0m
+  Rendered meals/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 4714ms (Views: 171.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 16:52:55 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 16:52:55 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 16:52:55 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 16:52:55 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 16:52:55 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 16:52:55 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 16:52:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 16:52:55 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"
+  Rendered meals/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 225ms (Views: 208.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:27 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.4ms)[0m  [1mSELECT "meals".* FROM "meals"[0m
+  Rendered meals/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 197ms (Views: 181.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
