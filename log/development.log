@@ -3239,3 +3239,370 @@ Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 17:15:30 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 17:15:30 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:16:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 60ms
+
+NameError (uninitialized constant Meal::Meals):
+  app/models/meal.rb:6:in `algo'
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.6ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:16:53 +0000
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 11ms
+
+NameError (uninitialized constant Meal::Meals):
+  app/models/meal.rb:6:in `algo'
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:17:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  Rendered meals/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 13016ms (Views: 287.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 17:18:04 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 17:18:04 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 17:18:04 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 17:18:04 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 17:18:04 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 17:18:04 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 17:18:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 17:18:04 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:18:07 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"
+  Rendered meals/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 56964ms (Views: 160.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:19:04 +0000
+Processing by MealsController#index as HTML
+Completed   in 17762ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:19:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.7ms)[0m  SELECT "meals".* FROM "meals"
+  [1m[36mMeal Load (0.5ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  Rendered meals/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 4298473ms (Views: 299.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 18:31:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 18:31:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 18:31:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 18:31:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 18:31:09 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 18:31:09 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 18:31:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 18:31:09 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:31:11 +0000
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+SyntaxError (/vagrant/finalProject/app/models/meal.rb:63: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/meal.rb:63: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.1ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:31:52 +0000
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/vagrant/finalProject/app/models/meal.rb:38: syntax error, unexpected tIDENTIFIER, expecting '}'
+        grams: (breakfast_list[0].calories...
+             ^
+/vagrant/finalProject/app/models/meal.rb:43: syntax error, unexpected '}', expecting keyword_end
+/vagrant/finalProject/app/models/meal.rb:55: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/meal.rb:38: syntax error, unexpected tIDENTIFIER, expecting '}'
+  app/models/meal.rb:43: syntax error, unexpected '}', expecting keyword_end
+  app/models/meal.rb:55: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.3ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:32:18 +0000
+Processing by MealsController#index as HTML
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/vagrant/finalProject/app/models/meal.rb:55: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/meal.rb:55: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/meals_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:32:37 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  Rendered meals/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 221259ms (Views: 163.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:36:19 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  Rendered meals/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8869ms (Views: 162.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 18:36:28 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 18:36:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 18:36:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 18:36:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 18:36:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 18:36:28 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 18:36:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 18:36:28 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:36:29 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 140525ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:38:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  Rendered meals/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 20970ms (Views: 267.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 18:39:16 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 18:39:16 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 18:39:16 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 18:39:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 18:39:16 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 18:39:16 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 18:39:16 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 18:39:16 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:39:18 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  Rendered meals/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 84061ms (Views: 157.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 18:40:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 18:40:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 18:40:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 18:40:42 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 18:40:42 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 18:40:42 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 18:40:42 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 18:40:42 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:40:44 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  Rendered meals/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 73137ms (Views: 157.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:41:57 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  Rendered meals/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 47341ms (Views: 165.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 18:42:44 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 18:42:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 18:42:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 18:42:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 18:42:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 18:42:44 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 18:42:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 18:42:44 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:42:49 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 19143ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:43:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 43709ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:44:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+Completed   in 92131ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:45:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.7ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  Rendered meals/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 51024ms (Views: 269.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 18:46:29 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 18:46:29 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 18:46:29 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 18:46:29 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 18:46:29 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 18:46:29 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 18:46:29 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 18:46:30 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:46:38 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+Completed   in 10456ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 18:47:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
