@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+  <hr>
+    <div class="notice"><%= flash[:notice] %></div>
+  <hr>
+<% end %>
 
 <p>
   <strong>Name:</strong>
