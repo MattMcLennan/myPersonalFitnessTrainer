@@ -14,7 +14,7 @@ faker_confirmation_password = Faker::Internet.password
   goal: "gain"
   )
 
-1000.times do 
+1000.times do
   @meal = Meal.create!(
     food_name: Faker::Name.name,
     calories: Faker::Number.between(20, 500),
@@ -22,4 +22,5 @@ faker_confirmation_password = Faker::Internet.password
     fat: Faker::Number.between(2, 50),
     carbs: Faker::Number.between(2, 50)
   )
+
 end
