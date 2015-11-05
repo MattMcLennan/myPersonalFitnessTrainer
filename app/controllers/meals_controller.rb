@@ -4,7 +4,8 @@ class MealsController < ApplicationController
   # GET /meals
   # GET /meals.json
   def index
-    @meals = Meal.all
+    @meals = Meal.algo
+    binding.pry
   end
 
   # GET /meals/1

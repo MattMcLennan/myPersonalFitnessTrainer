@@ -3134,3 +3134,108 @@ Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 16:53:44 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 16:59:56 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'breakfast')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'breakfast')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'breakfast')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.4ms)[0m  [1mSELECT "meals".* FROM "meals"[0m
+  Rendered meals/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 220430ms (Views: 158.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:03:39 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"
+  Rendered meals/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59605ms (Views: 171.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 17:04:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 17:04:39 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 17:04:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 17:04:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 17:04:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 17:04:39 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 17:04:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 17:04:39 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:12:58 +0000
+Processing by MealsController#index as HTML
+  [1m[36mMeal Load (0.5ms)[0m  [1mSELECT "meals".* FROM "meals"[0m
+  Rendered meals/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38147ms (Views: 170.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 17:13:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 17:13:37 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 17:13:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 17:13:37 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 17:13:37 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 17:13:37 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 17:13:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 17:13:37 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-05 17:14:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  Rendered meals/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 78859ms (Views: 265.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-05 17:15:29 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-05 17:15:29 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-05 17:15:29 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-05 17:15:29 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-05 17:15:29 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-05 17:15:30 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-05 17:15:30 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-05 17:15:30 +0000

@@ -1,7 +1,9 @@
 class Meal < ActiveRecord::Base
   belongs_to :user
 
-  def algo
+
+  def self.algo
+    @meals = Meals.all
     calories_target = 2000
     protein_target = 0.40 * calories_target
     carbs_target = 0.40 * calories_target
@@ -24,6 +26,11 @@ class Meal < ActiveRecord::Base
       dinner_target.push(nutrition_category * 0.25)
       snack3_target.push(nutrition_category * 0.05)
     end
+
+    binding.pry
+
+
+
 
   end
 end
