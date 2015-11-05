@@ -1,4 +1,11 @@
 <h1>Personal Fitness Trainer</h1>
+
+  <% if flash[:notice] %>
+    <hr>
+      <%= flash[:notice] %>
+    <hr>
+  <% end %>
+  
   <% if current_user %>
     Signed in as <%= current_user.name %> (<%= link_to "Log out", session_path("current"), method: :delete %>)
   <% else %>
@@ -6,3 +13,7 @@
 
     <%= link_to "Sign in with Fitbit", "/auth/fitbit" %>
   <% end %>
+
+
+
+
