@@ -6,3 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first
 
+require 'csv'
+
+csv_text = File.read('Paleo Diet - Sheet1.csv')
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
+  Meal.create!(row.to_hash)
+end

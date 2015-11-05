@@ -1,12 +1,14 @@
 class CreateMeals < ActiveRecord::Migration
   def change
     create_table :meals do |t|
-      t.string :food_name
+      t.string :food
       t.integer :calories
-      t.integer :protien
-      t.integer :fat
+      t.integer :protein
       t.integer :carbs
-      t.references :user, index: true
+      t.integer :fat
+      t.integer :per_grams
+      t.string :diet_name
+      t.string :category
 
       t.timestamps
     end
