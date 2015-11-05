@@ -33,7 +33,13 @@ class Meal < ActiveRecord::Base
     breakfast_item2 = 1
 
     self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "calories", breakfast_item1)
+    self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "protein", breakfast_item1)
+    self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "carbs", breakfast_item1)
+    self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "fat", breakfast_item1)
     self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "calories", breakfast_item2)
+    self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "protein", breakfast_item2)
+    self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "carbs", breakfast_item2)
+    self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "fat", breakfast_item2)
 
     # Snack 1
     snack1_list = Meal.where("category LIKE ?","Snack 1")
@@ -52,7 +58,82 @@ class Meal < ActiveRecord::Base
     }
 
     self.generate_meal_category(snack1_list, snack1_plan, "item1", "calories", snack1_item1)
+    self.generate_meal_category(snack1_list, snack1_plan, "item1", "protein", snack1_item1)
+    self.generate_meal_category(snack1_list, snack1_plan, "item1", "carbs", snack1_item1)
+    self.generate_meal_category(snack1_list, snack1_plan, "item1", "fat", snack1_item1)
     self.generate_meal_category(snack1_list, snack1_plan, "item2", "calories", snack1_item2)
+    self.generate_meal_category(snack1_list, snack1_plan, "item2", "protein", snack1_item2)
+    self.generate_meal_category(snack1_list, snack1_plan, "item2", "carbs", snack1_item2)
+    self.generate_meal_category(snack1_list, snack1_plan, "item2", "fat", snack1_item2)
+
+
+
+    # Lunch
+    lunch_list = Meal.where("category LIKE ?","Snack 1")
+    lunch_item1 = Random.rand(lunch_list.length)
+    lunch_item2 = Random.rand(lunch_list.length)
+
+    lunch_plan = {
+      item1: {
+        name: lunch_list[lunch_item1].food,
+        grams: ((lunch_list[lunch_item1].per_grams / lunch_list[lunch_item1].calories.to_f) * (snack1_target * 0.5)).round(-1)
+      },
+      item2: {
+        name: lunch_list[lunch_item2].food,
+        grams: ((lunch_list[lunch_item2].per_grams / lunch_list[lunch_item2].calories.to_f) * (snack1_target * 0.5)).round(-1)
+      }
+    }
+
+    self.generate_meal_category(lunch_list, lunch_plan, "item1", "calories", lunch_item1)
+    self.generate_meal_category(lunch_list, lunch_plan, "item1", "protein", lunch_item1)
+    self.generate_meal_category(lunch_list, lunch_plan, "item1", "carbs", lunch_item1)
+    self.generate_meal_category(lunch_list, lunch_plan, "item1", "fat", lunch_item1)
+    self.generate_meal_category(lunch_list, lunch_plan, "item2", "calories", lunch_item2)
+    self.generate_meal_category(lunch_list, lunch_plan, "item2", "protein", lunch_item2)
+    self.generate_meal_category(lunch_list, lunch_plan, "item2", "carbs", lunch_item2)
+    self.generate_meal_category(lunch_list, lunch_plan, "item2", "fat", lunch_item2)
+
+
+    # Snack 2
+    snack2_list = Meal.where("category LIKE ?","Snack 1")
+    snack2_item1 = Random.rand(snack2_list.length)
+    snack2_item2 = Random.rand(snack2_list.length)
+
+    snack2_plan = {
+      item1: {
+        name: snack2_list[snack2_item1].food,
+        grams: ((snack2_list[snack2_item1].per_grams / snack2_list[snack2_item1].calories.to_f) * (snack2_target * 0.5)).round(-1)
+      },
+      item2: {
+        name: snack2_list[snack2_item2].food,
+        grams: ((snack2_list[snack2_item2].per_grams / snack2_list[snack2_item2].calories.to_f) * (snack2_target * 0.5)).round(-1)
+      }
+    }
+
+    self.generate_meal_category(snack2_list, snack2_plan, "item1", "calories", snack2_item1)
+    self.generate_meal_category(snack2_list, snack2_plan, "item1", "protein", snack2_item1)
+    self.generate_meal_category(snack2_list, snack2_plan, "item1", "carbs", snack2_item1)
+    self.generate_meal_category(snack2_list, snack2_plan, "item1", "fat", snack2_item1)
+    self.generate_meal_category(snack2_list, snack2_plan, "item2", "calories", snack2_item2)
+    self.generate_meal_category(snack2_list, snack2_plan, "item2", "protein", snack2_item2)
+    self.generate_meal_category(snack2_list, snack2_plan, "item2", "carbs", snack2_item2)
+    self.generate_meal_category(snack2_list, snack2_plan, "item2", "fat", snack2_item2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     binding.pry
