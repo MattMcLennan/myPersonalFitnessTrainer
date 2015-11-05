@@ -5,6 +5,7 @@ class MealsController < ApplicationController
   # GET /meals.json
   def index
     @meals = Meal.all
+    binding.pry
   end
 
   # GET /meals/1
@@ -26,7 +27,7 @@ class MealsController < ApplicationController
   def create
     @meal = Meal.new(meal_params)
 
-    render :json @meal
+    # render :json @meal
 
     # respond_to do |format|
     #   if @meal.save
