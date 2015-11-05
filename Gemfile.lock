@@ -40,6 +40,8 @@ GEM
     coffee-script-source (1.9.1.1)
     erubis (2.7.0)
     execjs (2.6.0)
+    faker (1.5.0)
+      i18n (~> 0.5)
     fitgem (0.12.1)
       oauth
     hashie (3.4.3)
@@ -132,6 +134,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   coffee-rails (~> 4.0.0)
+  faker
   fitgem
   jbuilder (~> 2.0)
   jquery-rails

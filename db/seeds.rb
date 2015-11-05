@@ -12,4 +12,12 @@ csv_text = File.read('Paleo Diet - Sheet1.csv')
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
   Meal.create!(row.to_hash)
+
+  30.times do
+    User.create(
+      name: Faker::Name.name,
+      email: Faker::Internet.email,
+      password: Faker::Internet.password
+    )
+  end
 end
