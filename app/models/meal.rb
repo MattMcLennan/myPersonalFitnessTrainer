@@ -1,22 +1,99 @@
 class Meal < ActiveRecord::Base
   belongs_to :user
 
+  BREAKFAST_TARGET_ALLOCATION = 0.25
+  SNACK1_TARGET_ALLOCATION = 0.075
+  LUNCH_TARGET_ALLOCATION = 0.20
+  SNACK2_TARGET_ALLOCATION = 0.075
+  DINNER_TARGET_ALLOCATION = 0.25
+  SNACK3_TARGET_ALLOCATION = 0.05
 
+  BREAKFAST_ITEM1_ALLOCATION = 0.80
+  BREAKFAST_ITEM2_ALLOCATION = 0.80
+  
+  SNACK1_ITEM1_ALLOCATION = 0.80
+  SNACK1_ITEM2_ALLOCATION = 0.80
+  
+  LUNCH_ITEM1_ALLOCATION = 0.80
+  LUNCH_ITEM2_ALLOCATION = 0.80
+  
+  SNACK2_ITEM1_ALLOCATION = 0.80
+  SNACK2_ITEM2_ALLOCATION = 0.80
+  
+  
+  DINNER_ITEM1_ALLOCATION = 0.80
+  DINNER_ITEM2_ALLOCATION = 0.80
+  
+  SNACK3_ITEM1_ALLOCATION = 0.80
+  SNACK3_ITEM2_ALLOCATION = 0.80
+  
   def self.algo
+    # Defined by user
+    user_cals_target = 2000
     nutrition_content = ["calories", "protein", "carbs", "fat"]
 
-    calories_target = 2000
-    protein_target = 0.40 * calories_target
-    carbs_target = 0.40 * calories_target
-    fat_target = 0.20 * calories_target
-    nutrition_target = [calories_target, protein_target, carbs_target, fat_target]
+    breakfast_target = user_cals_target * BREAKFAST_TARGET_ALLOCATION
+    snack1_target = user_cals_target * SNACK1_TARGET_ALLOCATION
+    lunch_target = user_cals_target * LUNCH_TARGET_ALLOCATION
+    snack2_target = user_cals_target * SNACK2_TARGET_ALLOCATION
+    dinner_target = user_cals_target * DINNER_TARGET_ALLOCATION
+    snack3_target = user_cals_target * SNACK3_TARGET_ALLOCATION
 
-    breakfast_target = calories_target * 0.25
-    snack1_target = calories_target * 0.075
-    lunch_target = calories_target * 0.20
-    snack2_target = calories_target * 0.075
-    dinner_target = calories_target * 0.25
-    snack3_target = calories_target * 0.05
+    
+    # Storing an empty daily_meal object to iterate over
+    daily_meal = { breakfast: {}, snack1: {}, lunch: {}, snack2: {}, dinner: {}, snack3: {} }
+
+    daily_meal.each do |meal_category, value|
+      find = Meal.where("category LIKE ?", meal_category.to_s.capitalize)
+
+      # case needed for unique cases
+      case meal_category
+      when :breakfast
+        meal_category = {
+          item1: {
+            name: find[0].food,
+            grams: ((find[0].per_grams / find[0].calories.to_f) * (breakfast_target * BREAKFAST_ITEM1_ALLOCATION)).round(-1)
+          },
+          item2: {
+            name: find[1].food,
+            grams: ((find[1].per_grams / find[1].calories.to_f) * (breakfast_target * BREAKFAST_ITEM2_ALLOCATION)).round(-1)
+          }
+        }
+        puts "breakfast"
+      when :snack1
+        puts "snack1"
+      when :lunch
+        puts "lunch"
+      when :snack2
+        puts "snack2"
+      when :dinner
+        # Hard coded find to search for Lunch as that is the food category name in the DB
+        # Foods meant for lunch or dinner can be interchanged
+        find = Meal.where("category LIKE ?", "Lunch")
+        puts "dinner"
+      when :snack3
+        puts "snack3"
+      end
+
+      def set_meal_category_items(meal_category, find, meal_target, item_allocation)
+        meal_category = {
+          item1: {
+            name: find[0].food,
+            grams: ((find[0].per_grams / find[0].calories.to_f) * (breakfast_target * BREAKFAST_ITEM1_ALLOCATION)).round(-1)
+          },
+          item2: {
+            name: find[1].food,
+            grams: ((find[1].per_grams / find[1].calories.to_f) * (breakfast_target * BREAKFAST_ITEM2_ALLOCATION)).round(-1)
+          }
+        }
+      end
+
+
+
+
+    end
+
+
 
     breakfast_list = Meal.where("category LIKE ?","Breakfast")
     breakfast_plan = {
@@ -39,27 +116,6 @@ class Meal < ActiveRecord::Base
     end
 
 
-    # Storing an empty daily_meal object ot iterate over
-    daily_meal = { breakfast: {}, snack1: {}, lunch: {}, snack2: {}, dinner: {}, snack3: {} }
-
-    daily_meal.each do |meal_category, value|
-
-      # case needed for unique cases
-      case meal_category
-      when :breakfast
-        puts "breakfast"
-      when :snack1
-        puts "snack1"
-      when :lunch
-        puts "lunch"
-      when :snack2
-        puts "snack2"
-      when :dinner
-        puts "dinner"
-      when :snack3
-        puts "snack3"
-      end
-    end
 
 
 
