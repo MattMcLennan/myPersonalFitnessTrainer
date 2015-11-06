@@ -3,6 +3,8 @@ class Meal < ActiveRecord::Base
 
 
   def self.algo
+    nutrition_content = ["calories", "protein", "carbs", "fat"]
+
     calories_target = 2000
     protein_target = 0.40 * calories_target
     carbs_target = 0.40 * calories_target
@@ -32,14 +34,10 @@ class Meal < ActiveRecord::Base
     breakfast_item1 = 0
     breakfast_item2 = 1
 
-    self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "calories", breakfast_item1)
-    self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "protein", breakfast_item1)
-    self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "carbs", breakfast_item1)
-    self.generate_meal_category(breakfast_list, breakfast_plan, "item1", "fat", breakfast_item1)
-    self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "calories", breakfast_item2)
-    self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "protein", breakfast_item2)
-    self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "carbs", breakfast_item2)
-    self.generate_meal_category(breakfast_list, breakfast_plan, "item2", "fat", breakfast_item2)
+    nutrition_content.each do |content|
+      self.generate_meal_category(breakfast_list, breakfast_plan, "item1", content, breakfast_item1)
+      self.generate_meal_category(breakfast_list, breakfast_plan, "item2", content, breakfast_item2)
+    end
 
     # Snack 1
     snack1_list = Meal.where("category LIKE ?","Snack 1")
@@ -57,16 +55,10 @@ class Meal < ActiveRecord::Base
       }
     }
 
-    self.generate_meal_category(snack1_list, snack1_plan, "item1", "calories", snack1_item1)
-    self.generate_meal_category(snack1_list, snack1_plan, "item1", "protein", snack1_item1)
-    self.generate_meal_category(snack1_list, snack1_plan, "item1", "carbs", snack1_item1)
-    self.generate_meal_category(snack1_list, snack1_plan, "item1", "fat", snack1_item1)
-    self.generate_meal_category(snack1_list, snack1_plan, "item2", "calories", snack1_item2)
-    self.generate_meal_category(snack1_list, snack1_plan, "item2", "protein", snack1_item2)
-    self.generate_meal_category(snack1_list, snack1_plan, "item2", "carbs", snack1_item2)
-    self.generate_meal_category(snack1_list, snack1_plan, "item2", "fat", snack1_item2)
-
-
+    nutrition_content.each do |content|
+      self.generate_meal_category(snack1_list, snack1_plan, "item1", content, snack1_item1)
+      self.generate_meal_category(snack1_list, snack1_plan, "item2", content, snack1_item2)
+    end
 
     # Lunch
     lunch_list = Meal.where("category LIKE ?","Snack 1")
@@ -84,18 +76,13 @@ class Meal < ActiveRecord::Base
       }
     }
 
-    self.generate_meal_category(lunch_list, lunch_plan, "item1", "calories", lunch_item1)
-    self.generate_meal_category(lunch_list, lunch_plan, "item1", "protein", lunch_item1)
-    self.generate_meal_category(lunch_list, lunch_plan, "item1", "carbs", lunch_item1)
-    self.generate_meal_category(lunch_list, lunch_plan, "item1", "fat", lunch_item1)
-    self.generate_meal_category(lunch_list, lunch_plan, "item2", "calories", lunch_item2)
-    self.generate_meal_category(lunch_list, lunch_plan, "item2", "protein", lunch_item2)
-    self.generate_meal_category(lunch_list, lunch_plan, "item2", "carbs", lunch_item2)
-    self.generate_meal_category(lunch_list, lunch_plan, "item2", "fat", lunch_item2)
-
+    nutrition_content.each do |content|
+      self.generate_meal_category(lunch_list, lunch_plan, "item1", content, lunch_item1)
+      self.generate_meal_category(lunch_list, lunch_plan, "item2", content, lunch_item2)
+    end
 
     # Snack 2
-    snack2_list = Meal.where("category LIKE ?","Snack 1")
+    snack2_list = Meal.where("category LIKE ?","Snack 2")
     snack2_item1 = Random.rand(snack2_list.length)
     snack2_item2 = Random.rand(snack2_list.length)
 
@@ -110,31 +97,53 @@ class Meal < ActiveRecord::Base
       }
     }
 
-    self.generate_meal_category(snack2_list, snack2_plan, "item1", "calories", snack2_item1)
-    self.generate_meal_category(snack2_list, snack2_plan, "item1", "protein", snack2_item1)
-    self.generate_meal_category(snack2_list, snack2_plan, "item1", "carbs", snack2_item1)
-    self.generate_meal_category(snack2_list, snack2_plan, "item1", "fat", snack2_item1)
-    self.generate_meal_category(snack2_list, snack2_plan, "item2", "calories", snack2_item2)
-    self.generate_meal_category(snack2_list, snack2_plan, "item2", "protein", snack2_item2)
-    self.generate_meal_category(snack2_list, snack2_plan, "item2", "carbs", snack2_item2)
-    self.generate_meal_category(snack2_list, snack2_plan, "item2", "fat", snack2_item2)
+    nutrition_content.each do |content|
+      self.generate_meal_category(snack2_list, snack2_plan, "item1", content, snack2_item1)
+      self.generate_meal_category(snack2_list, snack2_plan, "item2", content, snack2_item2)
+    end
+
+    # Dinner
+    dinner_list = Meal.where("category LIKE ?","Lunch")
+    dinner_item1 = Random.rand(dinner_list.length)
+    dinner_item2 = Random.rand(dinner_list.length)
+
+    dinner_plan = {
+      item1: {
+        name: dinner_list[dinner_item1].food,
+        grams: ((dinner_list[dinner_item1].per_grams / dinner_list[dinner_item1].calories.to_f) * (dinner_target * 0.5)).round(-1)
+      },
+      item2: {
+        name: dinner_list[dinner_item2].food,
+        grams: ((dinner_list[dinner_item2].per_grams / dinner_list[dinner_item2].calories.to_f) * (dinner_target * 0.5)).round(-1)
+      }
+    }
+
+    nutrition_content.each do |content|
+      self.generate_meal_category(dinner_list, dinner_plan, "item1", content, dinner_item1)
+      self.generate_meal_category(dinner_list, dinner_plan, "item2", content, dinner_item2)
+    end
 
 
+    # Snack 3
+    snack3_list = Meal.where("category LIKE ?","Snack 3")
+    snack3_item1 = Random.rand(snack3_list.length)
+    snack3_item2 = Random.rand(snack3_list.length)
 
+    snack3_plan = {
+      item1: {
+        name: snack3_list[snack3_item1].food,
+        grams: ((snack3_list[snack3_item1].per_grams / snack3_list[snack3_item1].calories.to_f) * (snack3_target * 0.5)).round(-1)
+      },
+      item2: {
+        name: snack3_list[snack3_item2].food,
+        grams: ((snack3_list[snack3_item2].per_grams / snack3_list[snack3_item2].calories.to_f) * (snack3_target * 0.5)).round(-1)
+      }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    nutrition_content.each do |content|
+      self.generate_meal_category(snack3_list, snack3_plan, "item1", content, snack3_item1)
+      self.generate_meal_category(snack3_list, snack3_plan, "item2", content, snack3_item2)
+    end
 
     binding.pry
   end

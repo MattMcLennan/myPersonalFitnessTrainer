@@ -16,7 +16,7 @@ Clams,148,26,5,2,100,Paleo,Lunch
 Salmon,208,20,0,13,100,Paleo,Lunch
 Lamb chops,294,25,0,21,100,Paleo,Lunch
 Rabbit,173,33,0,4,100,Paleo,Lunch
-Eggs,155,13,1,11,100,Paleo,Breakfast
+Eggs,155,13,1,11,100,Paleo,Breakfast <-------------------------------->
 Tuna,184,30,0,6,100,Paleo,Lunch
 Sardines,208,25,0,11,100,Paleo,Lunch
 Trout,138,21,0,5,100,Paleo,Lunch
@@ -36,11 +36,11 @@ Walnuts,654,15,14,65,100,Paleo,Snack 2
 Hazelnuts,628,15,17,61,100,Paleo,Snack 2
 Pecans,690,9,14,72,100,Paleo,Snack 2
 Pine nuts,673,14,13,68,100,Paleo,Snack 2
-Apple,52,0,14,0,100,Paleo,Snack 1
+Apple,52,0,14,0,100,Paleo,Snack 1    <-------------------------------------->
 Blackberries,43,1,10,1,100,Paleo,Snack 1
-Peaches,39,1,10,0,100,Paleo,Snack 1
-Plums,46,1,11,0,100,Paleo,Snack 1
-Mango,60,1,15,0,100,Paleo,Snack 1
+Peaches,39,1,10,0,100,Paleo,Snack 1   <------------------------------------->
+Plums,46,1,11,0,100,Paleo,Snack 1     <------------------------------------->
+Mango,60,1,15,0,100,Paleo,Snack 1     <------------------------------------->
 Blueberries,57,1,14,0,100,Paleo,Snack 1
 Grapes,67,1,17,0,100,Paleo,Snack 1
 Strawberries,33,1,8,0,100,Paleo,Snack 1
@@ -48,9 +48,9 @@ Watermelon,30,1,8,0,100,Paleo,Snack 1
 Raspberries,53,1,12,1,100,Paleo,Snack 1
 Cantaloupe,34,1,8,0,100,Paleo,Snack 1
 Tangerine,53,1,13,0,100,Paleo,Snack 1
-Oranges,47,1,12,0,100,Paleo,Snack 1
-Bananas,89,1,23,0,100,Paleo,Snack 1
-Turkey Bacon,382,30,3,28,100,Paleo,Breakfast
-Basmati rice,120,4,25,0,100,Paleo,Lunch
+Oranges,47,1,12,0,100,Paleo,Snack 1  <--------------------------------->
+Bananas,89,1,23,0,100,Paleo,Snack 1  <--------------------------------->
+Turkey Bacon,382,30,3,28,100,Paleo,Breakfast <------------------------->
+Basmati rice,120,4,25,0,100,Paleo,Lunch 
 Blackberry Greek yogurt,130,11,21,0,150,Paleo,Lunch
-Protein Shake,120,7,4,2,29,Paleo,Snack3
+Protein Shake,120,7,4,2,29,Paleo,Snack 3 
