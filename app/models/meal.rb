@@ -1,31 +1,27 @@
 class Meal < ActiveRecord::Base
-  belongs_to :user
-
   BREAKFAST_TARGET_ALLOCATION = 0.25
-  SNACK1_TARGET_ALLOCATION = 0.075
-  LUNCH_TARGET_ALLOCATION = 0.20
+  SNACK1_TARGET_ALLOCATION = 0.10
+  LUNCH_TARGET_ALLOCATION = 0.25
   SNACK2_TARGET_ALLOCATION = 0.075
   DINNER_TARGET_ALLOCATION = 0.25
-  SNACK3_TARGET_ALLOCATION = 0.05
+  SNACK3_TARGET_ALLOCATION = 0.075
 
   BREAKFAST_ITEM1_ALLOCATION = 0.80
-  BREAKFAST_ITEM2_ALLOCATION = 0.80
+  BREAKFAST_ITEM2_ALLOCATION = 0.20
   
-  SNACK1_ITEM1_ALLOCATION = 0.80
-  SNACK1_ITEM2_ALLOCATION = 0.80
+  SNACK1_ITEM1_ALLOCATION = 0.60
+  SNACK1_ITEM2_ALLOCATION = 0.40
   
   LUNCH_ITEM1_ALLOCATION = 0.80
-  LUNCH_ITEM2_ALLOCATION = 0.80
+  LUNCH_ITEM2_ALLOCATION = 0.20
   
-  SNACK2_ITEM1_ALLOCATION = 0.80
-  SNACK2_ITEM2_ALLOCATION = 0.80
-  
+  SNACK2_ITEM1_ALLOCATION = 0.50
+  SNACK2_ITEM2_ALLOCATION = 0.50
   
   DINNER_ITEM1_ALLOCATION = 0.80
-  DINNER_ITEM2_ALLOCATION = 0.80
+  DINNER_ITEM2_ALLOCATION = 0.20
   
-  SNACK3_ITEM1_ALLOCATION = 0.80
-  SNACK3_ITEM2_ALLOCATION = 0.80
+  SNACK3_ITEM1_ALLOCATION = 1
   
   def self.algo
     # Defined by user
@@ -39,7 +35,6 @@ class Meal < ActiveRecord::Base
     dinner_target = user_cals_target * DINNER_TARGET_ALLOCATION
     snack3_target = user_cals_target * SNACK3_TARGET_ALLOCATION
 
-    
     # Storing an empty daily_meal object to iterate over
     daily_meal = { breakfast: {}, snack1: {}, lunch: {}, snack2: {}, dinner: {}, snack3: {} }
 
@@ -88,21 +83,18 @@ class Meal < ActiveRecord::Base
       end
 
       def self.set_meal_category_items(meal_category, item_num, find, meal_target, item_allocation, db_id)
-        meal_category[item_num][:name] = find[0].food
-        meal_category[item_num][:grams] = ((find[0].per_grams / find[0].calories.to_f) * (breakfast_target * item_allocation)).round(-1)
+        meal_category {
+          item1: {
+            name: = find[item_num].food,
+            grams: = ((find[0].per_grams / find[0].calories.to_f) * (breakfast_target * item_allocation)).round(-1)
+          },
+          item2: {
+            name: = find[item_num].food,
+            grams: = ((find[0].per_grams / find[0].calories.to_f) * (breakfast_target * item_allocation)).round(-1)
+          }
+        }
       end
 
-      meal_category {
-        item1: {
-          name:
-          grams:
-        },
-        item2: {
-          name:
-          grams:
-        }
-      }
-    end
 
 
 
