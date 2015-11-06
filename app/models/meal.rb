@@ -49,71 +49,78 @@ class Meal < ActiveRecord::Base
       # case needed for unique cases
       case meal_category
       when :breakfast
-        meal_category = {
-          item1: {
-            name: find[0].food,
-            grams: ((find[0].per_grams / find[0].calories.to_f) * (breakfast_target * BREAKFAST_ITEM1_ALLOCATION)).round(-1)
-          },
-          item2: {
-            name: find[1].food,
-            grams: ((find[1].per_grams / find[1].calories.to_f) * (breakfast_target * BREAKFAST_ITEM2_ALLOCATION)).round(-1)
-          }
-        }
+        item1 = 0
+        item2 = 1
+        
+        set_meal_category_items(meal_category, "item1", find, breakfast_target, BREAKFAST_ITEM1_ALLOCATION, item1)
+        set_meal_category_items(meal_category, "item2", find, breakfast_target, BREAKFAST_ITEM2_ALLOCATION, item2)
+
+
         puts "breakfast"
       when :snack1
+        self.set_meal_category_items(meal_category, "item1", find, breakfast_target, SNACK1_ITEM1_ALLOCATION)
+        self.set_meal_category_items(meal_category, "item2", find, breakfast_target, SNACK1_ITEM2_ALLOCATION)
         puts "snack1"
       when :lunch
+        self.set_meal_category_items(meal_category, "item1", find, breakfast_target, LUNCH_ITEM1_ALLOCATION)
+        self.set_meal_category_items(meal_category, "item2", find, breakfast_target, LUNCH_ITEM2_ALLOCATION)
         puts "lunch"
       when :snack2
+        self.set_meal_category_items(meal_category, "item1", find, breakfast_target, SNACK2_ITEM1_ALLOCATION)
+        self.set_meal_category_items(meal_category, "item2", find, breakfast_target, SNACK2_ITEM2_ALLOCATION)
         puts "snack2"
       when :dinner
         # Hard coded find to search for Lunch as that is the food category name in the DB
         # Foods meant for lunch or dinner can be interchanged
         find = Meal.where("category LIKE ?", "Lunch")
+        self.set_meal_category_items(meal_category, "item1", find, breakfast_target, DINNER_ITEM1_ALLOCATION)
+        self.set_meal_category_items(meal_category, "item2", find, breakfast_target, DINNER_ITEM2_ALLOCATION)
         puts "dinner"
       when :snack3
+        self.set_meal_category_items(meal_category, "item1", find, breakfast_target, SNACK3_ITEM1_ALLOCATION)
+        self.set_meal_category_items(meal_category, "item2", find, breakfast_target, SNACK3_ITEM2_ALLOCATION)
         puts "snack3"
       end
-
-      def set_meal_category_items(meal_category, find, meal_target, item_allocation)
-        meal_category = {
-          item1: {
-            name: find[0].food,
-            grams: ((find[0].per_grams / find[0].calories.to_f) * (breakfast_target * BREAKFAST_ITEM1_ALLOCATION)).round(-1)
-          },
-          item2: {
-            name: find[1].food,
-            grams: ((find[1].per_grams / find[1].calories.to_f) * (breakfast_target * BREAKFAST_ITEM2_ALLOCATION)).round(-1)
-          }
-        }
+    
+      nutrition_content.each do |content|
+        self.generate_meal_category(find, meal_category, "item1", content, item1)
+        self.generate_meal_category(find, meal_category, "item2", content, item2)
       end
 
+      def self.set_meal_category_items(meal_category, item_num, find, meal_target, item_allocation, db_id)
+        meal_category[item_num][:name] = find[0].food
+        meal_category[item_num][:grams] = ((find[0].per_grams / find[0].calories.to_f) * (breakfast_target * item_allocation)).round(-1)
+      end
 
-
-
-    end
-
-
-
-    breakfast_list = Meal.where("category LIKE ?","Breakfast")
-    breakfast_plan = {
-      item1: {
-        name: breakfast_list[0].food,
-        grams: ((breakfast_list[0].per_grams / breakfast_list[0].calories.to_f) * (breakfast_target * 0.80)).round(-1)
-      },
-      item2: {
-        name: breakfast_list[1].food,
-        grams: ((breakfast_list[1].per_grams / breakfast_list[1].calories.to_f) * (breakfast_target * 0.20)).round(-1)
+      meal_category {
+        item1: {
+          name:
+          grams:
+        },
+        item2: {
+          name:
+          grams:
+        }
       }
-    }
-
-    breakfast_item1 = 0
-    breakfast_item2 = 1
-
-    nutrition_content.each do |content|
-      self.generate_meal_category(breakfast_list, breakfast_plan, "item1", content, breakfast_item1)
-      self.generate_meal_category(breakfast_list, breakfast_plan, "item2", content, breakfast_item2)
     end
+
+
+
+    # breakfast_list = Meal.where("category LIKE ?","Breakfast")
+    # breakfast_plan = {
+    #   item1: {
+    #     name: breakfast_list[0].food,
+    #     grams: ((breakfast_list[0].per_grams / breakfast_list[0].calories.to_f) * (breakfast_target * 0.80)).round(-1)
+    #   },
+    #   item2: {
+    #     name: breakfast_list[1].food,
+    #     grams: ((breakfast_list[1].per_grams / breakfast_list[1].calories.to_f) * (breakfast_target * 0.20)).round(-1)
+    #   }
+    # }
+
+    # breakfast_item1 = 0
+    # breakfast_item2 = 1
+
 
 
 
