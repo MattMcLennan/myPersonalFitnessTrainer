@@ -18,7 +18,6 @@ class Meal < ActiveRecord::Base
     dinner_target = calories_target * 0.25
     snack3_target = calories_target * 0.05
 
-
     breakfast_list = Meal.where("category LIKE ?","Breakfast")
     breakfast_plan = {
       item1: {
@@ -38,6 +37,48 @@ class Meal < ActiveRecord::Base
       self.generate_meal_category(breakfast_list, breakfast_plan, "item1", content, breakfast_item1)
       self.generate_meal_category(breakfast_list, breakfast_plan, "item2", content, breakfast_item2)
     end
+
+
+    # Storing an empty daily_meal object ot iterate over
+    daily_meal = { breakfast: {}, snack1: {}, lunch: {}, snack2: {}, dinner: {}, snack3: {} }
+
+    daily_meal.each do |meal_category, value|
+
+      # case needed for unique cases
+      case meal_category
+      when :breakfast
+        puts "breakfast"
+      when :snack1
+        puts "snack1"
+      when :lunch
+        puts "lunch"
+      when :snack2
+        puts "snack2"
+      when :dinner
+        puts "dinner"
+      when :snack3
+        puts "snack3"
+      end
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     # Snack 1
     snack1_list = Meal.where("category LIKE ?","Snack 1")
