@@ -31,8 +31,9 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["info"]["full_name"]
-      # user.password_digest = auth["info"]["fullName"]
+      user.token = auth['credentials'].token
+      user.secret = auth['credentials'].secret
     end
-  end
+  ends
 
 end

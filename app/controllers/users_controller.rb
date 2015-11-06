@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+        puts request.env["omniauth.auth"].inspect
+
   end
 
   def new
