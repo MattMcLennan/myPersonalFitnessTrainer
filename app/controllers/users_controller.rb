@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-        # puts request.env["omniauth.auth"].inspect
   end
 
   def new
@@ -22,10 +21,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         format.html { redirect_to users_path, notice: "User was successfully created." }
-        # format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, alert: "Signup was not successful." }
-        # format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,6 +38,13 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :goal)
+      params.require(:user).permit(
+        :name,
+        :email,
+        :password,
+        :password_confirmation,
+        :goal
+      )
     end
+
 end

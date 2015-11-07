@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to users_path, notice: "Welcome back, #{user.name}!"
+      redirect_to users_path, notice: "Welcome back, #{user.name.capitalize}!"
     else
       flash.now[:alert] = "Log in failed..."
       render :new
@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    
+
   end
 
   def fitbit

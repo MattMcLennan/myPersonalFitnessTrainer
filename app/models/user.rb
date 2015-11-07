@@ -1,10 +1,5 @@
 class User < ActiveRecord::Base
 
-  # has_secure_password
-  # validates :name, :email, :password, presence: true
-  # validates :email, uniqueness: true
-  # validate :valid_email
- 
   has_many :meals
   has_many :exercises
 
@@ -14,6 +9,11 @@ class User < ActiveRecord::Base
   ]
 
   EMAIL_RE = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/
+
+  validates :name, :email, presence: true
+  validates :email, uniqueness: true
+
+  validate :valid_email
 
   def valid_email
     errors.add(:invalid_email, "Email not valid") unless email.match(EMAIL_RE)
