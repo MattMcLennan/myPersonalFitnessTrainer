@@ -63,6 +63,11 @@ class Meal < ActiveRecord::Base
       when :snack1
         item1 = Random.rand(find.length)
         item2 = Random.rand(find.length)
+        
+        # item2 cannot be the same as item1
+        while item2 == item1 do 
+          item2 = Random.rand(find.length)
+        end
 
         self.set_meal_category_items(value, "item1", find, snack1_target, SNACK1_ITEM1_ALLOCATION, item1)
         self.set_meal_category_items(value, "item2", find, snack1_target, SNACK1_ITEM2_ALLOCATION, item2)
@@ -77,6 +82,11 @@ class Meal < ActiveRecord::Base
       when :snack2
         item1 = Random.rand(find.length)
         item2 = Random.rand(find.length)
+
+        # item2 cannot be the same as item1
+        while item2 == item1 do 
+          item2 = Random.rand(find.length)
+        end
 
         self.set_meal_category_items(value, "item1", find, snack2_target, SNACK2_ITEM1_ALLOCATION, item1)
         self.set_meal_category_items(value, "item2", find, snack2_target, SNACK2_ITEM2_ALLOCATION, item2)
