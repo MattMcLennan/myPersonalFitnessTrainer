@@ -20,11 +20,12 @@ class SessionsController < ApplicationController
   end
 
   def fitbit
-    # auth_hash = request.env['omniauth.auth']
-    # render :text => auth_hash.inspect
-
-  user = User.from_omniauth(env["omniauth.auth"])
-  session[:user_id] = user.id
-  redirect_to root_url, notice: "Signed in!"
+    # raise env["omniauth.auth"].to_yaml
+    # puts env["omniauth.auth"]['credentials'].inspect
+    user = User.from_omniauth(env["omniauth.auth"])
+    session[:user_id] = user.id
+    # session[:token] = params.oauth_token
+    redirect_to users_path, notice: "Welcome back, #{user.name}!"
   end
+
 end

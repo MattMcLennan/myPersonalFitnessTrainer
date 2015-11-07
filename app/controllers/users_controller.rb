@@ -3,10 +3,17 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+        # puts request.env["omniauth.auth"].inspect
   end
 
   def new
     @user = User.new
+  end
+
+  def generate_user_info
+    @user = User.find(1)
+    # fitbit_weight(@user)
+    render :json => @user
   end
 
   def create

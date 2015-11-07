@@ -11,3 +11,7 @@ end
 def fitbit_weight(user)
   puts fitbit_client(user).body_weight_goal
 end
+
+def generate_user_info(user)
+  render :json => fitbit_client(user).body_weight_goal
+end
