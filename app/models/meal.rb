@@ -101,6 +101,14 @@ class Meal < ActiveRecord::Base
         puts "dinner"
         # binding.pry
       when :snack3
+        # Override value as only 1 item should be chosen for snack 3 --- Take it easy with night snacking!
+        value = {
+          item1: {
+            name: "",
+            grams: 0
+          }
+        }
+
         item1 = Random.rand(find.length)
         self.set_meal_category_items(value, "item1", find, snack3_target, SNACK3_ITEM1_ALLOCATION, item1)
         
@@ -110,7 +118,7 @@ class Meal < ActiveRecord::Base
 
     daily_meal[meal_category] = value
     end
-    binding.pry
+    # binding.pry
   end
 
   def self.set_meal_category_items(value, item_num, find, meal_target, item_allocation, db_id)
