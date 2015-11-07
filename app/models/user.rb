@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   EMAIL_RE = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/
 
-  validates :name, :email, :password, presence: true
+  validates :name, :email, presence: true
   validates :email, uniqueness: true
 
   validate :valid_email

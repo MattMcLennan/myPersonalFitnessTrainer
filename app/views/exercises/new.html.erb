@@ -1,0 +1,90 @@
+<div class="container">
+  <% if current_user %>
+    <h2>Your current goal is: <%= current_user.goal %></h2>
+    <p>Here are your choices:</p>
+
+    <% if current_user.goal == "Weight Gain" %>
+      <button id="ss_btn">Starting Strength</button>
+      <button id="sl_btn">Strong Lifts</button>
+
+      <div class="ss_form" id="ss_form">
+        <%= form_for @exercise do |f| %>
+          <% if @exercise.errors.any? %>
+            <div>
+              <%= pluralize(@exercise.errors.count, "error") %> prevented this movie from being submitted:
+              <ul>
+                <% @exercise.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div>
+            <%= f.label :squat %><br>
+            <%= f.text_field :squat %>
+          </div>
+          <div>
+            <%= f.label :deadlift %><br>
+            <%= f.text_field :deadlift %>
+          </div>
+          <div>
+            <%= f.label :bench %><br>
+            <%= f.text_field :bench %>
+          </div>
+          <div>
+            <%= f.label :overhead_press %><br>
+            <%= f.text_field :overhead_press %>
+          </div><div>
+            <%= f.label :chinups %><br>
+            <%= f.text_field :chinups %>
+          </div>
+          <div>
+            <%= f.label :pullups %><br>
+            <%= f.text_field :pullups %>
+          </div>
+          <div>
+            <%= f.submit "Submit" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="sl_form" id="sl_form">
+        <%= form_for @exercise do |f| %>
+          <% if @exercise.errors.any? %>
+            <div>
+              <%= pluralize(@exercise.errors.count, "error") %> prevented this movie from being submitted:
+              <ul>
+                <% @exercise.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div>
+            <%= f.label :squat %><br>
+            <%= f.text_field :squat %>
+          </div>
+          <div>
+            <%= f.label :deadlift %><br>
+            <%= f.text_field :deadlift %>
+          </div>
+          <div>
+            <%= f.label :bench %><br>
+            <%= f.text_field :bench %>
+          </div>
+          <div>
+            <%= f.label :overhead_press %><br>
+            <%= f.text_field :overhead_press %>
+          </div><div>
+            <%= f.label :barbell_row %><br>
+            <%= f.text_field :barbell_row %>
+          </div>
+          <div>
+            <%= f.submit "Submit" %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+  <% end %>
+</div>
