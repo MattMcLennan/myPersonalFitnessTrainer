@@ -1,20 +1,20 @@
 food,calories,protein,carbs,fat,per_grams,diet_name,category
 Turkey,170,29,0,5,100,Paleo,Lunch
-Chicken breast,165,31,0,4,100,Paleo,Lunch
-Pork tenderloin,143,26,0,4,100,Paleo,Lunch
-Pork chops,157,21,1,8,100,Paleo,Lunch
+Chickenbreast,165,31,0,4,100,Paleo,Lunch
+Porktenderloin,143,26,0,4,100,Paleo,Lunch
+Porkchops,157,21,1,8,100,Paleo,Lunch
 Steak,194,28,0,9,100,Paleo,Lunch
 Veal,172,24,0,8,100,Paleo,Lunch
 Pork,242,27,0,14,100,Paleo,Lunch
-Ground beef,332,14,0,30,100,Paleo,Lunch
-Chicken thigh,177,24,0,8,100,Paleo,Lunch
-Chicken leg,239,27,0,14,100,Paleo,Lunch
+Groundbeef,332,14,0,30,100,Paleo,Lunch
+Chickenthigh,177,24,0,8,100,Paleo,Lunch
+Chickenleg,239,27,0,14,100,Paleo,Lunch
 Lamb,294,25,0,21,100,Paleo,Lunch
 Shrimp,99,24,0,0,100,Paleo,Lunch
 Lobster,89,19,0,1,100,Paleo,Lunch
 Clams,148,26,5,2,100,Paleo,Lunch
 Salmon,208,20,0,13,100,Paleo,Lunch
-Lamb chops,294,25,0,21,100,Paleo,Lunch
+Lambchops,294,25,0,21,100,Paleo,Lunch
 Rabbit,173,33,0,4,100,Paleo,Lunch
 Eggs,155,13,1,11,100,Paleo,Breakfast
 Tuna,184,30,0,6,100,Paleo,Lunch
@@ -23,19 +23,19 @@ Trout,138,21,0,5,100,Paleo,Lunch
 Crab,83,18,0,1,100,Paleo,Lunch
 Asparagus,20,2,4,0,100,Paleo,Snack2
 Avocado,160,2,9,15,100,Paleo,Snack2
-Brussel Sprouts,43,3,9,0,100,Paleo,Snack2
+BrusselSprouts,43,3,9,0,100,Paleo,Snack2
 Carrots,41,1,10,0,100,Paleo,Snack2
 Spinach,23,3,4,0,100,Paleo,Snack2
 Celery,16,1,3,0,100,Paleo,Snack2
 Broccoli,34,0,7,3,100,Paleo,Snack2
 Cabbage,25,1,6,0,100,Paleo,Snack2
-Sweet Potato,86,2,20,0,100,Paleo,Lunch
+SweetPotato,86,2,20,0,100,Paleo,Lunch
 Almonds,576,21,22,49,100,Paleo,Snack2
 Cashews,553,18,30,44,100,Paleo,Snack2
 Walnuts,654,15,14,65,100,Paleo,Snack2
 Hazelnuts,628,15,17,61,100,Paleo,Snack2
 Pecans,690,9,14,72,100,Paleo,Snack2
-Pine Nuts,673,14,13,68,100,Paleo,Snack2
+PineNuts,673,14,13,68,100,Paleo,Snack2
 Apple,52,0,14,0,100,Paleo,Snack1
 Blackberries,43,1,10,1,100,Paleo,Snack1
 Peaches,39,1,10,0,100,Paleo,Snack1
@@ -50,7 +50,7 @@ Cantaloupe,34,1,8,0,100,Paleo,Snack1
 Tangerine,53,1,13,0,100,Paleo,Snack1
 Oranges,47,1,12,0,100,Paleo,Snack1
 Bananas,89,1,23,0,100,Paleo,Snack1
-Turkey Bacon,382,30,3,28,100,Paleo,Breakfast
-Basmati Rice,120,4,25,0,100,Paleo,Lunch 
-Blackberry Greek Yogurt,130,11,21,0,150,Paleo,Snack3
-Protein Shake,120,7,4,2,29,Paleo,Snack3 
+TurkeyBacon,382,30,3,28,100,Paleo,Breakfast
+BasmatiRice,120,4,25,0,100,Paleo,Lunch
+BlackberryGreekYogurt,130,11,21,0,150,Paleo,Snack3
+ProteinShake,120,7,4,2,29,Paleo,Snack3
