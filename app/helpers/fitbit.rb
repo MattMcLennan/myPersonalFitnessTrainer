@@ -9,6 +9,7 @@ def fitbit_client(user)
     :secret => user.secret, :user_id => user.uid})
 end
 
-def fitbit_weight(user)
-  puts fitbit_client(user).body_weight_goal
+def generate_user_info
+  user = User.find(params[:id])
+  render :json => fitbit_client(user).body_weight_goal
 end
