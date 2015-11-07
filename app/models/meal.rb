@@ -61,7 +61,7 @@ class Meal < ActiveRecord::Base
         self.set_meal_category_items(value, "item1", find, breakfast_target, BREAKFAST_ITEM1_ALLOCATION, item1)
         self.set_meal_category_items(value, "item2", find, breakfast_target, BREAKFAST_ITEM2_ALLOCATION, item2)
         puts "breakfast"
-        binding.pry
+        # binding.pry
       when :snack1
         item1 = Random.rand(find.length)
         item2 = Random.rand(find.length)
@@ -69,7 +69,7 @@ class Meal < ActiveRecord::Base
         self.set_meal_category_items(value, "item1", find, snack1_target, SNACK1_ITEM1_ALLOCATION, item1)
         self.set_meal_category_items(value, "item2", find, snack1_target, SNACK1_ITEM2_ALLOCATION, item2)
         puts "snack1"
-        binding.pry
+        # binding.pry
       when :lunch
         item1 = Random.rand(find.length)
         self.set_meal_category_items(value, "item1", find, lunch_target, LUNCH_ITEM1_ALLOCATION, item1)
@@ -79,7 +79,7 @@ class Meal < ActiveRecord::Base
 
         self.set_meal_category_items(value, "item2", find, lunch_target, LUNCH_ITEM2_ALLOCATION, item2)
         puts "lunch"
-        binding.pry
+        # binding.pry
       when :snack2
         item1 = Random.rand(find.length)
         item2 = Random.rand(find.length)
@@ -87,7 +87,7 @@ class Meal < ActiveRecord::Base
         self.set_meal_category_items(value, "item1", find, snack2_target, SNACK2_ITEM1_ALLOCATION, item1)
         self.set_meal_category_items(value, "item2", find, snack2_target, SNACK2_ITEM2_ALLOCATION, item2)
         puts "snack2"
-        binding.pry
+        # binding.pry
       when :dinner
         # Hard coded find to search for Lunch as that is the food category name in the DB
         # Foods meant for lunch or dinner can be interchanged
@@ -99,21 +99,23 @@ class Meal < ActiveRecord::Base
         item2 = Random.rand(find.length)
         self.set_meal_category_items(value, "item2", find, dinner_target, DINNER_ITEM2_ALLOCATION, item2)
         puts "dinner"
-        binding.pry
+        # binding.pry
       when :snack3
         item1 = Random.rand(find.length)
         self.set_meal_category_items(value, "item1", find, snack3_target, SNACK3_ITEM1_ALLOCATION, item1)
         
         puts "snack3"
-        binding.pry
+        # binding.pry
       end
-    binding.pry
+
+    daily_meal[meal_category] = value
     end
+    binding.pry
   end
 
   def self.set_meal_category_items(value, item_num, find, meal_target, item_allocation, db_id)
     value[item_num.to_sym][:name] = find[db_id].food
     value[item_num.to_sym][:grams] = ((find[db_id].per_grams / find[db_id].calories.to_f) * (meal_target * item_allocation)).round(-1)
-    binding.pry
+    # binding.pry
   end
 end
