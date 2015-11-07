@@ -10,11 +10,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # def generate_user_info
-  #   @user = User.find(1)
-  #   fitbit_weight(@user)
-  #   render :json => @user
-  # end
+  def generate_user_info
+    @user = User.find(1)
+    # fitbit_weight(@user)
+    render :json => @user
+  end
 
   def create
     @user = User.new(user_params)
