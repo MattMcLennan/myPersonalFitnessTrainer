@@ -6088,3 +6088,136 @@ Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-07 18:49:54 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-07 18:49:54 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-07 18:52:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 393ms (Views: 338.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-07 18:52:55 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-07 18:53:12 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 236ms (Views: 206.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:13 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-07 18:53:51 +0000
+Processing by MealsController#index as HTML
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 207ms (Views: 196.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-07 18:53:52 +0000
