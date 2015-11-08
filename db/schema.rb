@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107203356) do
+ActiveRecord::Schema.define(version: 20151107210629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,9 +30,6 @@ ActiveRecord::Schema.define(version: 20151107203356) do
     t.integer  "cable_crunches",   default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "pullups",          default: 0
-    t.integer  "chinups",          default: 0
-    t.string   "routine"
   end
 
   add_index "exercises", ["user_id"], name: "index_exercises_on_user_id", using: :btree

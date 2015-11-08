@@ -1,5 +1,10 @@
 class ExercisesController < ApplicationController
 
+  def index
+    @exercises = Exercise.all
+    binding.pry
+  end
+
   def new
     if !current_user
       redirect_to users_path, alert: "Log in first!"

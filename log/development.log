@@ -30523,3 +30523,16 @@ Started GET "/assets/meals.js?body=1" for 127.0.0.1 at 2015-11-07 15:38:18 -0500
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-07 15:38:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveColumnsFromExercises (20151107210629)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveColumnsFromExercises (20151107210629)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mALTER TABLE "exercises" DROP "chinups"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "exercises" DROP "pullups"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "exercises" DROP "routine"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151107210629"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

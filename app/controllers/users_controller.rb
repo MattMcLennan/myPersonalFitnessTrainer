@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    @exercise = Exercise.new
+    @exercises = Exercise.all
   end
 
   def new

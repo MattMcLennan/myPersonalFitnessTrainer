@@ -1,0 +1,50 @@
+<% @exercises.each do |exercise| %>
+<!-- Workout A -->
+  <table>
+    <tr>
+      <td></td>
+      <td>Sets x Reps</td>
+      <td>Session #1</td>
+      <td>Session #3</td>
+      <td>Session #5</td>
+      <td>Session #7</td>
+      <td>Session #9</td>
+      <td>Session #11</td>
+      <td>Session #13</td>
+      <td>Session #15</td>
+      <td>Session #17</td>
+      <td>Session #19</td>
+      <td>Session #21</td>
+      <td>Session #23</td>
+    </tr>
+    <tr>
+      <td>Squat <%= exercise.squat %></td>
+      <td>Bench <%= exercise.bench %></td>
+      <td>Deadlift <%= exercise.deadlift %></td>
+    </tr>
+  </table>
+<!-- Workout B -->
+  <table>
+    <tr>
+      <td></td>
+      <td>Sets x Reps</td>
+      <td>Session #2</td>
+      <td>Session #4</td>
+      <td>Session #6</td>
+      <td>Session #8</td>
+      <td>Session #10</td>
+      <td>Session #12</td>
+      <td>Session #14</td>
+      <td>Session #16</td>
+      <td>Session #18</td>
+      <td>Session #20</td>
+      <td>Session #22</td>
+      <td>Session #24</td>
+    </tr>
+    <tr>
+      <td>Squat</td>
+      <td>Overhead Press</td>
+      <td>Barbell Row</td>
+    </tr>
+  </table>
+<% end %>
