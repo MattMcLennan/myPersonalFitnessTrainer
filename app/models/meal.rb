@@ -60,6 +60,11 @@ class Meal < ActiveRecord::Base
         
         self.set_meal_category_items(value, "item1", find, breakfast_target, BREAKFAST_ITEM1_ALLOCATION, item1)
         self.set_meal_category_items(value, "item2", find, breakfast_target, BREAKFAST_ITEM2_ALLOCATION, item2)
+
+        nutrition_content.each do |nutrition_category|
+          self.generate_meal_category(value, "item1", find, nutrition_category, item1)
+          self.generate_meal_category(value, "item2", find, nutrition_category, item2)
+        end
       when :snack1
         item1 = Random.rand(find.length)
         item2 = Random.rand(find.length)
@@ -71,14 +76,27 @@ class Meal < ActiveRecord::Base
 
         self.set_meal_category_items(value, "item1", find, snack1_target, SNACK1_ITEM1_ALLOCATION, item1)
         self.set_meal_category_items(value, "item2", find, snack1_target, SNACK1_ITEM2_ALLOCATION, item2)
+
+        nutrition_content.each do |nutrition_category|
+          self.generate_meal_category(value, "item1", find, nutrition_category, item1)
+          self.generate_meal_category(value, "item2", find, nutrition_category, item2)
+        end
       when :lunch
         item1 = Random.rand(find.length)
         self.set_meal_category_items(value, "item1", find, lunch_target, LUNCH_ITEM1_ALLOCATION, item1)
+
+        nutrition_content.each do |nutrition_category|
+          self.generate_meal_category(value, "item1", find, nutrition_category, item1)
+        end
 
         find = Meal.where("category LIKE ?", "Snack1")
         item2 = Random.rand(find.length)
 
         self.set_meal_category_items(value, "item2", find, lunch_target, LUNCH_ITEM2_ALLOCATION, item2)
+
+        nutrition_content.each do |nutrition_category|
+          self.generate_meal_category(value, "item2", find, nutrition_category, item2)
+        end
       when :snack2
         item1 = Random.rand(find.length)
         item2 = Random.rand(find.length)
@@ -90,16 +108,29 @@ class Meal < ActiveRecord::Base
 
         self.set_meal_category_items(value, "item1", find, snack2_target, SNACK2_ITEM1_ALLOCATION, item1)
         self.set_meal_category_items(value, "item2", find, snack2_target, SNACK2_ITEM2_ALLOCATION, item2)
+
+        nutrition_content.each do |nutrition_category|
+          self.generate_meal_category(value, "item1", find, nutrition_category, item1)
+          self.generate_meal_category(value, "item2", find, nutrition_category, item2)
+        end
       when :dinner
         # Hard coded find to search for Lunch as that is the food category name in the DB
         # Foods meant for lunch or dinner can be interchanged
         find = Meal.where("category LIKE ?", "Lunch")
         item1 = Random.rand(find.length)
         self.set_meal_category_items(value, "item1", find, dinner_target, DINNER_ITEM1_ALLOCATION, item1)
+
+        nutrition_content.each do |nutrition_category|
+          self.generate_meal_category(value, "item1", find, nutrition_category, item1)
+        end
         
         find = Meal.where("category LIKE ?", "Snack2")
         item2 = Random.rand(find.length)
         self.set_meal_category_items(value, "item2", find, dinner_target, DINNER_ITEM2_ALLOCATION, item2)
+
+        nutrition_content.each do |nutrition_category|
+          self.generate_meal_category(value, "item2", find, nutrition_category, item2)
+        end
       when :snack3
         # Override value as only 1 item should be chosen for snack 3 --- Take it easy with night snacking!
         value = {
@@ -111,6 +142,10 @@ class Meal < ActiveRecord::Base
 
         item1 = Random.rand(find.length)
         self.set_meal_category_items(value, "item1", find, snack3_target, SNACK3_ITEM1_ALLOCATION, item1)
+
+        nutrition_content.each do |nutrition_category|
+          self.generate_meal_category(value, "item1", find, nutrition_category, item1)
+        end
       end
 
     daily_meal[meal_category] = value
@@ -122,4 +157,8 @@ class Meal < ActiveRecord::Base
     value[item_num.to_sym][:name] = find[db_id].food
     value[item_num.to_sym][:grams] = ((find[db_id].per_grams / find[db_id].calories.to_f) * (meal_target * item_allocation)).round(-1)
   end
+
+  def self.generate_meal_category(value, item_key, find, nutrition_category, db_id) 
+    value[item_key.to_sym][nutrition_category.to_sym] = ((find[db_id][nutrition_category.to_sym] / find[db_id]["per_grams"].to_f) * value[item_key.to_sym][:grams]).round(-1)
+  end 
 end
