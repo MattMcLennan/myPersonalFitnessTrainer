@@ -172,3 +172,91 @@ Started GET "/assets/start.js?body=1" for 10.0.2.2 at 2015-11-09 21:34:37 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-09 21:34:37 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-09 21:44:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 413ms (Views: 390.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/start.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:10 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-09 21:44:25 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 257ms (Views: 256.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/start.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-09 21:44:26 +0000
