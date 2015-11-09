@@ -12,5 +12,4 @@ class Exercise < ActiveRecord::Base
     :close_grip_bench,
     :cable_crunches,
     numericality: { greater_than_or_equal_to: 0 }
->>>>>>> exercise
 end
