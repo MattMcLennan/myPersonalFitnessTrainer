@@ -2,7 +2,6 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises = Exercise.all
-    binding.pry
   end
 
   def new
