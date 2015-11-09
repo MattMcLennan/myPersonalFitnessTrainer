@@ -179,7 +179,7 @@ class Meal < ActiveRecord::Base
 
     # Online source is saying 4 calories per gram of protein
     # 4 calories per gram of carbs
-    # 9 calories per gram of fat
+    # 9 calories per gram of fatsss
     puts "total cals: #{total_cals}"
     puts "total protein: #{total_protein}"
     puts "total carbs: #{total_carbs}"
