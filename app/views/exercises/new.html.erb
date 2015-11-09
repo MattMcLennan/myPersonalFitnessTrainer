@@ -16,22 +16,22 @@
       <% end %>
       <div>
         <%= f.label :squat, "Squat (lbs)" %><br>
-        <%= f.text_field :squat %>
+        <%= f.number_field :squat %>
       </div>
       <div>
         <%= f.label :deadlift, "Deadlift (lbs)" %><br>
-        <%= f.text_field :deadlift %>
+        <%= f.number_field :deadlift %>
       </div>
       <div>
         <%= f.label :bench, "Bench (lbs)" %><br>
-        <%= f.text_field :bench %>
+        <%= f.number_field :bench %>
       </div>
       <div>
         <%= f.label :overhead_press, "Overhead Press (lbs)" %><br>
-        <%= f.text_field :overhead_press %>
+        <%= f.number_field :overhead_press %>
       </div><div>
         <%= f.label :barbell_row, "Barbell Row (lbs)" %><br>
-        <%= f.text_field :barbell_row %>
+        <%= f.number_field :barbell_row %>
       </div>
       <div>
         <%= f.submit "Submit" %>
