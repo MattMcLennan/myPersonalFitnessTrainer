@@ -154,7 +154,6 @@ class Meal < ActiveRecord::Base
       end
       weekly_meal.push(daily_meal)
     end
-    self.total_test(nutrition_content, weekly_meal)
   end
 
   def self.set_meal_category_items(value, item_num, find, meal_target, item_allocation, db_id)
