@@ -18,7 +18,9 @@ class User < ActiveRecord::Base
   validate :valid_email
 
   def valid_email
-    errors.add(:invalid_email, "Email not valid") unless email.match(EMAIL_RE)
+    if email
+      errors.add(:invalid_email, "Email not valid") unless email.match(EMAIL_RE)
+    end
   end
 
   def self.from_omniauth(auth)
