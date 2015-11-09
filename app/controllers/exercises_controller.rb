@@ -39,7 +39,6 @@ class ExercisesController < ApplicationController
       :barbell_curl,
       :close_grip_bench,
       :cable_crunches,
-      :pullups
     )
   end
 
