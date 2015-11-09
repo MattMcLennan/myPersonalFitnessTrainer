@@ -1,5 +1,5 @@
-@consumer_key = 'f03b54e47ba1660519ced49131fd7ff9'
-@consumer_secret = 'a3d5288ecd685c7ee24cacfcdea1a5a3'
+@consumer_key = 'd73fc36ebb2877cb1900ad5b34630227'
+@consumer_secret = '7c52a7bec1d9dcabe7e7b0bfab0bde2a'
 
 
 def fitbit_client(user)
@@ -8,10 +8,7 @@ def fitbit_client(user)
     :secret => user.secret, :user_id => user.uid})
 end
 
-def fitbit_weight(user)
-  puts fitbit_client(user).body_weight_goal
-end
-
-def generate_user_info(user)
+def generate_user_info
+  user = User.find(params[:id])
   render :json => fitbit_client(user).body_weight_goal
 end
