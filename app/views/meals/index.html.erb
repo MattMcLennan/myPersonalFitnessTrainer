@@ -1,34 +1,71 @@
 <h1>Diet</h1> 
 
-<!-- <table class="striped">
+<table class="striped">
   <thead>
     <tr>
-        <th data-field="id">Name</th>
-        <th data-field="name">Item Name</th>
-        <th data-field="price">Item Price</th>
+      <th colspan="2">Daily Menu</th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td>Alvin</td>
-      <td>Eclair</td>
-      <td>$0.87</td>
+      <td colspan="2">Breakfast</td>
     </tr>
-    <tr>
-      <td>Alan</td>
-      <td>Jellybean</td>
-      <td>$3.76</td>
-    </tr>
-    <tr>
-      <td>Jonathan</td>
-      <td>Lollipop</td>
-      <td>$7.00</td>
-    </tr>
-  </tbody>
-</table> -->
 
-<% @meals.each do |daily_meal| %>
+    <tr>
+      <td><%= @meals[0][:breakfast][:item1][:name] %></td>
+      <td><%= @meals[1][:breakfast][:item1][:name] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Snack</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals[0][:snack1][:item1][:name] %></td>
+      <td><%= @meals[1][:snack1][:item1][:name] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Lunch</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals[0][:lunch][:item1][:name] %></td>
+      <td><%= @meals[1][:lunch][:item1][:name] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Snack</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals[0][:snack2][:item1][:name] %></td>
+      <td><%= @meals[1][:snack2][:item1][:name] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Dinner</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals[0][:dinner][:item1][:name] %></td>
+      <td><%= @meals[1][:dinner][:item1][:name] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Snack</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals[0][:snack3][:item1][:name] %></td>
+      <td><%= @meals[1][:snack3][:item1][:name] %></td>
+    </td>
+  </tbody>
+</table>
+
+
+<% @meals[0].each do |daily_meal| %>
   <p> <%= daily_meal %> </p>
 <% end %>
 
