@@ -150,7 +150,7 @@ class Meal < ActiveRecord::Base
 
     daily_meal[meal_category] = value
     end
-    p daily_meal
+    self.total_test(nutrition_content, daily_meal)
   end
 
   def self.set_meal_category_items(value, item_num, find, meal_target, item_allocation, db_id)
@@ -160,5 +160,30 @@ class Meal < ActiveRecord::Base
 
   def self.generate_meal_category(value, item_key, find, nutrition_category, db_id) 
     value[item_key.to_sym][nutrition_category.to_sym] = ((find[db_id][nutrition_category.to_sym] / find[db_id]["per_grams"].to_f) * value[item_key.to_sym][:grams]).round(-1)
+  end
+
+  def self.total_test(nutrition_content, daily_meal)
+    total_cals = 0
+    total_protein = 0
+    total_carbs = 0
+    total_fat = 0
+
+    daily_meal.each do |menu_category, value|
+      value.each do |key, value|
+        total_cals += value[:calories]
+        total_protein += value[:protein]
+        total_carbs += value[:carbs]
+        total_fat += value[:fat]
+      end
+    end
+
+    # Online source is saying 4 calories per gram of protein
+    # 4 calories per gram of carbs
+    # 9 calories per gram of fat
+    puts "total cals: #{total_cals}"
+    puts "total protein: #{total_protein}"
+    puts "total carbs: #{total_carbs}"
+    puts "total fat: #{total_fat}"
+
   end 
 end
