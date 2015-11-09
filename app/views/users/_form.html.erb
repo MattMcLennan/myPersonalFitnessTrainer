@@ -31,22 +31,6 @@
     <%= f.label :goal %><br>
     <%= f.select :goal, options_for_select(User::GOALS) %>
   </div>
-  <div class="field">
-    <%= f.label :fitBit_ID %><br>
-    <%= f.text_field :fitBit_ID %>
-  </div>
-  <div class="field">
-    <%= f.label :fitBit_auth %><br>
-    <%= f.text_field :fitBit_auth %>
-  </div>
-  <div class="field">
-    <%= f.label :fatSecret_ID %><br>
-    <%= f.text_field :fatSecret_ID %>
-  </div>
-  <div class="field">
-    <%= f.label :fatSecret_auth %><br>
-    <%= f.text_field :fatSecret_auth %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

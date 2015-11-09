@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_many :meals
   has_many :exercises
 
+  has_secure_password
+
   GOALS = [
     "Weight Gain",
     "Weight Loss"
