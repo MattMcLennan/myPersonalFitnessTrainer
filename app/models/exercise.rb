@@ -11,6 +11,5 @@ class Exercise < ActiveRecord::Base
     :barbell_curl,
     :close_grip_bench,
     :cable_crunches,
-    :pullups,
     numericality: { only_integer: true }
 end
