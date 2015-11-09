@@ -11,26 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151109190316) do
+ActiveRecord::Schema.define(version: 20151109194158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exercises", force: true do |t|
     t.integer  "user_id"
-    t.integer  "bench"
-    t.integer  "deadlift"
-    t.integer  "squat"
-    t.integer  "overhead_press"
-    t.integer  "barbell_row"
-    t.integer  "barbell_shrug"
-    t.integer  "tricep_extension"
-    t.integer  "barbell_curl"
-    t.integer  "close_grip_bench"
-    t.integer  "cable_crunches"
+    t.integer  "bench",            default: 0
+    t.integer  "deadlift",         default: 0
+    t.integer  "squat",            default: 0
+    t.integer  "overhead_press",   default: 0
+    t.integer  "barbell_row",      default: 0
+    t.integer  "barbell_shrug",    default: 0
+    t.integer  "tricep_extension", default: 0
+    t.integer  "barbell_curl",     default: 0
+    t.integer  "close_grip_bench", default: 0
+    t.integer  "cable_crunches",   default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "hyperextensions"
+    t.integer  "hyperextensions",  default: 0
   end
 
   add_index "exercises", ["user_id"], name: "index_exercises_on_user_id", using: :btree
