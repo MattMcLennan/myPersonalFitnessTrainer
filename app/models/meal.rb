@@ -175,8 +175,6 @@ class Meal < ActiveRecord::Base
         end
       end
     end
-
     puts "total cals for the week: #{weekly_cals}"
-
   end 
 end
