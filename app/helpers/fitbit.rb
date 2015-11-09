@@ -1,4 +1,3 @@
-
 @consumer_key = 'd73fc36ebb2877cb1900ad5b34630227'
 @consumer_secret = '7c52a7bec1d9dcabe7e7b0bfab0bde2a'
 
