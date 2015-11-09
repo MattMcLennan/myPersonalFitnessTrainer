@@ -10,10 +10,11 @@
     <h2>Hello <%= current_user.name.capitalize %> </h2>
 
     <% if !current_user.template_chosen %>
-      <p>It looks like you haven't set a template yet!</p>
-      <p><%= link_to "Pick a template", new_exercise_path %></p>
+      <p>It looks like you haven't set up your template yet!</p>
+      <p><%= link_to "Set up template", new_exercise_path %></p>
     <% else %>
       <h1>Here's your current template:</h1>
+      <%= render './exercises/template' %>
     <% end %>
 
     <%= link_to "Log out", session_path("current"), method: :delete %>

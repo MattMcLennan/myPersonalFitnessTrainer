@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @exercise = Exercise.find_by(user_id: current_user)
   end
 
   def new

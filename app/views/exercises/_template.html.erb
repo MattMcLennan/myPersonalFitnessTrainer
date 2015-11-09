@@ -1,0 +1,282 @@
+<!-- Workout A -->
+<table>
+  <tr>
+    <td></td>
+    <td>Sets x Reps</td>
+    <td>Session #1</td>
+    <td>Session #3</td>
+    <td>Session #5</td>
+    <td>Session #7</td>
+    <td>Session #9</td>
+    <td>Session #11</td>
+    <td>Session #13</td>
+    <td>Session #15</td>
+    <td>Session #17</td>
+    <td>Session #19</td>
+    <td>Session #21</td>
+    <td>Session #23</td>
+  </tr>
+  <tr>
+    <td>Squat</td>
+    <td>5 x 5</td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+  </tr>
+  <tr>
+    <td>Bench</td>
+    <td>5 x 5</td>
+    <td>
+      <% if @exercise.bench < 45 %>
+        BAR (45lbs)
+      <% end %>
+    </td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+    <td><%= @exercise.bench %></td>
+  </tr>
+  <tr>
+    <td>Barbell Row</td>
+    <td>5 x 5</td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+  </tr>
+  <tr>
+    <td>Barbell Shrugs</td>
+    <td>3 x 8</td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+    <td><%= @exercise.barbell_shrug %></td>
+  </tr>
+  <tr>
+    <td>Tricep Extension</td>
+    <td>3 x 8</td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+    <td><%= @exercise.tricep_extension %></td>
+  </tr>
+  <tr>
+    <td>Barbell Curl</td>
+    <td>3 x 8</td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+  </tr>
+  <tr>
+    <td>Hyperextensions</td>
+    <td>2 x 10</td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+    <td><%= @exercise.hyperextensions %></td>
+  </tr>
+  <tr>
+    <td>Cable Crunches</td>
+    <td>3 x 10</td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+  </tr>
+</table>
+<!-- Workout B -->
+<table>
+  <tr>
+    <td></td>
+    <td>Sets x Reps</td>
+    <td>Session #2</td>
+    <td>Session #4</td>
+    <td>Session #6</td>
+    <td>Session #8</td>
+    <td>Session #10</td>
+    <td>Session #12</td>
+    <td>Session #14</td>
+    <td>Session #16</td>
+    <td>Session #18</td>
+    <td>Session #20</td>
+    <td>Session #22</td>
+    <td>Session #24</td>
+  </tr>
+  <tr>
+    <td>Squat</td>
+    <td>5 x 5</td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+    <td><%= @exercise.squat %></td>
+  </tr>
+  <tr>
+    <td>Deadlift</td>
+    <td>1 x 5</td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+    <td><%= @exercise.deadlift %></td>
+  </tr>
+  <tr>
+    <td>Overhead Press</td>
+    <td>5 x 5</td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+    <td><%= @exercise.overhead_press %></td>
+  </tr>
+  <tr>
+    <td>Barbell Row (10% Lighter than Workout A)</td>
+    <td>3 x 8</td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+    <td><%= @exercise.barbell_row %></td>
+  </tr>
+  <tr>
+    <td>Close Grip Bench</td>
+    <td>3 x 8</td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+    <td><%= @exercise.close_grip_bench %></td>
+  </tr>
+  <tr>
+    <td>Barbell Curl</td>
+    <td>3 x 8</td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+    <td><%= @exercise.barbell_curl %></td>
+  </tr>
+  <tr>
+    <td>Cable Crunches</td>
+    <td>3 x 10</td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+    <td><%= @exercise.cable_crunches %></td>
+  </tr>
+</table>
