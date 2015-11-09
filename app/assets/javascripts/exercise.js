@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready (function(){
   $('#ss_btn').click(function(){
     $('#ss_form').css('display', 'inline');
     $('#sl_form').css('display', 'none');
