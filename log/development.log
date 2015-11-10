@@ -17452,3 +17452,48 @@ Started GET "/assets/meals.js?body=1" for 127.0.0.1 at 2015-11-10 11:09:38 -0500
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-10 11:09:38 -0500
 =======
 >>>>>>> f3e46c5c960f1817ed490a6ad0ac7a4cb525174c
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddMoreExercisesToExcercises (20151109222357)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.8ms)[0m  [1mALTER TABLE "exercises" ADD COLUMN "calf_raise" integer DEFAULT 0[0m
+  [1m[35m (3.7ms)[0m  ALTER TABLE "exercises" ADD COLUMN "pullups" integer DEFAULT 0
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151109222357"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Migrating to RemoveExercisesFromExercises (20151110003330)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "exercises" DROP "hyperextensions"
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "exercises" DROP "close_grip_bench"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "exercises" DROP "barbell_shrug"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151110003330"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddBarbellShrugsExercises (20151110005241)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.1ms)[0m  ALTER TABLE "exercises" ADD COLUMN "barbell_shrug" integer DEFAULT 0
+  [1m[36m (3.4ms)[0m  [1mALTER TABLE "exercises" ADD COLUMN "close_grip_bench" integer DEFAULT 0[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151110005241"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveBarbellShrugsFromExercises (20151110005607)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "exercises" DROP "barbell_shrug"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151110005607"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveCloseGripBenchFromExercises (20151110005731)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "exercises" DROP "close_grip_bench"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151110005731"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddRepsToExercises (20151110034837)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mALTER TABLE "exercises" ADD COLUMN "bench_reps" integer DEFAULT 0[0m
+  [1m[35m (2.9ms)[0m  ALTER TABLE "exercises" ADD COLUMN "deadlift_reps" integer DEFAULT 0
+  [1m[36m (3.2ms)[0m  [1mALTER TABLE "exercises" ADD COLUMN "squat_reps" integer DEFAULT 0[0m
+  [1m[35m (5.3ms)[0m  ALTER TABLE "exercises" ADD COLUMN "overhead_press_reps" integer DEFAULT 0
+  [1m[36m (6.2ms)[0m  [1mALTER TABLE "exercises" ADD COLUMN "barbell_row_reps" integer DEFAULT 0[0m
+  [1m[35m (5.3ms)[0m  ALTER TABLE "exercises" ADD COLUMN "tricep_extension_reps" integer DEFAULT 0
+  [1m[36m (4.7ms)[0m  [1mALTER TABLE "exercises" ADD COLUMN "barbell_curl_reps" integer DEFAULT 0[0m
+  [1m[35m (3.8ms)[0m  ALTER TABLE "exercises" ADD COLUMN "cable_crunches_reps" integer DEFAULT 0
+  [1m[36m (5.5ms)[0m  [1mALTER TABLE "exercises" ADD COLUMN "calf_raise_reps" integer DEFAULT 0[0m
+  [1m[35m (6.0ms)[0m  ALTER TABLE "exercises" ADD COLUMN "pullup_reps" integer DEFAULT 0
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151110034837"]]
+  [1m[35m (3.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
