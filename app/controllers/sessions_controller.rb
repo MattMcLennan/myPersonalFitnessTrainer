@@ -33,11 +33,16 @@ class SessionsController < ApplicationController
     @consumer_key = '10c780512cf30750c716e8523c718155'
     @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
 
+
     client = Fitgem::Client.new({:consumer_key => @consumer_key, 
     :consumer_secret => @consumer_secret, :token => @user.token, 
     :secret => @user.secret, :user_id => @user.uid})
 
+    binding.pry
+    # client.activity_on_date_range(:steps, '2015-07-07', 'today')
     # client.body_weight_goal
+    # Need Partner API access for:
+      # client.intraday_time_series({resource: :calories ,date: '2015-10-12',  detailLevel:  "1min", startTime: '10:20', endTime: '10:40'})
 
     session[:user_id] = @user.id
     redirect_to new_user_path(id: @user.id) 

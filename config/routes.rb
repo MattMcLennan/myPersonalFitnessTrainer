@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-root 'users#index'
-
+root 'start#index'
 
 # get   '/', :to => 'sessions#new', :as => :/
 # get  '/auth/fitbit', :to => 'sessions#fitbit'
