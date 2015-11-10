@@ -1,5 +1,6 @@
-# @consumer_key = 'd73fc36ebb2877cb1900ad5b34630227'
-# @consumer_secret = '7c52a7bec1d9dcabe7e7b0bfab0bde2a'
+
+# @consumer_key = '10c780512cf30750c716e8523c718155'
+# @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
 
 
 # def fitbit_client(user)
