@@ -5944,3 +5944,102 @@ Started GET "/assets/start.js?body=1" for 10.0.2.2 at 2015-11-10 00:57:49 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 00:57:49 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:08:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 957ms (Views: 928.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:23 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:23 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:23 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:23 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:23 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:23 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:23 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:23 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:24 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:24 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:24 +0000
+
+
+Started GET "/assets/start.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:24 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:24 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 332ms (Views: 263.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:08:33 +0000
+
+
+Started GET "/users/generate_user_info" for 10.0.2.2 at 2015-11-10 21:11:44 +0000
+Processing by UsersController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/generate_user_info" for 10.0.2.2 at 2015-11-10 21:11:45 +0000
+Processing by UsersController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
