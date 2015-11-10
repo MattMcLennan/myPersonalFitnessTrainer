@@ -1,6 +1,6 @@
 <% if current_user %>
   <h2>Your current goal is: <%= current_user.goal %></h2>
-  <p>Fill out the form below to generate your template:</p>
+  <p>Fill out the form below to generate your new template:</p>
 
   <hr>
   <%= link_to "Home Page", users_path %>
@@ -60,6 +60,12 @@
       <%= f.number_field :pullups %>
       <%= f.label :pullup_reps, "Reps"%>
       <%= f.number_field :pullup_reps %>
+    </div>
+    <div>
+      <%= f.label :cable_crunches, "Cable Crunches (lbs)" %>
+      <%= f.number_field :cable_crunches %>
+      <%= f.label :cable_crunches_reps, "Reps"%>
+      <%= f.number_field :cable_crunches_reps %>
     </div>
     <div>
       <%= f.submit "Submit" %>
