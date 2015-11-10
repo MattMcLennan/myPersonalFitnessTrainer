@@ -1,4 +1,4 @@
-exitclass Exercise < ActiveRecord::Base
+class Exercise < ActiveRecord::Base
   belongs_to :user
 
   validates :bench,
