@@ -1,5 +1,4 @@
 <!-- Commented out code -->
-<% if false %>
   <h1>Personal Fitness Trainer</h1>
 
     <% if flash[:notice] || flash[:alert]%>
@@ -23,13 +22,15 @@
     <% else %>
       <%= link_to "Log In", new_session_path %> | <%= link_to "Sign Up With Fitbit", "/auth/fitbit" %>
       <h3>Here's your current template:</h3>
-      <%= link_to "Edit your weights", edit_exercise_path(@exercises) %>
-      <%= render './exercises/template' %>
+      <% if false %>
+        <%= link_to "Edit your weights", edit_exercise_path(@exercises) %>
+        <%= render './exercises/template' %>
+      <% end %>
     <% end %>
 
     <button>AJAX</button>
-<% end %>
 <!-- End of commented out code -->
+
 
 <nav>
   <div class="nav-wrapper #78909c blue-grey lighten-1">
