@@ -12,9 +12,7 @@ class UsersController < ApplicationController
   end
 
   def generate_user_info
-    # @user = User.find(1)
-    binding.pry
-    @user_data = fitbit_weight_goal(current_user.id)
+    @user_data = fitbit_weight_goal(current_user)
     render :json => @user_data
   end
 
@@ -42,10 +40,11 @@ class UsersController < ApplicationController
     client = Fitgem::Client.new({:consumer_key => @consumer_key, 
       :consumer_secret => @consumer_secret, :token => user.token, 
       :secret => user.secret, :user_id => user.uid})
+    binding.pry
   end
 
   def fitbit_weight_goal(user)
-    fitbit_client(user).body_weight_goal
+    fitbit_client(user).user_id
   end
 
   private
