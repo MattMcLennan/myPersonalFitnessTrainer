@@ -15,8 +15,7 @@ class SessionsController < ApplicationController
     redirect_to users_path, notice: "Adios!"
   end
 
-  def failure
-    
+  def failure  
   end
 
   def fitbit
