@@ -7,7 +7,7 @@
   <% end %>
 
   <% if current_user %>
-    <h2>Hello <%= current_user.name.capitalize %> </h2>
+    <h2>Hello <%= current_user.name %> </h2>
 
     <% if !current_user.template_chosen %>
       <p>It looks like you haven't set up your template yet!</p>
@@ -19,9 +19,7 @@
 
     <%= link_to "Log out", session_path("current"), method: :delete %>
   <% else %>
-    <%= link_to "Log In", new_session_path %> | <%= link_to "Sign Up", new_user_path %>
-
-    <%= link_to "Sign in with Fitbit", "/auth/fitbit" %>
+    <%= link_to "Log In", new_session_path %> | <%= link_to "Sign Up With Fitbit", "/auth/fitbit" %>
   <% end %>
 
   <button>AJAX</button>
