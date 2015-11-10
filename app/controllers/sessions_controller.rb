@@ -33,10 +33,12 @@ class SessionsController < ApplicationController
     @consumer_key = '10c780512cf30750c716e8523c718155'
     @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
 
+
     client = Fitgem::Client.new({:consumer_key => @consumer_key, 
     :consumer_secret => @consumer_secret, :token => @user.token, 
     :secret => @user.secret, :user_id => @user.uid})
 
+    binding.pry
     # client.body_weight_goal
 
     session[:user_id] = @user.id
