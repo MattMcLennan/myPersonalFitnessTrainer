@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in?, only: [:update, :destroy]
 
   def index
     @users = User.all
@@ -7,21 +8,23 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    @user = User.find(params[:id])
   end
 
   def generate_user_info
-    @user = User.find(1)
-    # fitbit_weight(@user)
-    render :json => @user
+    # @user = User.find(1)
+    binding.pry
+    @user_data = fitbit_weight_goal(current_user.id)
+    render :json => @user_data
   end
 
-  def create
+  def update
     @user = User.new(user_params)
     @user.save
     respond_to do |format|
       if @user.save
-        format.html { redirect_to users_path, notice: "User was successfully created." }
+        format.html { redirect_to users_path, notice: "#{@user.name} welcome!" }
+        # session[:user_id] = @user.id
       else
         format.html { render :new, alert: "Signup was not successful." }
       end
@@ -32,6 +35,19 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+  @consumer_key = 'd73fc36ebb2877cb1900ad5b34630227'
+  @consumer_secret = '7c52a7bec1d9dcabe7e7b0bfab0bde2a'
+
+  def fitbit_client(user)
+    client = Fitgem::Client.new({:consumer_key => @consumer_key, 
+      :consumer_secret => @consumer_secret, :token => user.token, 
+      :secret => user.secret, :user_id => user.uid})
+  end
+
+  def fitbit_weight_goal(user)
+    fitbit_client(user).body_weight_goal
+  end
+
   private
 
     def set_user
@@ -40,11 +56,11 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(
-        :name,
-        :email,
-        :password,
-        :password_confirmation,
-        :goal
+        # :name,
+        :email
+        # :password,
+        # :password_confirmation,
+        # :goal
       )
     end
 
