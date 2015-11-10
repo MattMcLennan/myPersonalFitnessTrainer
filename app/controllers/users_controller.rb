@@ -33,23 +33,23 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
-  @consumer_key = '10c780512cf30750c716e8523c718155'
-  @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
+  # @consumer_key = '10c780512cf30750c716e8523c718155'
+  # @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
 
-  def fitbit_client(user)
-    binding.pry
-    client = Fitgem::Client.new({:consumer_key => @consumer_key, 
-      :consumer_secret => @consumer_secret, :token => user.token, 
-      :secret => user.secret, :user_id => user.uid})
+  # def fitbit_client(user)
+  #   binding.pry
+  #   client = Fitgem::Client.new({:consumer_key => @consumer_key, 
+  #     :consumer_secret => @consumer_secret, :token => user.token, 
+  #     :secret => user.secret, :user_id => user.uid})
 
-    binding.pry   
-    # Reconnects existing user using their credentials
-    access_token = client.reconnect(user.token, user.secret) 
-  end
+  #   binding.pry   
+  #   # Reconnects existing user using their credentials
+  #   access_token = client.reconnect(user.token, user.secret) 
+  # end
 
-  def fitbit_weight_goal(user)
-    fitbit_client(user).body_fat_goals
-  end
+  # def fitbit_weight_goal(user)
+  #   fitbit_client(user).body_fat_goals
+  # end
 
   private
 

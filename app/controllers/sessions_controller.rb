@@ -37,9 +37,8 @@ class SessionsController < ApplicationController
     :consumer_secret => @consumer_secret, :token => @user.token, 
     :secret => @user.secret, :user_id => @user.uid})
 
+    # client.body_weight_goal
 
-
-    binding.pry
     session[:user_id] = @user.id
     redirect_to new_user_path(id: @user.id) 
   end
