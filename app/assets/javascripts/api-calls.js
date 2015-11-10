@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
    $('button').click(function() {
       $.ajax({
-         url: "users/generate_user_info",
+         url: "sessions/generate_user_info",
          type: "get",
          dataType : "json",
          success: success,

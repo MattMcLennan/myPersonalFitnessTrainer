@@ -1905,3 +1905,2351 @@ Processing by SessionsController#fitbit as HTML
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
   [1m[35m (0.1ms)[0m  COMMIT
 Completed   in 267468ms
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 20:38:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (3.0ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 1382ms (Views: 1187.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:38:42 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:38:42 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:38:42 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:38:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:43 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:43 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:43 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:44 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:44 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:44 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:38:44 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:38:46 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:38:46 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=e1ad022881f16932e1a1196d47c27bc2&oauth_verifier=105a759fd02c0f1697750abed0a4b180" for 10.0.2.2 at 2015-11-10 20:38:49 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"e1ad022881f16932e1a1196d47c27bc2", "oauth_verifier"=>"105a759fd02c0f1697750abed0a4b180"}
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 138ms
+
+NameError (undefined local variable or method `token' for #<SessionsController:0xa818918>):
+  app/controllers/sessions_controller.rb:46:in `fitbit'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (91.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 20:39:08 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (0.2ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 810ms (Views: 731.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:39:10 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:39:10 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:39:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:39:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:10 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:11 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:11 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:11 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:11 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:39:12 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:39:13 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:39:13 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=bbf401f1d828c94f1b9dd1d8aabf4542&oauth_verifier=1cd1777015e7a7e2e1fd9a899bdb0cc0" for 10.0.2.2 at 2015-11-10 20:39:16 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"bbf401f1d828c94f1b9dd1d8aabf4542", "oauth_verifier"=>"1cd1777015e7a7e2e1fd9a899bdb0cc0"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 125ms
+
+NameError (undefined local variable or method `token' for #<SessionsController:0xa52b778>):
+  app/controllers/sessions_controller.rb:46:in `fitbit'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (97.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 20:41:36 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (0.6ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 861ms (Views: 779.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:41:37 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:41:37 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:37 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:41:37 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:41:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:38 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:38 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:38 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:38 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:38 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:41:40 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:41:40 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=df3fbae029018e0ec85f1ee8b5ef5afb&oauth_verifier=4b6aa39b1d138e4bfa8e22b95e4d6a20" for 10.0.2.2 at 2015-11-10 20:41:42 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"df3fbae029018e0ec85f1ee8b5ef5afb", "oauth_verifier"=>"4b6aa39b1d138e4bfa8e22b95e4d6a20"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new?id=1
+Completed 302 Found in 54ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/new?id=1" for 10.0.2.2 at 2015-11-10 20:41:42 +0000
+Processing by UsersController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (1031.6ms)
+  Rendered users/new.html.erb within layouts/application (1098.0ms)
+Completed 200 OK in 1824ms (Views: 1816.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:41:44 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:41:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:41:45 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:41:45 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:45 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:45 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:45 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:46 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:46 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:46 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:41:46 +0000
+
+
+Started PATCH "/users/1" for 10.0.2.2 at 2015-11-10 20:42:25 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jcHgzXA+itwfDQLgRayQ2pe1HXbVKnaQZ78JjAGd8Hg=", "user"=>{"email"=>"asdfljadf@aol.com"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-11-10 20:42:25.709821"], ["email", "asdfljadf@aol.com"], ["updated_at", "2015-11-10 20:42:25.709821"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 44ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 20:42:25 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (2.1ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 716ms (Views: 708.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:42:26 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:42:26 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:42:26 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:42:26 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:42:27 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:42:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:42:27 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:42:27 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:42:27 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:42:27 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:42:27 +0000
+
+
+Started GET "/users/generate_user_info" for 10.0.2.2 at 2015-11-10 20:42:38 +0000
+
+AbstractController::ActionNotFound (The action 'generate_user_info' could not be found for UsersController):
+  actionpack (4.1.6) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.text.erb (0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 20:45:18 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (1.8ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 790ms (Views: 705.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:45:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:19 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:45:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:45:20 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:45:20 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:20 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:20 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:20 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:20 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:20 +0000
+
+
+Started DELETE "/session.current" for 10.0.2.2 at 2015-11-10 20:45:22 +0000
+Processing by SessionsController#destroy as 
+  Parameters: {"authenticity_token"=>"jcHgzXA+itwfDQLgRayQ2pe1HXbVKnaQZ78JjAGd8Hg="}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 20:45:22 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (0.6ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 677ms (Views: 671.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:45:23 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:45:23 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:23 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:45:23 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:23 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:45:23 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:24 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:24 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:24 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:24 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:45:24 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:45:25 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:45:26 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=54008d3947cb3ebef8cbb4a80d0c9eea&oauth_verifier=e785d20e07c5a1ef98ee8f1ca3b11367" for 10.0.2.2 at 2015-11-10 20:45:28 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"54008d3947cb3ebef8cbb4a80d0c9eea", "oauth_verifier"=>"e785d20e07c5a1ef98ee8f1ca3b11367"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 41ms
+
+NameError (undefined local variable or method `verifier' for #<SessionsController:0xb19b170>):
+  app/controllers/sessions_controller.rb:47:in `fitbit'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (77.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 20:58:10 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (1.0ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 760ms (Views: 677.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:58:11 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:13 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:58:14 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:58:14 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=8752c33efd291e5b7039dccd2e7b5131&oauth_verifier=3c263ad3e94be16348edc818d85c0868" for 10.0.2.2 at 2015-11-10 20:58:16 +0000
+
+ActionController::RoutingError (undefined local variable or method `client' for SessionsController:Class):
+  app/controllers/sessions_controller.rb:50:in `<class:SessionsController>'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (123.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 20:58:29 +0000
+Processing by UsersController#index as HTML
+  [1m[36mExercise Load (0.6ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 795ms (Views: 725.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:58:30 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:58:30 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:58:31 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:58:31 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:31 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:31 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:31 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:31 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:58:32 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:58:33 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:58:33 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=d6070945ca9efc8522bea0e1b5ddceca&oauth_verifier=98fa2f0307646ebf386a5a9093350875" for 10.0.2.2 at 2015-11-10 20:58:35 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"d6070945ca9efc8522bea0e1b5ddceca", "oauth_verifier"=>"98fa2f0307646ebf386a5a9093350875"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/sessions_controller.rb:21:in `fitbit'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 20:59:38 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 754ms (Views: 679.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:39 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:40 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:40 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:40 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:40 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:41 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:41 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:59:42 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 20:59:43 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=b3c6c7af640dd626c811d47439a80940&oauth_verifier=dbb43e1c39a296d8c0395e88423e42ff" for 10.0.2.2 at 2015-11-10 20:59:45 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"b3c6c7af640dd626c811d47439a80940", "oauth_verifier"=>"dbb43e1c39a296d8c0395e88423e42ff"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new?id=1
+Completed 302 Found in 30ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/users/new?id=1" for 10.0.2.2 at 2015-11-10 20:59:45 +0000
+Processing by UsersController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (6.1ms)
+  Rendered users/new.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 819ms (Views: 813.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:46 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:48 +0000
+
+
+Started PATCH "/users/1" for 10.0.2.2 at 2015-11-10 20:59:53 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jcHgzXA+itwfDQLgRayQ2pe1HXbVKnaQZ78JjAGd8Hg=", "user"=>{"email"=>"jkhkljh@aol.com"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-11-10 20:59:53.882995"], ["email", "jkhkljh@aol.com"], ["updated_at", "2015-11-10 20:59:53.882995"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 31ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 20:59:53 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.6ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 680ms (Views: 672.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:54 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:54 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:54 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:55 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:55 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 20:59:55 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:55 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:55 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:55 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 20:59:55 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:00:31 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (3.8ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 768ms (Views: 678.3ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:33 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:34 +0000
+
+
+Started DELETE "/session.current" for 10.0.2.2 at 2015-11-10 21:00:35 +0000
+Processing by SessionsController#destroy as 
+  Parameters: {"authenticity_token"=>"jcHgzXA+itwfDQLgRayQ2pe1HXbVKnaQZ78JjAGd8Hg="}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:00:35 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 649ms (Views: 644.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:00:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:36 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:00:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:36 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:00:36 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:00:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:36 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:36 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:37 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:00:37 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:00:38 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:00:39 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=55a8834e950e6c49b668cbd740fb5164&oauth_verifier=ff726a501b9c10474b01bfc3374a3580" for 10.0.2.2 at 2015-11-10 21:00:42 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"55a8834e950e6c49b668cbd740fb5164", "oauth_verifier"=>"ff726a501b9c10474b01bfc3374a3580"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed   in 154405ms
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:13:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (3.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 1360ms (Views: 1159.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:13:08 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:13:08 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:13:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:13:08 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:13:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:13:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:13:09 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:13:09 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:13:09 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:13:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:13:09 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:13:11 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:13:12 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=fba38178b4310489d49308c68cecfe49&oauth_verifier=3e1d007a3d6c35cdceeb241b633c5492" for 10.0.2.2 at 2015-11-10 21:13:15 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"fba38178b4310489d49308c68cecfe49", "oauth_verifier"=>"3e1d007a3d6c35cdceeb241b633c5492"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mCACHE (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed   in 165432ms
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:16:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (3.8ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 1363ms (Views: 1167.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:16:34 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:16:34 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:16:34 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:16:35 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:16:35 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:16:35 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:16:35 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:16:35 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:16:35 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:16:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:16:36 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:16:37 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:16:38 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=99063daeac489f14e8984bb8f3ea8510&oauth_verifier=dd16d1a79fc160804004dd7697c2e508" for 10.0.2.2 at 2015-11-10 21:16:40 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"99063daeac489f14e8984bb8f3ea8510", "oauth_verifier"=>"dd16d1a79fc160804004dd7697c2e508"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3TMCGP' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Completed   in 219806ms
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:20:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (3.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 1370ms (Views: 1165.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:20:42 +0000
+Processing by UsersController#index as HTML
+  [1m[36mExercise Load (0.5ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 762ms (Views: 750.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:20:43 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:20:43 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:20:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:20:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:20:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:20:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:20:44 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:20:44 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:20:45 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:20:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:20:45 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:20:47 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:20:47 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=8157b4046a9b8f064715887e32d680a7&oauth_verifier=f573e6059f5c2fc82b96ecaaffeebe8a" for 10.0.2.2 at 2015-11-10 21:21:00 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"8157b4046a9b8f064715887e32d680a7", "oauth_verifier"=>"f573e6059f5c2fc82b96ecaaffeebe8a"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' AND "users"."provider" = 'fitbit' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "users" ("created_at", "name", "provider", "secret", "token", "uid", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2015-11-10 21:21:01.537552"], ["name", "Matthew McLennan"], ["provider", "fitbit"], ["secret", "2ccc132c20b77db4fb25197a6e1a68eb"], ["token", "3e25d12b4c3a4ba25b8c8a9d9967cbbf"], ["uid", "3KMJZM"], ["updated_at", "2015-11-10 21:21:01.537552"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+Completed   in 74423ms
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:27:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (3.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 1533ms (Views: 1313.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:20 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:20 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:21 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:21 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:21 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:21 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:21 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:21 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:22 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:22 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:27:24 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:27:25 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=d6abf84b98e1c091af44955839dc605f&oauth_verifier=efa9258749f41dacb5af98b7fff48066" for 10.0.2.2 at 2015-11-10 21:27:27 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"d6abf84b98e1c091af44955839dc605f", "oauth_verifier"=>"efa9258749f41dacb5af98b7fff48066"}
+  [1m[36mUser Load (5.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new?id=4
+Completed 302 Found in 10781ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/users/new?id=4" for 10.0.2.2 at 2015-11-10 21:27:38 +0000
+Processing by UsersController#new as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered users/_form.html.erb (1409.5ms)
+  Rendered users/new.html.erb within layouts/application (1487.7ms)
+Completed 200 OK in 2325ms (Views: 2300.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:41 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:41 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:42 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:42 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:43 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:43 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:27:43 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:27:48 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mExercise Load (1.0ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 745ms (Views: 715.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:59 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:59 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:27:59 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:28:02 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 695ms (Views: 688.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:28:03 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:28:03 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:28:03 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:28:03 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:28:04 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:28:04 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:28:04 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:28:04 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:28:04 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:28:05 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:28:05 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-10 21:28:12 +0000
+
+ActionController::RoutingError (No route matches [GET] "/sessions/generate_user_info"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (15.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:31:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mExercise Load (2.1ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1453ms (Views: 1188.9ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:36 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:36 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:37 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:37 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:37 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:37 +0000
+
+
+Started DELETE "/session.current" for 10.0.2.2 at 2015-11-10 21:31:39 +0000
+Processing by SessionsController#destroy as 
+  Parameters: {"authenticity_token"=>"jcHgzXA+itwfDQLgRayQ2pe1HXbVKnaQZ78JjAGd8Hg="}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:31:40 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 658ms (Views: 652.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:40 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:41 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:41 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:41 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:41 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:41 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:41 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:41 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:42 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:42 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:31:45 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:31:45 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=24cad2bd37c948f8fd237a3baea8f5b8&oauth_verifier=202cef2962d2c799bee3f9a1e53fa5fe" for 10.0.2.2 at 2015-11-10 21:31:47 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"24cad2bd37c948f8fd237a3baea8f5b8", "oauth_verifier"=>"202cef2962d2c799bee3f9a1e53fa5fe"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new?id=4
+Completed 302 Found in 4055ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/new?id=4" for 10.0.2.2 at 2015-11-10 21:31:52 +0000
+Processing by UsersController#new as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered users/_form.html.erb (1958.9ms)
+  Rendered users/new.html.erb within layouts/application (2155.7ms)
+Completed 200 OK in 3192ms (Views: 3104.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:56 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:56 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:31:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:56 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:57 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:57 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:31:57 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:31:58 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 709ms (Views: 702.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:03 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:03 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:03 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:03 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:32:06 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mExercise Load (0.9ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 850ms (Views: 843.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:08 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:08 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:08 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:08 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:08 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:08 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:09 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:09 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:32:15 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mExercise Load (2.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 920ms (Views: 903.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:16 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:17 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:17 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:32:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:17 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:17 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:17 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:32:18 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-10 21:32:24 +0000
+Processing by SessionsController#generate_user_info as JSON
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `body_weight_goal' for nil:NilClass):
+  app/controllers/sessions_controller.rb:51:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (30.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:33:23 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1123ms (Views: 1027.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:33:25 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:33:25 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:33:25 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:33:25 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:33:26 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:33:26 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:33:26 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:33:26 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:33:26 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:33:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:33:26 +0000
+
+
+Started GET "/session/generate_user_info" for 10.0.2.2 at 2015-11-10 21:33:29 +0000
+
+ActionController::RoutingError (uninitialized constant SessionController):
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (16.2ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:33:31 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:33:31 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:33:31 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:33:31 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:33:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (2.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mExercise Load (1.7ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 1782ms (Views: 1530.5ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:34:00 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:34:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:34:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:34:00 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:34:00 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:34:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:34:01 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:34:01 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:34:01 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:34:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:34:02 +0000
+
+
+Started GET "/session/generate_user_info" for 10.0.2.2 at 2015-11-10 21:34:08 +0000
+
+ActionController::RoutingError (uninitialized constant SessionController):
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (13.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:39:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mExercise Load (1.7ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1592ms (Views: 1336.0ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:39:26 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:39:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:39:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:39:27 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:39:27 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:39:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:39:28 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:39:28 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:39:28 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:39:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:39:28 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-10 21:39:31 +0000
+Processing by SessionsController#generate_user_info as JSON
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `body_weight_goal' for nil:NilClass):
+  app/controllers/sessions_controller.rb:50:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (7.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (63.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:41:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (3.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mExercise Load (1.7ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 1469ms (Views: 1137.3ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:41:47 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 685ms (Views: 678.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:41:48 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:41:48 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:41:48 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:41:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:41:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:41:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:41:49 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:41:49 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:41:49 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:41:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:41:50 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-10 21:41:53 +0000
+Processing by SessionsController#generate_user_info as JSON
+Completed 500 Internal Server Error in 16ms
+
+NameError (undefined local variable or method `client' for #<SessionsController:0xa62dd9c>):
+  app/controllers/sessions_controller.rb:50:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (45.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:43:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mExercise Load (1.9ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 1394ms (Views: 1125.6ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:43:22 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:43:22 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:43:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:43:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:43:23 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:43:23 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:43:23 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:43:23 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:43:23 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:43:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:43:24 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-10 21:43:26 +0000
+Processing by SessionsController#generate_user_info as JSON
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `token' for nil:NilClass):
+  app/controllers/sessions_controller.rb:50:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (32.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:57:09 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mExercise Load (1.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 738ms (Views: 649.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:10 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:10 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:11 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:11 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:11 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:12 +0000
+
+
+Started DELETE "/session.current" for 10.0.2.2 at 2015-11-10 21:57:20 +0000
+
+SyntaxError (/vagrant/fitness_trainer/app/controllers/sessions_controller.rb:53: syntax error, unexpected '.'
+    render :json => .body_weight_goal
+                     ^):
+  app/controllers/sessions_controller.rb:53: syntax error, unexpected '.'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 21:57:30 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 744ms (Views: 653.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:31 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:31 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:31 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:32 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:32 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:32 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:32 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:32 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:32 +0000
+
+
+Started DELETE "/session.current" for 10.0.2.2 at 2015-11-10 21:57:35 +0000
+Processing by SessionsController#destroy as 
+  Parameters: {"authenticity_token"=>"jcHgzXA+itwfDQLgRayQ2pe1HXbVKnaQZ78JjAGd8Hg="}
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 21:57:36 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (0.7ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 682ms (Views: 677.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:37 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:37 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:37 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 21:57:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:37 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:37 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:38 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 21:57:38 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:57:40 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 21:57:41 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=c8741b75cd603a8abaa3c97447d09208&oauth_verifier=762e6e79968a5fc9657ee03a20613077" for 10.0.2.2 at 2015-11-10 21:57:44 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"c8741b75cd603a8abaa3c97447d09208", "oauth_verifier"=>"762e6e79968a5fc9657ee03a20613077"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 136ms
+
+ActionView::MissingTemplate (Missing template sessions/fitbit, application/fitbit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/fitness_trainer/app/views"
+):
+  actionview (4.1.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.6) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth (1.1.0) lib/omniauth/strategies/oauth.rb:57:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 22:04:30 +0000
+Processing by UsersController#index as HTML
+  [1m[35mExercise Load (0.7ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" IS NULL LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 802ms (Views: 724.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 22:04:31 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 22:04:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 22:04:32 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 22:04:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:32 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:33 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:33 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:33 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 22:04:37 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-10 22:04:37 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=002decbc05d1ffab317fd505dc62fd33&oauth_verifier=a94ca8603cee746fb004fd0e4c78975f" for 10.0.2.2 at 2015-11-10 22:04:40 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"002decbc05d1ffab317fd505dc62fd33", "oauth_verifier"=>"a94ca8603cee746fb004fd0e4c78975f"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/new?id=4
+Completed 302 Found in 35ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/new?id=4" for 10.0.2.2 at 2015-11-10 22:04:41 +0000
+Processing by UsersController#new as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered users/_form.html.erb (984.2ms)
+  Rendered users/new.html.erb within layouts/application (1042.5ms)
+Completed 200 OK in 1740ms (Views: 1737.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 22:04:43 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 22:04:43 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 22:04:43 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 22:04:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:44 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:44 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:44 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 22:04:44 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-10 22:04:47 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 683ms (Views: 677.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-10 22:58:43 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mExercise Load (0.9ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 4 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 752ms (Views: 662.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-10 22:58:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-10 22:58:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-10 22:58:44 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2015-11-10 22:58:44 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-10 22:58:44 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-10 22:58:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-10 22:58:45 +0000
+
+
+Started GET "/assets/api-calls.js?body=1" for 10.0.2.2 at 2015-11-10 22:58:45 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-10 22:58:45 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-10 22:58:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-10 22:58:45 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-10 22:58:48 +0000
+Processing by SessionsController#generate_user_info as JSON
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:52:in `get_user_activities'
+  app/controllers/sessions_controller.rb:72:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (47.1ms)
