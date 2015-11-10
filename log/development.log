@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 Started GET "/" for 10.0.2.2 at 2015-11-09 16:57:26 +0000
@@ -17449,3 +17450,5 @@ Started GET "/assets/meals.js?body=1" for 127.0.0.1 at 2015-11-10 11:09:38 -0500
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-10 11:09:38 -0500
+=======
+>>>>>>> f3e46c5c960f1817ed490a6ad0ac7a4cb525174c
