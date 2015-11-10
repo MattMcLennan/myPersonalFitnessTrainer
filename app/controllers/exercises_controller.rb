@@ -28,10 +28,6 @@ class ExercisesController < ApplicationController
     else
       @exercise = Exercise.new
     end
-
-    if @exercise.save!
-      redirect_to users_path
-    end
   end
 
   def create

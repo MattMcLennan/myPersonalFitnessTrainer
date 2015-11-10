@@ -1,216 +1,100 @@
-<h4>Workout A</h4>
-<table>
-  <tr>
-    <td>Exercises</td>
-    <td>Sets x Reps</td>
-    <td>Session #1</td>
-    <td>Session #3</td>
-    <td>Session #5</td>
-    <td>Session #7</td>
-    <td>Session #9</td>
-    <td>Session #11</td>
-    <td>Session #13</td>
-    <td>Session #14</td>
-  </tr>
-  <tr>
-    <td>Squats</td>
-    <td>3 x 5</td>
-    <% if @exercise.squat < 45 %>
-      <td><%= @exercise.squat = "BAR" %></td>
-      <td><%= @exercise.squat = 50 %></td>
-      <td><%= @exercise.squat = 55 %></td>
-      <td><%= @exercise.squat = 60 %></td>
-      <td><%= @exercise.squat = 65 %></td>
-      <td><%= @exercise.squat = 70 %></td>
-      <td><%= @exercise.squat = 75 %></td>
-      <td><%= @exercise.squat = 80 %></td>
-    <% else %>
-      <td><%= @exercise.squat - 5 %> lbs</td>
-      <td><%= @exercise.squat %> lbs</td>
-      <td><%= @exercise.squat + 5 %> lbs</td>
-      <td><%= @exercise.squat + 10 %> lbs</td>
-      <td><%= @exercise.squat + 15 %> lbs</td>
-      <td><%= @exercise.squat + 20 %> lbs</td>
-      <td><%= (@exercise.squat * (1 + 0.025 * @exercise.squat_reps)).round(-1) %> lbs</td>
-      <td><%= (@exercise.squat * (1 + 0.025 * @exercise.squat_reps) + 5) %> lbs</td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>Bench</td>
-    <td>3 x 5</td>
-    <% if @exercise.bench < 45 %>
-      <td><%= @exercise.bench = "BAR" %></td>
-      <td><%= @exercise.bench = 50 %></td>
-      <td><%= @exercise.bench = 55 %></td>
-      <td><%= @exercise.bench = 60 %></td>
-      <td><%= @exercise.bench = 65 %></td>
-      <td><%= @exercise.bench = 70 %></td>
-      <td><%= @exercise.bench = 75 %></td>
-      <td><%= @exercise.bench = 80 %></td>
-    <% else %>
-      <td><%= @exercise.bench - 5 %> lbs</td>
-      <td><%= @exercise.bench %> lbs</td>
-      <td><%= @exercise.bench + 5 %> lbs</td>
-      <td><%= @exercise.bench + 10 %> lbs</td>
-      <td><%= @exercise.bench + 15 %> lbs</td>
-      <td><%= @exercise.bench + 20 %> lbs</td>
-      <td><%= @exercise.bench + 25 %> lbs</td>
-      <td><%= (@exercise.bench * (1 + 0.025 * @exercise.bench_reps) + 5).round(-1) %> lbs</td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>Barbell Row</td>
-    <td>3 x 5</td>
-    <% if @exercise.barbell_row < 45 %>
-      <td><%= @exercise.barbell_row = "BAR" %></td>
-      <td><%= @exercise.barbell_row = 50 %> lbs<td>
-      <td><%= @exercise.barbell_row = 55 %> lbs<td>
-      <td><%= @exercise.barbell_row = 60 %> lbs<td>
-      <td><%= @exercise.barbell_row = 65 %> lbs<td>
-      <td><%= @exercise.barbell_row = 70 %> lbs<td>
-      <td><%= @exercise.barbell_row = 75 %> lbs<td>
-      <td><%= @exercise.barbell_row = 80 %> lbs<td>
-    <% else %>
-      <td><%= @exercise.barbell_row - 5 %> lbs</td>
-      <td><%= @exercise.barbell_row %> lbs</td>
-      <td><%= @exercise.barbell_row + 5 %> lbs</td>
-      <td><%= @exercise.barbell_row + 10 %> lbs</td>
-      <td><%= @exercise.barbell_row + 15 %> lbs</td>
-      <td><%= @exercise.barbell_row + 20 %> lbs</td>
-      <td><%= @exercise.barbell_row + 25 %> lbs</td>
-      <td><%= (@exercise.barbell_row * (1 + 0.025 * @exercise.barbell_row_reps) + 5).round(-1) %> lbs</td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>Tricep Extension</td>
-    <td>3 x 12</td>
-    <td><%= @exercise.tricep_extension = 45 %> lbs</td>
-    <td><%= @exercise.tricep_extension = 50 %> lbs</td>
-    <td><%= @exercise.tricep_extension = 55 %> lbs</td>
-    <td><%= @exercise.tricep_extension = 60 %> lbs</td>
-    <td><%= @exercise.tricep_extension = 65 %> lbs</td>
-    <td><%= @exercise.tricep_extension = 70 %> lbs</td>
-    <td><%= @exercise.tricep_extension = 75 %> lbs</td>
-    <td><%= @exercise.tricep_extension = 80 %> lbs</td>
-  </tr>
-  <tr>
-    <td>Calf Raise</td>
-    <td>3 x 15</td>
-    <td><%= @exercise.calf_raise = 45 %> lbs</td>
-    <td><%= @exercise.calf_raise = 50 %> lbs</td>
-    <td><%= @exercise.calf_raise = 55 %> lbs</td>
-    <td><%= @exercise.calf_raise = 60 %> lbs</td>
-    <td><%= @exercise.calf_raise = 65 %> lbs</td>
-    <td><%= @exercise.calf_raise = 70 %> lbs</td>
-    <td><%= @exercise.calf_raise = 75 %> lbs</td>
-    <td><%= @exercise.calf_raise = 80 %> lbs</td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Workout A</span>
+        <table class="responsive-table">
+          <tr>
+            <th>Exercise</th>
+            <th>Sets x Reps</th>
+            <th>Session #1</th>
+            <th>Session #3</th>
+            <th>Session #5</th>
+            <th>Session #7</th>
+            <th>Session #9</th>
+          </tr>
+          <tr>
+            <td>Squats</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.squat %></td>
+            <% 4.times do %>
+              <td><%= @exercises.squat += 5 %></td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Bench</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.bench %></td>
+            <% 4.times do %>
+              <td><%= @exercises.bench += 5 %></td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Barbell Row</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.barbell_row %></td>
+            <% 4.times do %>
+              <td><%= @exercises.barbell_row += 5 %></td>
+            <% end %>
+          </tr>
+          <th>Accessories</th>
+          <tr>
+            <td>Tricep Extension</td>
+            <td>3 x 12</td>
+          </tr>
+          <tr>
+            <td>Calf Raise</td>
+            <td>3 x 15</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h4>Workout B</h4>
-<table>
-  <tr>
-    <td>Exercises</td>
-    <td>Sets x Reps</td>
-    <td>Session #2</td>
-    <td>Session #4</td>
-    <td>Session #6</td>
-    <td>Session #8</td>
-    <td>Session #10</td>
-    <td>Session #12</td>
-    <td>Session #14</td>
-    <td>Session #16</td>
-  </tr>
-  <tr>
-    <td>Deadlift</td>
-    <td>1 x 5</td>
-    <% if @exercise.deadlift < 45 %>
-      <td><%= @exercise.deadlift = "BAR" %></td>
-      <td><%= @exercise.deadlift = 50 %> lbs</td>
-      <td><%= @exercise.deadlift = 55 %> lbs</td>
-      <td><%= @exercise.deadlift = 60 %> lbs</td>
-      <td><%= @exercise.deadlift = 65 %> lbs</td>
-      <td><%= @exercise.deadlift = 70 %> lbs</td>
-      <td><%= @exercise.deadlift = 75 %> lbs</td>
-      <td><%= @exercise.deadlift = 80 %> lbs</td>
-    <% else %>
-      <td><%= @exercise.deadlift %> lbs</td>
-      <td><%= (@exercise.deadlift * (1 + 0.025 * @exercise.deadlift_reps) - 30) %> lbs</td>
-      <td><%= (@exercise.deadlift * (1 + 0.025 * @exercise.deadlift_reps) - 25) %> lbs</td>
-      <td><%= (@exercise.deadlift * (1 + 0.025 * @exercise.deadlift_reps) - 20) %> lbs</td>
-      <td><%= (@exercise.deadlift * (1 + 0.025 * @exercise.deadlift_reps) - 15) %> lbs</td>
-      <td><%= (@exercise.deadlift * (1 + 0.025 * @exercise.deadlift_reps) - 10) %> lbs</td>
-      <td><%= (@exercise.deadlift * (1 + 0.025 * @exercise.deadlift_reps) - 5) %> lbs</td>
-      <td><%= (@exercise.deadlift * (1 + 0.025 * @exercise.deadlift_reps) + 5).round(-1) %> lbs</td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>Overhead Press</td>
-    <td>3 x 5</td>
-    <% if @exercise.overhead_press < 45 %>
-      <td><%= @exercise.deadlift = "BAR" %></td>
-      <td><%= @exercise.deadlift = 50 %> lbs</td>
-      <td><%= @exercise.deadlift = 55 %> lbs</td>
-      <td><%= @exercise.deadlift = 60 %> lbs</td>
-      <td><%= @exercise.deadlift = 65 %> lbs</td>
-      <td><%= @exercise.deadlift = 70 %> lbs</td>
-      <td><%= @exercise.deadlift = 75 %> lbs</td>
-      <td><%= @exercise.deadlift = 80 %> lbs</td>
-    <% else %>
-      <td><%= @exercise.overhead_press - 5 %> lbs</td>
-      <td><%= @exercise.overhead_press %> lbs</td>
-      <td><%= @exercise.overhead_press + 5 %> lbs</td>
-      <td><%= @exercise.overhead_press + 10 %> lbs</td>
-      <td><%= @exercise.overhead_press + 15 %> lbs</td>
-      <td><%= @exercise.overhead_press + 20 %> lbs</td>
-      <td><%= @exercise.overhead_press + 25 %> lbs</td>
-      <td><%= (@exercise.overhead_press * (1 + 0.025 * @exercise.overhead_press_reps) + 5).round(-1) %> lbs</td>
-    <% end %>
-  <tr>
-    <td>Pullups</td>
-    <td>3 x 8</td>
-    <% if @exercise.pullups <= 0 %>
-      <td><%= @exercise.pullups = "BODY WEIGHT" %></td>
-      <td><%= @exercise.pullups = "BODY WEIGHT" %></td>
-      <td><%= @exercise.pullups = "BODY WEIGHT" %></td>
-      <td><%= @exercise.pullups = "BODY WEIGHT" %></td>
-      <td><%= @exercise.pullups = "BODY WEIGHT" %></td>
-      <td><%= @exercise.pullups = "BODY WEIGHT" %></td>
-      <td><%= @exercise.pullups = "BODY WEIGHT" %></td>
-      <td><%= @exercise.pullups = "BODY WEIGHT" %></td>
-    <% else %>
-      <td><%= @exercise.pullups + 2.5 %> lbs</td>
-      <td><%= @exercise.pullups + 5 %> lbs</td>
-      <td><%= @exercise.pullups + 7.5 %> lbs</td>
-      <td><%= @exercise.pullups + 10 %> lbs</td>
-      <td><%= @exercise.pullups + 12.5 %> lbs</td>
-      <td><%= @exercise.pullups + 15 %> lbs</td>
-      <td><%= @exercise.pullups + 17.5 %> lbs</td>
-      <td><%= @exercise.pullups + 20 %> lbs</td>
-    <% end %>
-  </tr>
-  <tr>
-    <td>Barbell Curl</td>
-    <td>3 x 12</td>
-    <td><%= @exercise.barbell_curl + 2.5 %> lbs</td>
-    <td><%= @exercise.barbell_curl + 5 %> lbs</td>
-    <td><%= @exercise.barbell_curl + 7.5 %> lbs</td>
-    <td><%= @exercise.barbell_curl + 10 %> lbs</td>
-    <td><%= @exercise.barbell_curl + 12.5 %> lbs</td>
-    <td><%= @exercise.barbell_curl + 15 %> lbs</td>
-    <td><%= @exercise.barbell_curl + 17.5 %> lbs</td>
-    <td><%= @exercise.barbell_curl + 20 %> lbs</td>
-  </tr>
-  <tr>
-    <td>Cable Crunches</td>
-    <td>3 x 15</td>
-    <td><%= @exercise.cable_crunches + 2.5 %> lbs</td>
-    <td><%= @exercise.cable_crunches + 5 %> lbs</td>
-    <td><%= @exercise.cable_crunches + 7.5 %> lbs</td>
-    <td><%= @exercise.cable_crunches + 10 %> lbs</td>
-    <td><%= @exercise.cable_crunches + 12.5 %> lbs</td>
-    <td><%= @exercise.cable_crunches + 15 %> lbs</td>
-    <td><%= @exercise.cable_crunches + 17.5 %> lbs</td>
-    <td><%= @exercise.cable_crunches + 20 %> lbs</td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Workout B</span>
+        <table class="responsive-table">
+          <tr>
+            <th>Exercise</th>
+            <th>Sets x Reps</th>
+            <th>Working Weight</th>
+            <th>Session #2</th>
+            <th>Session #4</th>
+            <th>Session #6</th>
+            <th>Session #8</th>
+            <th>Session #10</th>
+          </tr>
+          <tr>
+            <td>Deadlift</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.deadlift %></td>
+            <% 5.times do %>
+              <td><%= @exercises.deadlift += 5 %></td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Overhead Press</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.overhead_press %></td>
+            <% 5.times do %>
+              <td><%= @exercises.overhead_press += 5 %></td>
+            <% end %>
+          </tr>
+          <th>Accessories</th>
+          <tr>
+            <td>Biceps Curls</td>
+            <td>3 x 12</td>
+          </tr>
+          <tr>
+            <td>Cable Crunches</td>
+            <td>3 x 15</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
