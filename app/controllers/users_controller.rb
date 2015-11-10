@@ -11,10 +11,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def generate_user_info
-    @user_data = fitbit_weight_goal(current_user)
-    render :json => @user_data
-  end
+  # def generate_user_info
+  #   @user_data = fitbit_weight_goal(current_user)
+  #   render :json => @user_data
+  # end
 
   def update
     @user = User.new(user_params)
@@ -22,7 +22,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         format.html { redirect_to users_path, notice: "#{@user.name} welcome!" }
-        # session[:user_id] = @user.id
       else
         format.html { render :new, alert: "Signup was not successful." }
       end
