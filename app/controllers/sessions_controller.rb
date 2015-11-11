@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
 
   def fitbit
     auth = (env["omniauth.auth"])
+    binding.pry
     @user = User.find_or_initialize_by(uid: auth["uid"], provider: 'fitbit')
     @user.provider = auth["provider"]
     @user.uid = auth["uid"]

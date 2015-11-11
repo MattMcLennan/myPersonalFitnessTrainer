@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20151111221929) do
     t.integer  "avg_weekly_cals"
     t.text     "weekly_meal",     default: [],    array: true
     t.string   "gender"
+    t.integer  "weight"
   end
 
 end
