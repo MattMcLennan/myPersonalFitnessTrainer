@@ -41,8 +41,15 @@ class SessionsController < ApplicationController
       :secret => current_user.secret,
       :user_id => current_user.uid})
 
-    @data = client.activity_on_date_range(:calories, '2015-07-07', 'today')
+    @data = {
+      "body_weight" => client.data_by_time_range('/body/weight', {:base_date => "2015-07-07", :end_date => "today"}),
+      "steps" => client.data_by_time_range('/activities/log/steps', {:base_date => "2015-07-07", :end_date => "today"}),
+      "distance" => client.data_by_time_range('/activities/log/distance', {:base_date => "2015-07-07", :end_date => "today"}),
+      "calories" => client.data_by_time_range('/activities/log/calories', {:base_date => "2015-07-07", :end_date => "today"})
 
+    }
+      # client.activity_on_date_range(:calories, '2015-07-07', 'today') gets total calories out per day
+      # client.activity_on_date_range(:steps, '2015-07-07', 'today')  gets total steps out per day
     render :json => @data
   end
 
