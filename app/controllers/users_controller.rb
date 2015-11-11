@@ -3,12 +3,20 @@ class UsersController < ApplicationController
   before_action :signed_in?, only: [:update, :destroy]
 
   def index
-    @users = User.all
-    @exercises = Exercise.find_by(user_id: current_user)
+    if !current_user
+      redirect_to root_path, alert: "Log in first!"
+    else
+      @users = User.all
+      @exercises = Exercise.find_by(user_id: current_user)
+    end
   end
 
   def new
-    @user = User.find(params[:id])
+    if !current_user
+      redirect_to root_path, alert: "Log in first!"
+    else
+      @user = User.find(params[:id])
+    end
   end
 
   def update

@@ -13,7 +13,9 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
   </head>
   <body>
-    <%= render './layouts/nav' %>
+    <% if current_user %>
+      <%= render './layouts/nav' %>
+    <% end %>
 
     <% if flash[:notice] || flash[:alert]%>
         <%= flash[:notice] || flash[:alert] %>
