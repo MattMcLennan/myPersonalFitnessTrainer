@@ -14,15 +14,15 @@ class SessionsController < ApplicationController
     @user.secret = auth['credentials'].secret
     @user.save
 
-    @consumer_key = '10c780512cf30750c716e8523c718155'
-    @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
+    # @consumer_key = '10c780512cf30750c716e8523c718155'
+    # @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
 
-    @client = Fitgem::Client.new({
-      :consumer_key => @consumer_key,
-      :consumer_secret => @consumer_secret,
-      :token => @user.token,
-      :secret => @user.secret,
-      :user_id => @user.uid})
+    # @client = Fitgem::Client.new({
+    #   :consumer_key => @consumer_key,
+    #   :consumer_secret => @consumer_secret,
+    #   :token => @user.token,
+    #   :secret => @user.secret,
+    #   :user_id => @user.uid})
 
     session[:user_id] = @user.id
 
