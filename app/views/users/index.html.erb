@@ -3,13 +3,17 @@
 <% end %>
 
 <div class="row">
-  <div class="col s12">
-    <h1>Hello World</h1>
-  </div>
 </div>
 
 <div class="row">
   <div class="col s12">
-    <%= render './exercises/template' %>
+    <% if !current_user.template_chosen %>
+      <p>It looks like you haven't set up your template yet!</p>
+      <p><%= link_to "Set up template", new_exercise_path %></p>
+    <% else %>
+      <h1>Here's your current template:</h1>
+      <a a href="<%= edit_exercise_path(@exercises) %>" class="waves-effect waves-light btn">Adjust your weights</a>
+      <%= render './exercises/template' %>
+    <% end %>
   </div>
 </div>
