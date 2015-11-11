@@ -1,41 +1,68 @@
-<div class="container">
-  <% if current_user %>
-    <h2>Your current goal is: <%= current_user.goal %></h2>
-    <p>Fill out the form below to generate your template:</p>
+<% if current_user %>
+  <h2>Your current goal is: <%= current_user.goal %></h2>
+  <p>Fill out the form below to generate your template:</p>
 
-    <%= form_for @exercise do |f| %>
-      <% if @exercise.errors.any? %>
-        <div>
-          <%= pluralize(@exercise.errors.count, "error") %> prevented this movie from being submitted:
-          <ul>
-            <% @exercise.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <div>
-        <%= f.label :squat, "Squat (lbs)" %><br>
-        <%= f.number_field :squat %>
-      </div>
-      <div>
-        <%= f.label :deadlift, "Deadlift (lbs)" %><br>
-        <%= f.number_field :deadlift %>
-      </div>
-      <div>
-        <%= f.label :bench, "Bench (lbs)" %><br>
-        <%= f.number_field :bench %>
-      </div>
-      <div>
-        <%= f.label :overhead_press, "Overhead Press (lbs)" %><br>
-        <%= f.number_field :overhead_press %>
-      </div><div>
-        <%= f.label :barbell_row, "Barbell Row (lbs)" %><br>
-        <%= f.number_field :barbell_row %>
-      </div>
-      <div>
-        <%= f.submit "Submit" %>
-      </div>
-    <% end %>
+  <hr>
+  <%= link_to "Home Page", users_path %>
+  <hr>
+
+  <%= form_for @exercise do |f| %>
+    <div>
+      <%= f.label :squat, "Squat (lbs)" %>
+      <%= f.number_field :squat %>
+      <%= f.label :squat_reps, "Reps"%>
+      <%= f.number_field :squat_reps %>
+    </div>
+    <div>
+      <%= f.label :deadlift, "Deadlift (lbs)" %>
+      <%= f.number_field :deadlift %>
+      <%= f.label :deadlift_reps, "Reps"%>
+      <%= f.number_field :deadlift_reps %>
+    </div>
+    <div>
+      <%= f.label :bench, "Bench (lbs)" %>
+      <%= f.number_field :bench %>
+      <%= f.label :bench_reps, "Reps"%>
+      <%= f.number_field :bench_reps %>
+    </div>
+    <div>
+      <%= f.label :overhead_press, "Overhead Press (lbs)" %>
+      <%= f.number_field :overhead_press %>
+      <%= f.label :overhead_press_reps, "Reps"%>
+      <%= f.number_field :overhead_press_reps %>
+    </div>
+    <div>
+      <%= f.label :barbell_row, "Barbell Row (lbs)" %>
+      <%= f.number_field :barbell_row %>
+      <%= f.label :barbell_row_reps, "Reps"%>
+      <%= f.number_field :barbell_row_reps %>
+    </div>
+    <div>
+      <%= f.label :barbell_curl, "Barbell Curl (lbs)" %>
+      <%= f.number_field :barbell_curl %>
+      <%= f.label :barbell_curl_reps, "Reps"%>
+      <%= f.number_field :barbell_curl_reps %>
+    </div>
+    <div>
+      <%= f.label :tricep_extension, "Tricep Extension (lbs)" %>
+      <%= f.number_field :tricep_extension %>
+      <%= f.label :tricep_extension_reps, "Reps"%>
+      <%= f.number_field :tricep_extension_reps %>
+    </div>
+    <div>
+      <%= f.label :calf_raise, "Calf Raise (lbs)" %>
+      <%= f.number_field :calf_raise %>
+      <%= f.label :calf_raise_reps, "Reps"%>
+      <%= f.number_field :calf_raise_reps %>
+    </div>
+    <div>
+      <%= f.label :pullups, "Pullups (lbs)" %>
+      <%= f.number_field :pullups %>
+      <%= f.label :pullup_reps, "Reps"%>
+      <%= f.number_field :pullup_reps %>
+    </div>
+    <div>
+      <%= f.submit "Submit" %>
+    </div>
   <% end %>
-</div>
+<% end %> -->

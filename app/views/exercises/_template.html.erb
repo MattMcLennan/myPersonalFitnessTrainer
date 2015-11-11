@@ -1,181 +1,100 @@
-<!-- Workout A -->
-<table>
-  <tr>
-    <td></td>
-    <td>Sets x Reps</td>
-    <td>Session #1</td>
-    <td>Session #3</td>
-    <td>Session #5</td>
-    <td>Session #7</td>
-    <td>Session #9</td>
-    <td>Session #11</td>
-    <td>Session #13</td>
-    <td>Session #15</td>
-    <td>Session #17</td>
-    <td>Session #19</td>
-    <td>Session #21</td>
-    <td>Session #23</td>
-  </tr>
-  <tr>
-    <td>Squat</td>
-    <td>5 x 5</td>
-    <td><%= @exercise.squat + 5 %></td>
-    <td><%= @exercise.squat + 10 %></td>
-    <td><%= @exercise.squat + 15 %></td>
-    <td><%= @exercise.squat + 20 %></td>
-    <td><%= @exercise.squat + 25 %></td>
-    <td><%= @exercise.squat + 30 %></td>
-    <td><%= @exercise.squat + 35 %></td>
-    <td><%= @exercise.squat + 40 %></td>
-    <td><%= @exercise.squat + 45 %></td>
-    <td><%= @exercise.squat + 50 %></td>
-    <td><%= @exercise.squat + 55 %></td>
-    <td><%= @exercise.squat + 60 %></td>
-  </tr>
-  <tr>
-    <td>Bench</td>
-    <td>5 x 5</td>
-    <td><%= @exercise.bench + 5 %></td>
-    <td><%= @exercise.bench + 10 %></td>
-    <td><%= @exercise.bench + 15 %></td>
-    <td><%= @exercise.bench + 20 %></td>
-    <td><%= @exercise.bench + 25 %></td>
-    <td><%= @exercise.bench + 30 %></td>
-    <td><%= @exercise.bench + 35 %></td>
-    <td><%= @exercise.bench + 40 %></td>
-    <td><%= @exercise.bench + 45 %></td>
-    <td><%= @exercise.bench + 50 %></td>
-    <td><%= @exercise.bench + 55 %></td>
-    <td><%= @exercise.bench + 60 %></td>
-  </tr>
-  <tr>
-    <td>Barbell Row</td>
-    <td>5 x 5</td>
-    <td><%= @exercise.barbell_row + 5 %></td>
-    <td><%= @exercise.barbell_row + 10 %></td>
-    <td><%= @exercise.barbell_row + 15 %></td>
-    <td><%= @exercise.barbell_row + 20 %></td>
-    <td><%= @exercise.barbell_row + 25 %></td>
-    <td><%= @exercise.barbell_row + 30 %></td>
-    <td><%= @exercise.barbell_row + 35 %></td>
-    <td><%= @exercise.barbell_row + 40 %></td>
-    <td><%= @exercise.barbell_row + 45 %></td>
-    <td><%= @exercise.barbell_row + 50 %></td>
-    <td><%= @exercise.barbell_row + 65 %></td>
-    <td><%= @exercise.barbell_row + 60 %></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold">Accessories</td>
-  </tr>
-  <tr>
-    <td>Barbell Shrugs</td>
-  </tr>
-  <tr>
-    <td>Tricep Extension</td>
-  </tr>
-  <tr>
-    <td>Barbell Curl</td>
-  </tr>
-  <tr>
-    <td>Hyperextensions</td>
-  </tr>
-  <tr>
-    <td>Cable Crunches</td>
-  </tr>
-</table>
-<!-- Workout B -->
-<table>
-  <tr>
-    <td></td>
-    <td>Sets x Reps</td>
-    <td>Session #2</td>
-    <td>Session #4</td>
-    <td>Session #6</td>
-    <td>Session #8</td>
-    <td>Session #10</td>
-    <td>Session #12</td>
-    <td>Session #14</td>
-    <td>Session #16</td>
-    <td>Session #18</td>
-    <td>Session #20</td>
-    <td>Session #22</td>
-    <td>Session #24</td>
-  </tr>
-  <tr>
-    <td>Squat</td>
-    <td>5 x 5</td>
-    <td><%= @exercise.squat + 5 %></td>
-    <td><%= @exercise.squat + 10 %></td>
-    <td><%= @exercise.squat + 15 %></td>
-    <td><%= @exercise.squat + 20 %></td>
-    <td><%= @exercise.squat + 25 %></td>
-    <td><%= @exercise.squat + 30 %></td>
-    <td><%= @exercise.squat + 35 %></td>
-    <td><%= @exercise.squat + 40 %></td>
-    <td><%= @exercise.squat + 45 %></td>
-    <td><%= @exercise.squat + 50 %></td>
-    <td><%= @exercise.squat + 55 %></td>
-    <td><%= @exercise.squat + 60 %></td>
-  </tr>
-  <tr>
-    <td>Deadlift</td>
-    <td>1 x 5</td>
-    <td><%= @exercise.deadlift + 5 %></td>
-    <td><%= @exercise.deadlift + 10 %></td>
-    <td><%= @exercise.deadlift + 15 %></td>
-    <td><%= @exercise.deadlift + 20 %></td>
-    <td><%= @exercise.deadlift + 25 %></td>
-    <td><%= @exercise.deadlift + 30 %></td>
-    <td><%= @exercise.deadlift + 35 %></td>
-    <td><%= @exercise.deadlift + 40 %></td>
-    <td><%= @exercise.deadlift + 45 %></td>
-    <td><%= @exercise.deadlift + 50 %></td>
-    <td><%= @exercise.deadlift + 55 %></td>
-    <td><%= @exercise.deadlift + 60%></td>
-  </tr>
-  <tr>
-    <td>Overhead Press</td>
-    <td>5 x 5</td>
-    <td><%= @exercise.overhead_press + 5 %></td>
-    <td><%= @exercise.overhead_press + 10 %></td>
-    <td><%= @exercise.overhead_press + 15 %></td>
-    <td><%= @exercise.overhead_press + 20 %></td>
-    <td><%= @exercise.overhead_press + 25 %></td>
-    <td><%= @exercise.overhead_press + 30 %></td>
-    <td><%= @exercise.overhead_press + 35 %></td>
-    <td><%= @exercise.overhead_press + 40 %></td>
-    <td><%= @exercise.overhead_press + 45 %></td>
-    <td><%= @exercise.overhead_press + 50 %></td>
-    <td><%= @exercise.overhead_press + 55 %></td>
-    <td><%= @exercise.overhead_press + 60 %></td>
-  </tr>
-  <tr>
-    <td>Barbell Row (10% Lighter than Workout A)</td>
-    <td>3 x 8</td>
-    <td><%= @exercise.barbell_row + 5 %></td>
-    <td><%= @exercise.barbell_row + 10 %></td>
-    <td><%= @exercise.barbell_row + 15 %></td>
-    <td><%= @exercise.barbell_row + 20 %></td>
-    <td><%= @exercise.barbell_row + 25 %></td>
-    <td><%= @exercise.barbell_row + 30 %></td>
-    <td><%= @exercise.barbell_row + 35 %></td>
-    <td><%= @exercise.barbell_row + 40 %></td>
-    <td><%= @exercise.barbell_row + 45 %></td>
-    <td><%= @exercise.barbell_row + 50 %></td>
-    <td><%= @exercise.barbell_row + 55 %></td>
-    <td><%= @exercise.barbell_row + 60 %></td>
-  </tr>
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Workout A</span>
+        <table class="responsive-table">
+          <tr>
+            <th>Exercise</th>
+            <th>Sets x Reps</th>
+            <th>Session #1</th>
+            <th>Session #3</th>
+            <th>Session #5</th>
+            <th>Session #7</th>
+            <th>Session #9</th>
+          </tr>
+          <tr>
+            <td>Squats</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.squat %></td>
+            <% 4.times do %>
+              <td><%= @exercises.squat += 5 %></td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Bench</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.bench %></td>
+            <% 4.times do %>
+              <td><%= @exercises.bench += 5 %></td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Barbell Row</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.barbell_row %></td>
+            <% 4.times do %>
+              <td><%= @exercises.barbell_row += 5 %></td>
+            <% end %>
+          </tr>
+          <th>Accessories</th>
+          <tr>
+            <td>Tricep Extension</td>
+            <td>3 x 12</td>
+          </tr>
+          <tr>
+            <td>Calf Raise</td>
+            <td>3 x 15</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <tr>
-    <td style="font-weight: bold">Accessories</td>
-  </tr>
-  <tr>
-    <td>Close Grip Bench Press</td>
-  </tr>
-  <tr>
-    <td>Barbell Curls</td>
-  </tr>
-  <tr>
-    <td>Cable Crunches</td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Workout B</span>
+        <table class="responsive-table">
+          <tr>
+            <th>Exercise</th>
+            <th>Sets x Reps</th>
+            <th>Working Weight</th>
+            <th>Session #2</th>
+            <th>Session #4</th>
+            <th>Session #6</th>
+            <th>Session #8</th>
+            <th>Session #10</th>
+          </tr>
+          <tr>
+            <td>Deadlift</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.deadlift %></td>
+            <% 5.times do %>
+              <td><%= @exercises.deadlift += 5 %></td>
+            <% end %>
+          </tr>
+          <tr>
+            <td>Overhead Press</td>
+            <td>3 x 5</td>
+            <td><%= @exercises.overhead_press %></td>
+            <% 5.times do %>
+              <td><%= @exercises.overhead_press += 5 %></td>
+            <% end %>
+          </tr>
+          <th>Accessories</th>
+          <tr>
+            <td>Biceps Curls</td>
+            <td>3 x 12</td>
+          </tr>
+          <tr>
+            <td>Cable Crunches</td>
+            <td>3 x 15</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

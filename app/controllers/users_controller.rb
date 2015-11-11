@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    @exercise = Exercise.find_by(user_id: current_user)
+    @exercises = Exercise.find_by(user_id: current_user)
   end
 
   def new
@@ -37,13 +37,13 @@ class UsersController < ApplicationController
 
   # def fitbit_client(user)
   #   binding.pry
-  #   client = Fitgem::Client.new({:consumer_key => @consumer_key, 
-  #     :consumer_secret => @consumer_secret, :token => user.token, 
+  #   client = Fitgem::Client.new({:consumer_key => @consumer_key,
+  #     :consumer_secret => @consumer_secret, :token => user.token,
   #     :secret => user.secret, :user_id => user.uid})
 
-  #   binding.pry   
+  #   binding.pry
   #   # Reconnects existing user using their credentials
-  #   access_token = client.reconnect(user.token, user.secret) 
+  #   access_token = client.reconnect(user.token, user.secret)
   # end
 
   # def fitbit_weight_goal(user)
@@ -53,6 +53,7 @@ class UsersController < ApplicationController
   private
 
     def set_user
+      binding.pry
       @user = User.find(params[:id])
     end
 

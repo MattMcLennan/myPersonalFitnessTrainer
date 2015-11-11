@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-root 'users#index'
-
+root 'start#index'
 
 # get   '/', :to => 'sessions#new', :as => :/
 # get  '/auth/fitbit', :to => 'sessions#fitbit'
@@ -10,14 +9,12 @@ get 'auth/fitbit/callback', to: 'sessions#fitbit'
 post '/auth/failure', :to => 'sessions#failure'
 get 'sessions/generate_user_info', :to => 'sessions#generate_user_info'
 
-
-
   resources :users
 
   resource :session, only: [:new, :create, :destroy]
 
   resources :exercises
-  
+
   resources :meals
 
   # The priority is based upon order of creation: first created -> highest priority.
