@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111220904) do
+ActiveRecord::Schema.define(version: 20151111221929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,9 @@ ActiveRecord::Schema.define(version: 20151111220904) do
     t.boolean  "template_chosen", default: false
     t.string   "token"
     t.string   "secret"
+    t.integer  "avg_weekly_cals"
+    t.text     "weekly_meal",     default: [],    array: true
+    t.string   "gender"
   end
 
 end
