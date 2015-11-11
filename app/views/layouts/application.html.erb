@@ -12,8 +12,14 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
   </head>
   <body>
-    
-    <%= yield %>
+    <%= render './layouts/nav' %>
 
+    <% if flash[:notice] || flash[:alert]%>
+      <hr>
+        <%= flash[:notice] || flash[:alert] %>
+      <hr>
+    <% end %>
+
+    <%= yield %>
   </body>
 </html>

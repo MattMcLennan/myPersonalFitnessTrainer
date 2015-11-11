@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
-    redirect_to users_path, notice: "Adios!"
+    redirect_to root_path
   end
 
   def fitbit
@@ -29,11 +29,10 @@ class SessionsController < ApplicationController
     redirect_to new_user_path(id: @user.id)
   end
 
-
   def generate_user_info
     @consumer_key = '10c780512cf30750c716e8523c718155'
     @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
-    
+
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
       :consumer_secret => @consumer_secret,

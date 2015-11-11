@@ -17,6 +17,8 @@ get 'sessions/generate_user_info', :to => 'sessions#generate_user_info'
 
   resources :meals
 
+  resource :starts
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
