@@ -40,6 +40,8 @@ class ExercisesController < ApplicationController
 
       current_user.update_attributes(template_chosen: true)
       current_user.save!
+      
+      redirect_to users_path
     end
   end
 

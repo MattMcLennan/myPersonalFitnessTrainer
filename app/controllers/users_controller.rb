@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     @user.save
     respond_to do |format|
       if @user.save
-        format.html { redirect_to users_path, notice: "#{@user.name} welcome!" }
+        format.html { redirect_to users_path }
       else
         format.html { render :new, alert: "Signup was not successful." }
       end
