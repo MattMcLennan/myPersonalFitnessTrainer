@@ -4,16 +4,16 @@
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <% if current_user %>
-        <li><a href="sass.html">
+        <li>
           <%= link_to "Log out", session_path("current"), method: :delete %>
-        </a></li>
+        </li>
       <% end %>
     </ul>
     <ul class="side-nav" id="mobile-demo">
       <% if current_user %>
-        <li><a href="sass.html">
+        <li>
           <%= link_to "Log out", session_path("current"), method: :delete %>
-        </a></li>
+        </li>
       <% end %>
     </ul>
   </div>

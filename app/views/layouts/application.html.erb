@@ -16,9 +16,7 @@
     <%= render './layouts/nav' %>
 
     <% if flash[:notice] || flash[:alert]%>
-      <hr>
         <%= flash[:notice] || flash[:alert] %>
-      <hr>
     <% end %>
 
     <%= yield %>
