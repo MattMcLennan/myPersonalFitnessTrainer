@@ -1,3 +1,7 @@
+<% content_for :header do %>
+  <%= javascript_include_tag 'api_calls' %>  
+<% end %>
+
 <h1>Personal Fitness Trainer</h1>
 
   <% if flash[:notice] || flash[:alert]%>

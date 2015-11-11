@@ -15,9 +15,6 @@ class SessionsController < ApplicationController
     redirect_to users_path, notice: "Adios!"
   end
 
-  def failure  
-  end
-
   def fitbit
     auth = (env["omniauth.auth"])
     @user = User.find_or_initialize_by(uid: auth["uid"], provider: 'fitbit')
