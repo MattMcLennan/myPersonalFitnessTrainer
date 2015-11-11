@@ -1,33 +1,38 @@
 // Place all the styles related to the Start controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html, body {
-  height: 100%;
-  width: 100%;
-  // overflow-y: hidden;
-  // position: fixed;
-}
-
-img {
-  width: 100%;
+.appName {
+  font-size: 3rem;
+  font-family: 'Pacifico', cursive;
+  position: absolute;
+  left: 50%;
+  color: darkgrey;
+  font-style: bold;
 }
 
 .main {
   position: fixed;
-}
-
-nav .brand-logo.left {
-  left: 1.2em;
-}
-
-.nav-wrapper {
-  border: 1px solid black;
+  width: 100%;
 }
 
 .content {
   position: absolute;
+  max-width: 30%;
   top: 25%;
-  left: 10%;
+  left: 50%;
   color: white;
   font-size: 20px;
+}
+
+.content-footer {
+  position: absolute;
+  left: 50%;
+}
+
+.quote {
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Indie Flower", cursive;
+  font-size: 3rem;
 }
