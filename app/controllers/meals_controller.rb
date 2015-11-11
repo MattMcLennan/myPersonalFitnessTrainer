@@ -9,23 +9,6 @@ class MealsController < ApplicationController
     @meal = Meal.new
   end
 
-  def create
-    # @meal = Meal.new(meal_params)
-
-    # # render :json @meal
-
-    # # respond_to do |format|
-    # #   if @meal.save
-    # #     format.html { redirect_to @meal, notice: 'Meal was successfully created.' }
-    # #     format.json { render :show, status: :created, location: @meal }
-    # #   else
-    # #     format.html { render :new }
-    # #     format.json { render json: @meal.errors, status: :unprocessable_entity }
-    # #   end
-    # # end
-    # render :json @meal
-  end
-
   def destroy
     @meal.destroy
   end
