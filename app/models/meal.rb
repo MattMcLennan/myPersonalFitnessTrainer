@@ -25,6 +25,7 @@ class Meal < ActiveRecord::Base
   
   def self.algo
     # cals Defined by user
+    # binding.pry
     user_cals_target = 2000
     nutrition_content = ["calories", "protein", "carbs", "fat"]
 
@@ -34,9 +35,9 @@ class Meal < ActiveRecord::Base
     snack2_target = user_cals_target * SNACK2_TARGET_ALLOCATION
     dinner_target = user_cals_target * DINNER_TARGET_ALLOCATION
     snack3_target = user_cals_target * SNACK3_TARGET_ALLOCATION
-    weekly_meal = []
+    # weekly_meal = []
 
-    7.times do 
+    # 7.times do 
 
       # Storing an empty daily_meal object to iterate over
       daily_meal = { breakfast: {}, snack1: {}, lunch: {}, snack2: {}, dinner: {}, snack3: {} }
@@ -152,9 +153,9 @@ class Meal < ActiveRecord::Base
         end
       daily_meal[meal_category] = value
       end
-      weekly_meal.push(daily_meal)
-    end
-    return weekly_meal
+      # weekly_meal.push(daily_meal)
+    # end
+    return daily_meal
   end
 
   def self.set_meal_category_items(value, item_num, find, meal_target, item_allocation, db_id)

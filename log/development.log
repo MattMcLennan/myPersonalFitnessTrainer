@@ -2062,3 +2062,447 @@ Migrating to AddColumnsToUsers (20151111221929)
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 120], ["carbs", 4], ["category", "Snack3"], ["created_at", "2015-11-12 00:56:41.182753"], ["diet_name", "Paleo"], ["fat", 2], ["food", "Protein Shake"], ["per_grams", 29], ["protein", 7], ["updated_at", "2015-11-12 00:56:41.182753"]]
   [1m[35m (0.0ms)[0m  COMMIT
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-12 01:03:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 412ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:5:in `current_user'
+  app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___504175021_104845920'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-12 01:03:17 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 232ms (Views: 231.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-12 01:03:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:17 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-12 01:03:18 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-12 01:03:18 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-12 01:03:18 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-12 01:03:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:18 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:18 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:18 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-12 01:03:20 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-12 01:03:21 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=5863d35ec3065073df617deeee72e644&oauth_verifier=176827cd3f69bd5c7da51b4c6cd6f788" for 10.0.2.2 at 2015-11-12 01:03:32 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"5863d35ec3065073df617deeee72e644", "oauth_verifier"=>"176827cd3f69bd5c7da51b4c6cd6f788"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' AND "users"."provider" = 'fitbit' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "name", "provider", "secret", "token", "uid", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2015-11-12 01:03:33.263841"], ["name", "Matthew McLennan"], ["provider", "fitbit"], ["secret", "2ccc132c20b77db4fb25197a6e1a68eb"], ["token", "3e25d12b4c3a4ba25b8c8a9d9967cbbf"], ["uid", "3KMJZM"], ["updated_at", "2015-11-12 01:03:33.263841"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new?id=1
+Completed 302 Found in 43ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/new?id=1" for 10.0.2.2 at 2015-11-12 01:03:33 +0000
+Processing by UsersController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (345.6ms)
+  Rendered users/new.html.erb within layouts/application (366.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 617ms (Views: 613.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:33 +0000
+
+
+Started PATCH "/users/1" for 10.0.2.2 at 2015-11-12 01:03:36 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gWdKFegTKMx13jJT3jPCJ/QEuO/0k+9oD0IcokW6ZAM=", "user"=>{"email"=>""}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-11-12 01:03:36.349605"], ["email", ""], ["updated_at", "2015-11-12 01:03:36.349605"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-12 01:03:36 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.6ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (30.3ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 292ms (Views: 269.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:36 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-12 01:03:36 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 678ms
+
+NameError (undefined local variable or method `daily_meal' for #<SessionsController:0xb22710c>):
+  app/controllers/sessions_controller.rb:52:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (16.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-12 01:03:42 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 235ms (Views: 234.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:42 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-12 01:03:44 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-12 01:03:44 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=41795e59240b698ccc79c26a8e9f03a8&oauth_verifier=9e02cc2f9fc4cd33f8ae961ec59117cf" for 10.0.2.2 at 2015-11-12 01:03:46 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"41795e59240b698ccc79c26a8e9f03a8", "oauth_verifier"=>"9e02cc2f9fc4cd33f8ae961ec59117cf"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' AND "users"."provider" = 'fitbit' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/new?id=1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new?id=1" for 10.0.2.2 at 2015-11-12 01:03:46 +0000
+Processing by UsersController#new as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 268ms (Views: 265.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:47 +0000
+
+
+Started PATCH "/users/1" for 10.0.2.2 at 2015-11-12 01:03:49 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gWdKFegTKMx13jJT3jPCJ/QEuO/0k+9oD0IcokW6ZAM=", "user"=>{"email"=>""}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-11-12 01:03:49.144469"], ["email", ""], ["updated_at", "2015-11-12 01:03:49.144469"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-12 01:03:49 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 249ms (Views: 246.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:49 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-12 01:03:49 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 584ms
+
+NameError (undefined local variable or method `daily_meal' for #<SessionsController:0xb31c27a4>):
+  app/controllers/sessions_controller.rb:52:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (24.7ms)
+
+
+Started GET "/exercises/new" for 10.0.2.2 at 2015-11-12 01:03:53 +0000
+Processing by ExercisesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered exercises/new.html.erb within layouts/application (44.2ms)
+  Rendered layouts/_nav.html.erb (1.3ms)
+Completed 200 OK in 304ms (Views: 298.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/exercises" for 10.0.2.2 at 2015-11-12 01:03:56 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gWdKFegTKMx13jJT3jPCJ/QEuO/0k+9oD0IcokW6ZAM=", "exercise"=>{"squat"=>"0", "squat_reps"=>"0", "deadlift"=>"0", "deadlift_reps"=>"0", "bench"=>"0", "bench_reps"=>"0", "overhead_press"=>"0", "overhead_press_reps"=>"0", "barbell_row"=>"0", "barbell_row_reps"=>"0"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "exercises" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-11-12 01:03:56.191847"], ["updated_at", "2015-11-12 01:03:56.191847"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "template_chosen" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["template_chosen", "t"], ["updated_at", "2015-11-12 01:03:56.196146"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users
+Completed 302 Found in 15ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-12 01:03:56 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (2.2ms)
+  Rendered users/index.html.erb within layouts/application (39.7ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 288ms (Views: 284.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:03:56 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-12 01:03:56 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 574ms
+
+NameError (undefined local variable or method `daily_meal' for #<SessionsController:0xb4b7fbd8>):
+  app/controllers/sessions_controller.rb:52:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (17.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-12 01:04:26 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (34.9ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 308ms (Views: 265.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-12 01:04:27 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 577ms
+
+SyntaxError (/vagrant/final/app/models/meal.rb:182: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/meal.rb:182: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/sessions_controller.rb:60:in `daily_meal'
+  app/controllers/sessions_controller.rb:52:in `generate_user_info'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (12.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.6ms)
+  Rendered users/index.html.erb within layouts/application (36.7ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 344ms (Views: 295.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:09 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:10 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:10 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-12 01:05:10 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+Completed 200 OK in 630ms (Views: 14.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-12 01:05:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.6ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (2.6ms)
+  Rendered users/index.html.erb within layouts/application (54.9ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 519ms (Views: 413.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-12 01:05:42 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-12 01:05:43 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.5ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+Completed   in 73294ms

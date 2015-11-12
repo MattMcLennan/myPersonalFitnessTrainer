@@ -47,17 +47,19 @@ class SessionsController < ApplicationController
       "calories" => client.data_by_time_range('/activities/log/calories', {:base_date => "2015-07-07", :end_date => "today"})
     }
 
-    # If weekly_meal is already set do nothing
-    if current_user.weekly_meal.empty?
-      weekly_meal  
+    # If daily_meal is already set do nothing
+    if current_user.daily_meal.empty?
+      daily_meal  
     end
+
+    binding.pry
       # client.activity_on_date_range(:calories, '2015-07-07', 'today') gets total calories out per day
       # client.activity_on_date_range(:steps, '2015-07-07', 'today')  gets total steps out per day
     render :json => @data
   end
 
-  def weekly_meal
-    current_user.weekly_meal = Meal.algo
+  def daily_meal
+    current_user.daily_meal = Meal.algo
   end
 
 end
