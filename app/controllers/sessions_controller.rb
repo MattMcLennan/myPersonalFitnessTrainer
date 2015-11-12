@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
 
   def fitbit
     auth = (env["omniauth.auth"])
-    binding.pry
     @user = User.find_or_initialize_by(uid: auth["uid"], provider: 'fitbit')
     @user.provider = auth["provider"]
     @user.uid = auth["uid"]
@@ -46,11 +45,19 @@ class SessionsController < ApplicationController
       "steps" => client.data_by_time_range('/activities/log/steps', {:base_date => "2015-07-07", :end_date => "today"}),
       "distance" => client.data_by_time_range('/activities/log/distance', {:base_date => "2015-07-07", :end_date => "today"}),
       "calories" => client.data_by_time_range('/activities/log/calories', {:base_date => "2015-07-07", :end_date => "today"})
-
     }
+
+    # If weekly_meal is already set do nothing
+    if current_user.weekly_meal.empty?
+      weekly_meal  
+    end
       # client.activity_on_date_range(:calories, '2015-07-07', 'today') gets total calories out per day
       # client.activity_on_date_range(:steps, '2015-07-07', 'today')  gets total steps out per day
     render :json => @data
+  end
+
+  def weekly_meal
+    current_user.weekly_meal = Meal.algo
   end
 
 end
