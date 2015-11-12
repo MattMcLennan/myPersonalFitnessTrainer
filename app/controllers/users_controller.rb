@@ -7,8 +7,9 @@ class UsersController < ApplicationController
       redirect_to root_path, alert: "Log in first!"
     else
       @users = User.all
-      @exercises = Exercise.find_by(user_id: current_user)
+      @exercise = Exercise.find_by(user_id: current_user)
     end
+
   end
 
   def new

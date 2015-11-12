@@ -41,26 +41,25 @@ class SessionsController < ApplicationController
       "body_weight" => client.activity_on_date_range(:weight, '2015-07-07', 'today'),
       "steps" => client.activity_on_date_range(:steps, '2015-07-07', 'today'),
       "distance" => client.activity_on_date_range(:distance, '2015-07-07', 'today'),
-      "calories" => client.activity_on_date_range(:calories, '2015-07-07', 'today') 
+      "calories" => client.activity_on_date_range(:calories, '2015-07-07', 'today')
     }
-
      # calculates average cals
 
       get_cals = client.activity_on_date_range(:calories, 1.week.ago.to_date.to_s, "today")
       total_cals = 0
       count = 0
 
-      get_cals["activities-calories"].each do |i|        
+      get_cals["activities-calories"].each do |i|
         i.each do |key,value|
           if key=="value"
             total_cals += value.to_i
             count += 1
-          end  
-        end  
+          end
+        end
       end
       current_user.avg_weekly_cals = total_cals/count.round(-1)
       current_user.save!
-
+      
     render :json => @data
   end
 
@@ -70,4 +69,3 @@ end
 
 
   # config.vm.network :forwarded_port, guest: 3000, host: 1234
-
