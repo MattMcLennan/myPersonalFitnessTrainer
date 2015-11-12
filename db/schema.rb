@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 20151111221929) do
     t.string   "token"
     t.string   "secret"
     t.integer  "avg_weekly_cals"
-    t.text     "daily_meal",      default: [],    array: true
+    t.text     "daily_meal"
     t.string   "gender"
     t.integer  "weight"
   end
