@@ -11,6 +11,8 @@
       <h3 class="yourTemplate">Here's your template:</h3>
       <hr>
       <a href="<%= edit_exercise_path(@exercise) %>" class="waves-effect waves-light btn">Adjust your weights</a>
+      <a href="<%= exercise_path(@exercise) %>" class="waves-effect waves-light btn">Strength Level</a>
+      <hr>
       <%= render './exercises/template' %>
     <% end %>
   </div>
