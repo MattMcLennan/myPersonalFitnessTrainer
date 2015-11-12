@@ -6,8 +6,7 @@ class SessionsController < ApplicationController
 
   def fitbit
     auth = (env["omniauth.auth"])
-    binding.pry
-    @user = User.find_or_initialize_by(uid: auth["uid"], provider: 'fitbit')
+    @user = User.find_or_initialize_by(uid: auth["uid"])
     @user.provider = auth["provider"]
     @user.uid = auth["uid"]
     @user.name = auth["info"]["full_name"]
@@ -18,8 +17,12 @@ class SessionsController < ApplicationController
     @user.save
 
     session[:user_id] = @user.id
-
-    redirect_to new_user_path(id: @user.id)
+    # redirect_to new_user_path(id: @user.id)
+    if current_user.email != nil
+      redirect_to users_path
+    else
+      redirect_to new_user_path(id: @user.id)
+    end
   end
 
   def generate_user_info
@@ -34,18 +37,37 @@ class SessionsController < ApplicationController
       :user_id => current_user.uid})
 
     @data = {
-      "average_calories" => client.data_by_time_range('/activities/log/calories', {:base_date => 1.week.ago.to_date.to_s, :end_date => "today"}),
       "body_weight_goal" => client.body_weight_goal,
-      "body_weight" => client.data_by_time_range('/body/weight', {:base_date => "2015-07-07", :end_date => "today"}),
-      "steps" => client.data_by_time_range('/activities/log/steps', {:base_date => "2015-07-07", :end_date => "today"}),
-      "distance" => client.data_by_time_range('/activities/log/distance', {:base_date => "2015-07-07", :end_date => "today"}),
-      "calories" => client.data_by_time_range('/activities/log/calories', {:base_date => "2015-07-07", :end_date => "today"})
-
+      "body_weight" => client.activity_on_date_range(:weight, '2015-07-07', 'today'),
+      "steps" => client.activity_on_date_range(:steps, '2015-07-07', 'today'),
+      "distance" => client.activity_on_date_range(:distance, '2015-07-07', 'today'),
+      "calories" => client.activity_on_date_range(:calories, '2015-07-07', 'today') 
     }
-      # client.activity_on_date_range(:calories, '2015-07-07', 'today') gets total calories out per day
-      # client.activity_on_date_range(:steps, '2015-07-07', 'today')  gets total steps out per day
-    
+
+     # calculates average cals
+
+      get_cals = client.activity_on_date_range(:calories, 1.week.ago.to_date.to_s, "today")
+      total_cals = 0
+      count = 0
+
+      get_cals["activities-calories"].each do |i|        
+        i.each do |key,value|
+          if key=="value"
+            total_cals += value.to_i
+            count += 1
+          end  
+        end  
+      end
+      current_user.avg_weekly_cals = total_cals/count.round(-1)
+      current_user.save!
+
     render :json => @data
   end
 
 end
+
+
+
+
+  # config.vm.network :forwarded_port, guest: 3000, host: 1234
+
