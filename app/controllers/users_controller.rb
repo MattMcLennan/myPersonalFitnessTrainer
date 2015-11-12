@@ -9,12 +9,11 @@ class UsersController < ApplicationController
       @users = User.all
       @exercise = Exercise.find_by(user_id: current_user)
     end
-
   end
 
   def new
      @user = User.find(params[:id])
-          
+
     # if !current_user
     #   redirect_to root_path, alert: "Log in first!"
     # else
