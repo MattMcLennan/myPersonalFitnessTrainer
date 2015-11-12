@@ -49,10 +49,13 @@ class SessionsController < ApplicationController
 
     # If daily_meal is already set do nothing
     if current_user.daily_meal.empty?
-      daily_meal  
+      binding.pry
+      daily_meal
+      current_user.save!
+    elsif current_user.daily_meal[-1] != Time.now.in_time_zone("Eastern Time (US & Canada)").to_date
+      binding.pry
+      daily_meal
     end
-
-    binding.pry
       # client.activity_on_date_range(:calories, '2015-07-07', 'today') gets total calories out per day
       # client.activity_on_date_range(:steps, '2015-07-07', 'today')  gets total steps out per day
     render :json => @data

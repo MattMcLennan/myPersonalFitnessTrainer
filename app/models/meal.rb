@@ -1,3 +1,5 @@
+require 'date'
+
 class Meal < ActiveRecord::Base
   BREAKFAST_TARGET_ALLOCATION = 0.25
   SNACK1_TARGET_ALLOCATION = 0.10
@@ -154,7 +156,8 @@ class Meal < ActiveRecord::Base
       daily_meal[meal_category] = value
       end
     # end
-    daily_meal[:date] = Date.today
+    daily_meal[:date] = Time.now.in_time_zone("Eastern Time (US & Canada)").to_date-1
+    binding.pry
     return daily_meal
   end
 
