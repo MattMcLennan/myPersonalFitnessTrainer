@@ -22,5 +22,25 @@ class Exercise < ActiveRecord::Base
     :calf_raise_reps,
     :pullup_reps,
     numericality: { greater_than_or_equal_to: 0 }
-    
+
+    def squat_calc
+      squat * (1 + 0.025 * squat_reps)
+    end
+
+    def bench_calc
+      bench * (1 + 0.025 * bench_reps)
+    end
+
+    def deadlift_calc
+      deadlift * (1 + 0.025 * deadlift_reps)
+    end
+
+    def overhead_press_calc
+      overhead_press * (1 + 0.025 * overhead_press_reps)
+    end
+
+    def barbell_row_calc
+      barbell_row * (1 + 0.025 * barbell_row_reps)
+    end
+
 end

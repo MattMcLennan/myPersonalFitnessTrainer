@@ -3,11 +3,6 @@ class User < ActiveRecord::Base
   has_many :meals
   has_many :exercises
 
-  GOALS = [
-    "Weight Gain",
-    "Weight Loss"
-  ]
-
   EMAIL_RE = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/
 
   def valid_email

@@ -1,0 +1,19 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveColumnsFromUsers (20151111220904)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" DROP "password_digest"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" DROP "fitBit_ID"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" DROP "fitBit_auth"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" DROP "fatSecret_ID"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" DROP "fatSecret_auth"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151111220904"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddColumnsToUsers (20151111221929)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD COLUMN "avg_weekly_cals" integer[0m
+  [1m[35m (7.3ms)[0m  ALTER TABLE "users" ADD COLUMN "weekly_meal" text[] DEFAULT '{}'
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "gender" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "weight" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151111221929"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

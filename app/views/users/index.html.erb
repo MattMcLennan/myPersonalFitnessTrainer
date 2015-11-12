@@ -3,16 +3,14 @@
 <% end %>
 
 <div class="row">
-</div>
-
-<div class="row">
   <div class="col s12">
     <% if !current_user.template_chosen %>
       <p>It looks like you haven't set up your template yet!</p>
       <a href="<%= new_exercise_path %>" class="waves-effect waves-light btn">Set up template</a>
     <% else %>
-      <h1>Here's your current template:</h1>
-      <a href="<%= edit_exercise_path(@exercises) %>" class="waves-effect waves-light btn">Adjust your weights</a>
+      <h3 class="yourTemplate">Here's your template:</h3>
+      <hr>
+      <a href="<%= edit_exercise_path(@exercise) %>" class="waves-effect waves-light btn">Adjust your weights</a>
       <%= render './exercises/template' %>
     <% end %>
   </div>

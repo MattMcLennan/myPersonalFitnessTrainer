@@ -1,5 +1,15 @@
 class ExercisesController < ApplicationController
 
+  def show
+    @exercise = Exercise.find_by(user_id: current_user)
+
+    @squat = @exercise.squat_calc
+    @bench = @exercise.bench_calc
+    @deadlift = @exercise.deadlift_calc
+    @overhead_press = @exercise.overhead_press_calc
+    @barbell_row = @exercise.barbell_row_calc
+  end
+
   def edit
     if !current_user
       redirect_to users_path, alert: "Log in first!"
