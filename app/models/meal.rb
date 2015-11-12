@@ -153,8 +153,8 @@ class Meal < ActiveRecord::Base
         end
       daily_meal[meal_category] = value
       end
-      # weekly_meal.push(daily_meal)
     # end
+    daily_meal[:date] = Date.today
     return daily_meal
   end
 
