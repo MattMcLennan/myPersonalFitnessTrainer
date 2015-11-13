@@ -156,9 +156,7 @@ class Meal < ActiveRecord::Base
       daily_meal[meal_category] = value
       end
     # end
-    daily_meal[:date] = Time.now.in_time_zone("Eastern Time (US & Canada)").to_date-1
-    binding.pry
-    return daily_meal.to_s
+    return daily_meal.to_json
   end
 
   def self.set_meal_category_items(value, item_num, find, meal_target, item_allocation, db_id)
