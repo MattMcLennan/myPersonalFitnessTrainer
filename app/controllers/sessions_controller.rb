@@ -32,7 +32,7 @@ class SessionsController < ApplicationController
 
     if current_user.updated_at == current_user.created_at
       meal = JSON.parse(daily_meal)
-    elsif current_user.updated_at.to_date - 1 != Date.current
+    elsif current_user.updated_at.to_date != Date.current
       meal = JSON.parse(daily_meal)
     end
 
