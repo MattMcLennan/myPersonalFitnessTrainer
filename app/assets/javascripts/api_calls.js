@@ -9,11 +9,8 @@ $( document ).ready(function() {
     });
 
    function success(results) {
-      debugger
    }
 
    function error() {
-      debugger
    }
 });
-

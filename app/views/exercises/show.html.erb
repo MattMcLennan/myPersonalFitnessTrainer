@@ -1,105 +1,107 @@
-<div class="row">
-  <div class="col s12">
-    <h1>Strength Level</h1>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h1>Strength Level</h1>
+    </div>
 
-  <div class="col s12">
-    <h4>Your estimated 1RM for Squats: <%= @squat_max %> lbs</h4>
-    <table class="responsive-table">
-      <tr>
-        <th>Untrained</th>
-        <th>Novice</th>
-        <th>Intermediate</th>
-        <th>Advance</th>
-        <th>Elite</th>
-      </tr>
-      <tr>
-        <td><%= @squat[:untrained] %> lbs</td>
-        <td><%= @squat[:novice] %> lbs</td>
-        <td><%= @squat[:intermediate] %> lbs</td>
-        <td><%= @squat[:advance] %> lbs</td>
-        <td><%= @squat[:elite] %> lbs</td>
-      </tr>
-    </table>
-  </div>
+    <div class="col s12">
+      <h4>Your estimated 1RM for Squats: <%= @squat_max %> lbs</h4>
+      <table class="responsive-table">
+        <tr>
+          <th>Untrained</th>
+          <th>Novice</th>
+          <th>Intermediate</th>
+          <th>Advance</th>
+          <th>Elite</th>
+        </tr>
+        <tr>
+          <td><%= @squat[:untrained] %> lbs</td>
+          <td><%= @squat[:novice] %> lbs</td>
+          <td><%= @squat[:intermediate] %> lbs</td>
+          <td><%= @squat[:advance] %> lbs</td>
+          <td><%= @squat[:elite] %> lbs</td>
+        </tr>
+      </table>
+    </div>
 
-  <div class="col s12">
-    <h4>Your estimated 1RM for Deadlifts: <%= @deadlift_max %> lbs</h4>
-    <table class="responsive-table">
-      <tr>
-        <th>Untrained</th>
-        <th>Novice</th>
-        <th>Intermediate</th>
-        <th>Advance</th>
-        <th>Elite</th>
-      </tr>
-      <tr>
-        <td><%= @deadlift[:untrained] %> lbs</td>
-        <td><%= @deadlift[:novice] %> lbs</td>
-        <td><%= @deadlift[:intermediate] %> lbs</td>
-        <td><%= @deadlift[:advance] %> lbs</td>
-        <td><%= @deadlift[:elite] %> lbs</td>
-      </tr>
-    </table>
-  </div>
+    <div class="col s12">
+      <h4>Your estimated 1RM for Deadlifts: <%= @deadlift_max %> lbs</h4>
+      <table class="responsive-table">
+        <tr>
+          <th>Untrained</th>
+          <th>Novice</th>
+          <th>Intermediate</th>
+          <th>Advance</th>
+          <th>Elite</th>
+        </tr>
+        <tr>
+          <td><%= @deadlift[:untrained] %> lbs</td>
+          <td><%= @deadlift[:novice] %> lbs</td>
+          <td><%= @deadlift[:intermediate] %> lbs</td>
+          <td><%= @deadlift[:advance] %> lbs</td>
+          <td><%= @deadlift[:elite] %> lbs</td>
+        </tr>
+      </table>
+    </div>
 
-  <div class="col s12">
-    <h4>Your estimated 1RM for Bench: <%= @bench_max %> lbs</h4>
-    <table class="responsive-table">
-      <tr>
-        <th>Untrained</th>
-        <th>Novice</th>
-        <th>Intermediate</th>
-        <th>Advance</th>
-        <th>Elite</th>
-      </tr>
-      <tr>
-        <td><%= @bench[:untrained] %> lbs</td>
-        <td><%= @bench[:novice] %> lbs</td>
-        <td><%= @bench[:intermediate] %> lbs</td>
-        <td><%= @bench[:advance] %> lbs</td>
-        <td><%= @bench[:elite] %> lbs</td>
-      </tr>
-    </table>
-  </div>
+    <div class="col s12">
+      <h4>Your estimated 1RM for Bench: <%= @bench_max %> lbs</h4>
+      <table class="responsive-table">
+        <tr>
+          <th>Untrained</th>
+          <th>Novice</th>
+          <th>Intermediate</th>
+          <th>Advance</th>
+          <th>Elite</th>
+        </tr>
+        <tr>
+          <td><%= @bench[:untrained] %> lbs</td>
+          <td><%= @bench[:novice] %> lbs</td>
+          <td><%= @bench[:intermediate] %> lbs</td>
+          <td><%= @bench[:advance] %> lbs</td>
+          <td><%= @bench[:elite] %> lbs</td>
+        </tr>
+      </table>
+    </div>
 
-  <div class="col s12">
-    <h4>Your estimated 1RM for Overhead Press: <%= @overhead_press_max %> lbs</h4>
-    <table class="responsive-table">
-      <tr>
-        <th>Untrained</th>
-        <th>Novice</th>
-        <th>Intermediate</th>
-        <th>Advance</th>
-        <th>Elite</th>
-      </tr>
-      <tr>
-        <td><%= @overhead_press[:untrained] %> lbs</td>
-        <td><%= @overhead_press[:novice] %> lbs</td>
-        <td><%= @overhead_press[:intermediate] %> lbs</td>
-        <td><%= @overhead_press[:advance] %> lbs</td>
-        <td><%= @overhead_press[:elite] %> lbs</td>
-      </tr>
-    </table>
-  </div>
+    <div class="col s12">
+      <h4>Your estimated 1RM for Overhead Press: <%= @overhead_press_max %> lbs</h4>
+      <table class="responsive-table">
+        <tr>
+          <th>Untrained</th>
+          <th>Novice</th>
+          <th>Intermediate</th>
+          <th>Advance</th>
+          <th>Elite</th>
+        </tr>
+        <tr>
+          <td><%= @overhead_press[:untrained] %> lbs</td>
+          <td><%= @overhead_press[:novice] %> lbs</td>
+          <td><%= @overhead_press[:intermediate] %> lbs</td>
+          <td><%= @overhead_press[:advance] %> lbs</td>
+          <td><%= @overhead_press[:elite] %> lbs</td>
+        </tr>
+      </table>
+    </div>
 
-  <div class="col s12">
-    <h4>Your estimated 1RM for Barbell Row: <%= @barbell_row_max %> lbs</h4>
-    <table class="responsive-table">
-      <tr>
-        <th>Untrained</th>
-        <th>Novice</th>
-        <th>Intermediate</th>
-        <th>Advance</th>
-        <th>Elite</th>
-      </tr>
-      <tr>
-        <td><%= @barbell_row[:untrained] %> lbs</td>
-        <td><%= @barbell_row[:novice] %> lbs</td>
-        <td><%= @barbell_row[:intermediate] %> lbs</td>
-        <td><%= @barbell_row[:advance] %> lbs</td>
-        <td><%= @barbell_row[:elite] %> lbs</td>
-      </tr>
-    </table>
+    <div class="col s12">
+      <h4>Your estimated 1RM for Barbell Row: <%= @barbell_row_max %> lbs</h4>
+      <table class="responsive-table">
+        <tr>
+          <th>Untrained</th>
+          <th>Novice</th>
+          <th>Intermediate</th>
+          <th>Advance</th>
+          <th>Elite</th>
+        </tr>
+        <tr>
+          <td><%= @barbell_row[:untrained] %> lbs</td>
+          <td><%= @barbell_row[:novice] %> lbs</td>
+          <td><%= @barbell_row[:intermediate] %> lbs</td>
+          <td><%= @barbell_row[:advance] %> lbs</td>
+          <td><%= @barbell_row[:elite] %> lbs</td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
