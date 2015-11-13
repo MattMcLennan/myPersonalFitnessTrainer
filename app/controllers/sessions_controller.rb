@@ -30,6 +30,8 @@ class SessionsController < ApplicationController
       :secret => current_user.secret,
       :user_id => current_user.uid})
 
+    # Error we are getting back meal as null when refreshed page and on same date
+
     if current_user.updated_at == current_user.created_at
       meal = JSON.parse(daily_meal)
     elsif current_user.updated_at.to_date != Date.current
@@ -41,7 +43,7 @@ class SessionsController < ApplicationController
       "steps" => client.data_by_time_range('/activities/log/steps', {:base_date => "2015-07-07", :end_date => "today"}),
       "distance" => client.data_by_time_range('/activities/log/distance', {:base_date => "2015-07-07", :end_date => "today"}),
       "calories" => client.data_by_time_range('/activities/log/calories', {:base_date => "2015-07-07", :end_date => "today"}),
-      "meal" => meal
+      "meal" => current_meal
     }
 
     current_user.save!
