@@ -18502,3 +18502,63 @@ Processing by SessionsController#generate_user_info as JSON
   [1m[35m (0.2ms)[0m  BEGIN
   [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
 Completed   in 17667ms
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-13 17:02:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.8ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (33.1ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 499ms (Views: 399.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-13 17:02:50 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.5ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "daily_meal" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["daily_meal", "{\"breakfast\":{\"item1\":{\"name\":\"Eggs\",\"grams\":260,\"calories\":400,\"protein\":30,\"carbs\":0,\"fat\":30},\"item2\":{\"name\":\"Turkey Bacon\",\"grams\":30,\"calories\":110,\"protein\":10,\"carbs\":0,\"fat\":10}},\"snack1\":{\"item1\":{\"name\":\"Mango\",\"grams\":200,\"calories\":120,\"protein\":0,\"carbs\":30,\"fat\":0},\"item2\":{\"name\":\"Cantaloupe\",\"grams\":240,\"calories\":80,\"protein\":0,\"carbs\":20,\"fat\":0}},\"lunch\":{\"item1\":{\"name\":\"Tuna\",\"grams\":220,\"calories\":400,\"protein\":70,\"carbs\":0,\"fat\":10},\"item2\":{\"name\":\"Blackberries\",\"grams\":230,\"calories\":100,\"protein\":0,\"carbs\":20,\"fat\":0}},\"snack2\":{\"item1\":{\"name\":\"Celery\",\"grams\":470,\"calories\":80,\"protein\":0,\"carbs\":10,\"fat\":0},\"item2\":{\"name\":\"Hazelnuts\",\"grams\":10,\"calories\":60,\"protein\":0,\"carbs\":0,\"fat\":10}},\"dinner\":{\"item1\":{\"name\":\"Lobster\",\"grams\":450,\"calories\":400,\"protein\":90,\"carbs\":0,\"fat\":0},\"item2\":{\"name\":\"Celery\",\"grams\":630,\"calories\":100,\"protein\":10,\"carbs\":20,\"fat\":0}},\"snack3\":{\"item1\":{\"name\":\"Protein Shake\",\"grams\":40,\"calories\":170,\"protein\":10,\"carbs\":10,\"fat\":0}}}"], ["updated_at", "2015-11-13 17:02:51.866335"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed   in 12545ms

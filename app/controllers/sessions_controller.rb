@@ -31,10 +31,6 @@ class SessionsController < ApplicationController
       :secret => current_user.secret,
       :user_id => current_user.uid})
 
-    # Error we are getting back meal as null when refreshed page and on same date
-
-    # if current_user.updated_at == current_user.created_at
-    #   meal = JSON.parse(daily_meal)
     if current_user.updated_at.to_date != Date.current
       current_user.daily_meal = daily_meal(current_user)
     end
