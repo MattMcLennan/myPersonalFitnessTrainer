@@ -7,20 +7,22 @@ class UsersController < ApplicationController
       redirect_to root_path, alert: "Log in first!"
     else
       @users = User.all
-      @exercises = Exercise.find_by(user_id: current_user)
+      @exercise = Exercise.find_by(user_id: current_user)
     end
   end
 
   def new
-    if !current_user
-      redirect_to root_path, alert: "Log in first!"
-    else
-      @user = User.find(params[:id])
-    end
+     @user = User.find(params[:id])
+
+    # if !current_user
+    #   redirect_to root_path, alert: "Log in first!"
+    # else
+    #   @user = User.find(params[:id])
+    # end
   end
 
   def update
-    @user = User.new(user_params)
+    @user.update(user_params)
     @user.save
     respond_to do |format|
       if @user.save
