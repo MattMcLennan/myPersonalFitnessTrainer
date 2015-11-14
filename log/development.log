@@ -2122,3 +2122,391 @@ Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.8ms)
 Started GET "/meals" for 10.0.2.2 at 2015-11-14 19:28:43 +0000
 Processing by MealsController#index as HTML
 Completed   in 6434ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-14 19:31:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+Completed   in 19345ms
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-14 19:31:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.4ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_template.html.erb (20.9ms)
+  Rendered meals/index.html.erb within layouts/application (44.9ms)
+Completed 500 Internal Server Error in 195ms
+
+ActionView::Template::Error (undefined method `squat' for nil:NilClass):
+    17:         <tr>
+    18:           <td>Squats</td>
+    19:           <td>3 x 5</td>
+    20:           <td><%= @exercise.squat %> lbs</td>
+    21:           <% 4.times do %>
+    22:             <td><%= @exercise.squat += 5 %> lbs</td>
+    23:           <% end %>
+  app/views/meals/_template.html.erb:20:in `_app_views_meals__template_html_erb___320937303_98269550'
+  app/views/meals/index.html.erb:1:in `_app_views_meals_index_html_erb__735415484_98382530'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-14 19:31:48 +0000
+Processing by StartController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-14 19:31:48 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.5ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (1.5ms)
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (74.3ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 499ms (Views: 440.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-14 19:31:48 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-14 19:31:48 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-14 19:31:48 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-14 19:31:48 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-14 19:31:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-14 19:31:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-14 19:31:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-14 19:31:49 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-14 19:31:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-14 19:31:49 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-14 19:31:49 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-14 19:31:49 +0000
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.7ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-14 19:31:49 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 14696ms (Views: 8.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-14 19:32:17 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered meals/_template.html.erb (15.2ms)
+  Rendered users/index.html.erb within layouts/application (49.5ms)
+Completed 500 Internal Server Error in 98ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    65:     </tr>
+    66: 
+    67:     <tr>
+    68:       <td class="col s6"><%= @meals["breakfast"]["item1"]["name"] %></td>
+    69:       <td class="col s6"><%= @meals["breakfast"]["item2"]["name"] %></td>
+    70:     </td>
+    71: 
+  app/views/meals/_template.html.erb:68:in `_app_views_meals__template_html_erb___320937303_98269550'
+  app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___176962395_98512280'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-14 19:32:38 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_template.html.erb (18.0ms)
+  Rendered meals/index.html.erb within layouts/application (35.8ms)
+Completed 500 Internal Server Error in 101ms
+
+ActionView::Template::Error (undefined method `squat' for nil:NilClass):
+    17:         <tr>
+    18:           <td>Squats</td>
+    19:           <td>3 x 5</td>
+    20:           <td><%= @exercise.squat %> lbs</td>
+    21:           <% 4.times do %>
+    22:             <td><%= @exercise.squat += 5 %> lbs</td>
+    23:           <% end %>
+  app/views/meals/_template.html.erb:20:in `_app_views_meals__template_html_erb___320937303_98269550'
+  app/views/meals/index.html.erb:1:in `_app_views_meals_index_html_erb__735415484_98382530'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-14 19:34:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StartController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 71ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-14 19:34:14 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.6ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered meals/_dietplan.html.erb (21.1ms)
+  Rendered users/index.html.erb within layouts/application (69.5ms)
+Completed 500 Internal Server Error in 182ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    65:     </tr>
+    66: 
+    67:     <tr>
+    68:       <td class="col s6"><%= @meals["breakfast"]["item1"]["name"] %></td>
+    69:       <td class="col s6"><%= @meals["breakfast"]["item2"]["name"] %></td>
+    70:     </td>
+    71: 
+  app/views/meals/_dietplan.html.erb:68:in `_app_views_meals__dietplan_html_erb__371078096_92718590'
+  app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___192422508_93283170'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-14 19:34:54 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.4ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/index.html.erb within layouts/application (31.6ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (Missing partial ./meals/_template with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/final/app/views"
+):
+    1: <%= render './meals/template' %>
+  app/views/meals/index.html.erb:1:in `_app_views_meals_index_html_erb___147890079_90782950'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-14 19:35:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.8ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.8ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (21.8ms)
+  Rendered meals/index.html.erb within layouts/application (44.3ms)
+Completed 500 Internal Server Error in 197ms
+
+ActionView::Template::Error (undefined method `squat' for nil:NilClass):
+    17:         <tr>
+    18:           <td>Squats</td>
+    19:           <td>3 x 5</td>
+    20:           <td><%= @exercise.squat %> lbs</td>
+    21:           <% 4.times do %>
+    22:             <td><%= @exercise.squat += 5 %> lbs</td>
+    23:           <% end %>
+  app/views/meals/_dietplan.html.erb:20:in `_app_views_meals__dietplan_html_erb___23602813_92693560'
+  app/views/meals/index.html.erb:1:in `_app_views_meals_index_html_erb__520870764_92815130'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-14 19:36:19 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.6ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered meals/_dietplan.html.erb (13.8ms)
+  Rendered users/index.html.erb within layouts/application (53.4ms)
+Completed 500 Internal Server Error in 152ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    65:     </tr>
+    66: 
+    67:     <tr>
+    68:       <td class="col s6"><%= @meals["breakfast"]["item1"]["name"] %></td>
+    69:       <td class="col s6"><%= @meals["breakfast"]["item2"]["name"] %></td>
+    70:     </td>
+    71: 
+  app/views/meals/_dietplan.html.erb:68:in `_app_views_meals__dietplan_html_erb___23602813_92693560'
+  app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb__721417050_90428980'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-14 19:36:35 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered meals/_dietplan.html.erb (14.9ms)
+  Rendered users/index.html.erb within layouts/application (47.2ms)
+Completed 500 Internal Server Error in 90ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    65:     </tr>
+    66: 
+    67:     <tr>
+    68:       <td class="col s6"><%= @meals["breakfast"]["item1"]["name"] %></td>
+    69:       <td class="col s6"><%= @meals["breakfast"]["item2"]["name"] %></td>
+    70:     </td>
+    71: 
+  app/views/meals/_dietplan.html.erb:68:in `_app_views_meals__dietplan_html_erb___23602813_92693560'
+  app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb__721417050_83881380'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-14 19:36:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.5ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered meals/_dietplan.html.erb (21.3ms)
+  Rendered users/index.html.erb within layouts/application (69.8ms)
+Completed 500 Internal Server Error in 242ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    65:     </tr>
+    66: 
+    67:     <tr>
+    68:       <td class="col s6"><%= @meals["breakfast"]["item1"]["name"] %></td>
+    69:       <td class="col s6"><%= @meals["breakfast"]["item2"]["name"] %></td>
+    70:     </td>
+    71: 
+  app/views/meals/_dietplan.html.erb:68:in `_app_views_meals__dietplan_html_erb___571336272_100811640'
+  app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___732276655_101309200'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-14 19:37:09 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.9ms)
+  Rendered users/index.html.erb within layouts/application (34.8ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 387ms (Views: 384.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-14 19:37:09 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-14 19:37:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-14 19:37:09 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-14 19:37:09 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-14 19:37:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-14 19:37:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-14 19:37:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-14 19:37:10 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-14 19:37:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-14 19:37:10 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-14 19:37:10 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-14 19:37:19 +0000
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-14 19:37:19 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 6136ms (Views: 34.6ms | ActiveRecord: 0.4ms)
