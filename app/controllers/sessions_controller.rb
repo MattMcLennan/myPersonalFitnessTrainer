@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
     # Calculating the avg cals for the user 
     avg_cals(@user)
-    @user.daily_meal = daily_meal(@user, @user.avg_weekly_cals)
+    @user.daily_meal = daily_meal(@user)
     @user.save
 
     binding.pry
@@ -60,8 +60,8 @@ class SessionsController < ApplicationController
     render :json => @data
   end
 
-  def daily_meal(user, avg_weekly_cals)
-    user.daily_meal = Meal.algo(avg_weekly_cals)
+  def daily_meal(user)
+    user.daily_meal = Meal.algo(user)
   end
 
   def avg_cals(user)
@@ -76,18 +76,27 @@ class SessionsController < ApplicationController
       :user_id => user.uid})
 
     get_cals = client.activity_on_date_range(:calories, 1.week.ago.to_date.to_s, "today")
-    binding.pry
+    user.goal = client.body_weight_goal["goal"]["goalType"]
+
     total_cals = 0
     count = 0
+    i = 0
 
-    get_cals["activities-calories"].each do |i|
-      i.each do |key,value|
-        if key=="value"
-          total_cals += value.to_i
-          count += 1
-        end
-      end
+    # Object returns 8 objects however we only want to look at 7 of them
+    # since the 8th object will be calories as of the current date
+    # it will not be for the full date
+    7.times do
+      total_cals += get_cals["activities-calories"][i]["value"].to_i
+      count += 1
+      binding.pry
+      i += 1
     end
-    user.avg_weekly_cals = total_cals/count.round(-1)
+
+    if user.goal == "LOSE"
+      user.avg_weekly_cals = total_cals/count.round(-1) - 500
+    else
+      user.avg_weekly_cals = total_cals/count.round(-1) + 500
+    end
+
   end
 end

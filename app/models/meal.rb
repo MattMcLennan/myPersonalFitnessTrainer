@@ -25,10 +25,11 @@ class Meal < ActiveRecord::Base
   
   SNACK3_ITEM1_ALLOCATION = 1
   
-  def self.algo(avg_weekly_cals)
+  def self.algo(user)
     # cals Defined by user
     # binding.pry
-    user_cals_target = avg_weekly_cals
+    user_cals_target = user.avg_weekly_cals
+    binding.pry
     nutrition_content = ["calories", "protein", "carbs", "fat"]
 
     breakfast_target = user_cals_target * BREAKFAST_TARGET_ALLOCATION
