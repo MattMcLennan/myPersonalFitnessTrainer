@@ -1,5 +1,11 @@
 class ExercisesController < ApplicationController
 
+  def index
+    respond_to do |format|
+      format.json { render json: Exercise.find_by(user_id: current_user) }
+    end
+  end
+
   def show
     @exercise = Exercise.find_by(user_id: current_user)
 
