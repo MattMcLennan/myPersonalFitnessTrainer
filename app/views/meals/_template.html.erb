@@ -1,0 +1,122 @@
+<h1>Diet</h1> 
+
+<div class="col s12">
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <span class="card-title">Workout A</span>
+      <table class="responsive-table">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets x Reps</th>
+          <th>Session #1</th>
+          <th>Session #3</th>
+          <th>Session #5</th>
+          <th>Session #7</th>
+          <th>Session #9</th>
+        </tr>
+        <tr>
+          <td>Squats</td>
+          <td>3 x 5</td>
+          <td><%= @exercise.squat %> lbs</td>
+          <% 4.times do %>
+            <td><%= @exercise.squat += 5 %> lbs</td>
+          <% end %>
+        </tr>
+        <tr>
+          <td>Bench</td>
+          <td>3 x 5</td>
+          <td><%= @exercise.bench %> lbs</td>
+          <% 4.times do %>
+            <td><%= @exercise.bench += 5 %> lbs</td>
+          <% end %>
+        </tr>
+        <tr>
+          <td>Barbell Row</td>
+          <td>3 x 5</td>
+          <td><%= @exercise.barbell_row %> lbs</td>
+          <% 4.times do %>
+            <td><%= @exercise.barbell_row += 5 %> lbs</td>
+          <% end %>
+        </tr>
+        <th>Accessories</th>
+        <tr>
+          <td>Tricep Extension</td>
+          <td>3 x 12</td>
+        </tr>
+        <tr>
+          <td>Calf Raise</td>
+          <td>3 x 15</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<table class="striped">
+  <thead>
+    <tr>
+      <th colspan="2">Daily Menu</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td colspan="2">Breakfast</td>
+    </tr>
+
+    <tr>
+      <td class="col s6"><%= @meals["breakfast"]["item1"]["name"] %></td>
+      <td class="col s6"><%= @meals["breakfast"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Snack</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals["snack1"]["item1"]["name"] %></td>
+      <td><%= @meals["snack1"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Lunch</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals["lunch"]["item1"]["name"] %></td>
+      <td><%= @meals["lunch"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Snack</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals["snack2"]["item1"]["name"] %></td>
+      <td><%= @meals["snack2"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Dinner</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals["dinner"]["item1"]["name"] %></td>
+      <td><%= @meals["dinner"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2">Snack</td>
+    </tr>
+
+    <tr>
+      <td><%= @meals["snack3"]["item1"]["name"] %></td>
+    </td>
+  </tbody>
+</table>
+
+
+<% @meals.each do |daily_meal| %>
+  <p> <%= daily_meal %> </p>
+<% end %>
+

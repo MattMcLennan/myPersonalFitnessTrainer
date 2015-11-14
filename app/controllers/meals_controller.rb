@@ -2,7 +2,8 @@ class MealsController < ApplicationController
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
 
   def index
-    @meals = Meal.algo
+    binding.pry
+    @meals = JSON.parse(Meal.algo(current_user))
   end
 
   def new

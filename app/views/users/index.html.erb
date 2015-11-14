@@ -2,6 +2,16 @@
   <%= javascript_include_tag 'api_calls' %>
 <% end %>
 
+<h1>Diet</h1>
+<div class="meals">
+  <%= render './exercises/template' %>
+</div>
+
+
+
+
+
+
 <div class="row">
   <div class="col s12">
     <% if !current_user.template_chosen %>
