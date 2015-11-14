@@ -89,13 +89,10 @@ class SessionsController < ApplicationController
       i += 1
     end
 
-    binding.pry
-
     if user.goal == "LOSE"
       user.avg_weekly_cals = (total_cals/count).round(-1) - 500 
     else
       user.avg_weekly_cals = (total_cals/count).round(-1) + 500 
-      binding.pry
     end
 
   end
