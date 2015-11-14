@@ -20,8 +20,6 @@ class SessionsController < ApplicationController
     @user.daily_meal = daily_meal(@user)
     @user.save
 
-    binding.pry
-
     session[:user_id] = @user.id
     # redirect_to new_user_path(id: @user.id)
     if current_user.email != nil
@@ -88,14 +86,16 @@ class SessionsController < ApplicationController
     7.times do
       total_cals += get_cals["activities-calories"][i]["value"].to_i
       count += 1
-      binding.pry
       i += 1
     end
 
+    binding.pry
+
     if user.goal == "LOSE"
-      user.avg_weekly_cals = total_cals/count.round(-1) - 500
+      user.avg_weekly_cals = (total_cals/count).round(-1) - 500 
     else
-      user.avg_weekly_cals = total_cals/count.round(-1) + 500
+      user.avg_weekly_cals = (total_cals/count).round(-1) + 500 
+      binding.pry
     end
 
   end

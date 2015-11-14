@@ -157,6 +157,7 @@ class Meal < ActiveRecord::Base
       daily_meal[meal_category] = value
       end
     # end
+    self.test_daily(daily_meal)
     return daily_meal.to_json
   end
 
@@ -181,4 +182,15 @@ class Meal < ActiveRecord::Base
     end
     puts "total cals for the week: #{weekly_cals}"
   end 
+
+  def self.test_daily(daily_meal)
+    daily_cals = 0
+
+    daily_meal.each do |menu_category, value|
+      value.each do |key, value|
+        daily_cals += value[:calories]
+      end
+    end
+    binding.pry
+  end
 end
