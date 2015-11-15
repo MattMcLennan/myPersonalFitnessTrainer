@@ -10,39 +10,30 @@ $(function(){
         minMonth = minDate.getMonth(),
         minYear = minDate.getFullYear();
 
-    var updateDate;
-    var temp = updateDate;
+    var update,
+        temp = update;
 
-    updateDate = new Date(current_user_data.updated_at);
+    update = new Date(current_user_data.updated_at);
 
-    var updateDay = updateDate.getDate(),
-      updateMonth = updateDate.getMonth(),
-      updateYear = updateDate.getFullYear();
+    var updateDay = update.getDate(),
+        updateMonth = update.getMonth(),
+        updateYear = update.getFullYear(),
+        updateExercise = current_user_data;
 
-    var bench = {}
-    var squat = {}
-    var deadlift = {}
-    var barbell_row = {}
-    var overhead_press = {}
+    var bench = {},
+        squat = {},
+        deadlift = {},
+        barbell_row = {},
+        overhead_press = {};
 
-    if (updateDate != temp){
-      bench["date"] = [updateYear, updateMonth, updateDay];
-      bench["exercise"] = current_user_data.bench;
-      squat["date"] = [updateYear, updateMonth, updateDay];
-      squat["exercise"] = current_user_data.squat;
-      deadlift["date"] = [updateYear, updateMonth, updateDay];
-      deadlift["exercise"] = current_user_data.deadlift;
-      barbell_row["date"] = [updateYear, updateMonth, updateDay];
-      barbell_row["exercise"] = current_user_data.barbell_row;
-      overhead_press["date"] = [updateYear, updateMonth, updateDay];
-      overhead_press["exercise"] = current_user_data.overhead_press;
+    if (update != temp){
+      bench[update] = [updateYear, updateMonth, updateDay, updateExercise.bench];
+      squat[update] = [updateYear, updateMonth, updateDay, updateExercise.squat];
+      deadlift[update] = [updateYear, updateMonth, updateDay, updateExercise.deadlift];
+      barbell_row[update] = [updateYear, updateMonth, updateDay, updateExercise.barbell_row];
+      overhead_press[update] = [updateYear, updateMonth, updateDay, updateExercise.overhead_press];
     }
 
-    console.log(bench);
-    console.log(deadlift);
-    console.log(squat);
-    console.log(barbell_row);
-    console.log(overhead_press);
 
     $('#container').highcharts({
       chart: {
@@ -87,31 +78,31 @@ $(function(){
         name: 'Bench',
         data: [
           [Date.UTC(minYear, minMonth, minDay), current_user_data.bench],
-          [Date.UTC(bench["date"][0], bench["date"][1], bench["date"][2]), bench["exercise"]],
+          [Date.UTC(bench[update][0], bench[update][1], bench[update][2]), bench[update][3]],
         ]
       }, {
         name: 'Squat',
         data: [
           [Date.UTC(minYear, minMonth, minDay), current_user_data.squat],
-          [Date.UTC(squat["date"][0], squat["date"][1], squat["date"][2]), squat["exercise"]],
+          [Date.UTC(squat[update][0], squat[update][1], squat[update][2]), squat[update][3]],
         ]
       }, {
         name: 'Overhead Press',
         data: [
           [Date.UTC(minYear, minMonth, minDay), current_user_data.overhead_press],
-          [Date.UTC(overhead_press["date"][0], overhead_press["date"][1], overhead_press["date"][2]), overhead_press["exercise"]],
+          [Date.UTC(overhead_press[update][0], overhead_press[update][1], overhead_press[update][2]), overhead_press[update][3]],
         ]
       }, {
         name: 'Barbell Row',
         data: [
           [Date.UTC(minYear, minMonth, minDay), current_user_data.barbell_row],
-          [Date.UTC(barbell_row["date"][0], barbell_row["date"][1], barbell_row["date"][2]), barbell_row["exercise"]],
+          [Date.UTC(barbell_row[update][0], barbell_row[update][1], barbell_row[update][2]), barbell_row[update][3]],
         ]
       }, {
         name: 'Deadlift',
         data: [
           [Date.UTC(minYear, minMonth, minDay), current_user_data.deadlift],
-          [Date.UTC(deadlift["date"][0], deadlift["date"][1], deadlift["date"][2]), deadlift["exercise"]],
+          [Date.UTC(deadlift[update][0], deadlift[update][1], deadlift[update][2]), deadlift[update][3]],
         ]
       }]
     });
