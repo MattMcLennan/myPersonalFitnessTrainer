@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .menu-cat {
+  background-color: green;
+ }
