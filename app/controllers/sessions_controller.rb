@@ -30,8 +30,8 @@ class SessionsController < ApplicationController
   end
 
   def generate_user_info
-    @consumer_key = 'afa236cfde4b752007e5bdfff09fcd51'
-    @consumer_secret = '9e232d99682c218ec38ec05a7b010e6d'
+    @consumer_key = '441b218db31b866a1782ab19ce30bf0d'
+    @consumer_secret = '1c52dd889b8a0b7b813acf810ff5ac2c'
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
@@ -66,8 +66,8 @@ class SessionsController < ApplicationController
   end
 
   def avg_cals(user)
-    @consumer_key = 'afa236cfde4b752007e5bdfff09fcd51'
-    @consumer_secret = '9e232d99682c218ec38ec05a7b010e6d'
+    @consumer_key = '441b218db31b866a1782ab19ce30bf0d'
+    @consumer_secret = '1c52dd889b8a0b7b813acf810ff5ac2c'
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
