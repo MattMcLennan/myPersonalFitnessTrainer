@@ -52,7 +52,10 @@ class SessionsController < ApplicationController
       "steps" => client.activity_on_date_range(:steps, '2015-07-07', 'today'),
       "distance" => client.activity_on_date_range(:distance, '2015-07-07', 'today'),
       "calories" => client.activity_on_date_range(:calories, '2015-07-07', 'today'),
-      "meal" => JSON.parse(current_user.daily_meal)
+      "meal" => JSON.parse(current_user.daily_meal),
+      "user_calorie_goal" => current_user.avg_weekly_cals,
+      "user_calorie_intake" => Meal.test_daily(JSON.parse(current_user.daily_meal))
+
     }
 
     render :json => @data

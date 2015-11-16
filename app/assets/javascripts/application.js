@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require exercise.js
+//= require_tree .
