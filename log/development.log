@@ -7475,3 +7475,89 @@ Processing by ExercisesController#index as */*
   [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
   [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
 Completed 200 OK in 16ms (Views: 0.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-16 01:13:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StartController#index as HTML
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 168ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-16 01:13:24 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (4.0ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (909.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+Completed 200 OK in 2387ms (Views: 2282.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 01:13:27 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 01:13:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 01:13:27 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 01:13:27 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 01:13:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 01:13:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 01:13:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 01:13:28 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-16 01:13:29 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-16 01:13:29 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 01:13:29 +0000
+
+
+Started GET "/assets/start.js?body=1" for 10.0.2.2 at 2015-11-16 01:13:29 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 01:13:29 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-16 01:13:30 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 1249ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-16 01:13:31 +0000
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+Completed 200 OK in 72ms (Views: 0.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-16 01:13:32 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.0ms)[0m  COMMIT
+Completed 200 OK in 1085ms (Views: 24.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-16 01:13:33 +0000
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.0ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+Completed 200 OK in 12ms (Views: 0.0ms | ActiveRecord: 0.0ms)

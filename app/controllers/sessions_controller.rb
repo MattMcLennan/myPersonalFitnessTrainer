@@ -74,7 +74,8 @@ class SessionsController < ApplicationController
       :consumer_secret => @consumer_secret,
       :token => user.token,
       :secret => user.secret,
-      :user_id => user.uid})
+      :user_id => user.uid}), 
+      :user_id => user.uid}), 
 
     get_cals = client.activity_on_date_range(:calories, 1.week.ago.to_date.to_s, "today")
     user.goal = client.body_weight_goal["goal"]["goalType"]
