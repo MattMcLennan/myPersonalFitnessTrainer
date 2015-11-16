@@ -1,3 +1,33 @@
 // Place all the styles related to the Meals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.diet-table {
+  margin-top: 20px;
+  color: black;
+  border: solid 3px blue;
+  border-radius: 5px;
+}
+
+span {
+  background-color: darkgreen;
+  padding-right: 100px;
+  padding-left: 20px;
+  padding-top:15px;
+  padding-bottom:15px;
+  color: white;
+}
+
+h5 {
+  border: 1px solid green;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.extra {
+  display: none;
+}
