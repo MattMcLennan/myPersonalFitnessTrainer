@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 Started GET "/" for 10.0.2.2 at 2015-11-17 00:32:58 +0000
@@ -4567,3 +4568,5 @@ Processing by SessionsController#generate_user_info as JSON
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 623ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+=======
+>>>>>>> 8fa540cab69dde3383f38b7b8d2eb6a908d13559
