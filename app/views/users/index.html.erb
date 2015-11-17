@@ -11,7 +11,7 @@
         <p>It looks like you haven't set up your template yet!</p>
         <a href="<%= new_exercise_path %>" class="waves-effect waves-light btn">Set up template</a>
       <% else %>
-        <h3 class="yourTemplate">Here's your template:</h3>
+        <h3 class="yourTemplate">Workout Template:</h3>
         <hr>
         <a href="<%= edit_exercise_path(@exercise) %>" class="waves-effect waves-light btn">Adjust your weights</a>
         <a href="<%= exercise_path(@exercise) %>" class="waves-effect waves-light btn">Strength Level</a>
@@ -22,8 +22,13 @@
   </div>
 </div>
 
+<div class="divider"></div>
+
 <div class="section">
   <div class="row">
+    <div class="col s6">
+      <%= render 'dietplan' %>
+    </div>
     <div class="col s3">
       <!-- <div id="container"></div> -->
       <!-- <div id="container2" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div> -->
@@ -34,12 +39,3 @@
     </div>
   </div>
 </div>
-
-<div id="container2" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
-
-<div style="width: 600px; height: 400px; margin: 0 auto">
-<div id="container-speed" style="width: 300px; height: 200px; float: left"></div>
-
-<div id="container2" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
-
-<%= render 'dietplan' %>
