@@ -2087,3 +2087,2483 @@ Processing by SessionsController#generate_user_info as JSON
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 578ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:04:13 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:04:14 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 1074ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.8ms)
+  Rendered users/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:20 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:05:21 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 683ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:05:30 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 662ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+
+
+Started GET "/assets/RiverFitness.jpg" for 127.0.0.1 at 2015-11-16 20:06:26 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-16 20:06:31 -0500
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 25ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/assets/RiverFitness.jpg" for 127.0.0.1 at 2015-11-16 20:06:32 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-16 20:07:10 -0500
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:07:10 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:10 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:10 -0500
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2015-11-16 20:07:10 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-16 20:07:54 -0500
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 35ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:07:54 -0500
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2015-11-16 20:07:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:54 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:54 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:07:59 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 622ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:08:22 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (4.0ms)
+  Rendered users/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:08:23 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 652ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-16 20:08:24 -0500
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (Undefined variable: "$tertiary-color".
+  (in /Users/Jackie/Desktop/myPersonalFitnessTrainer/app/assets/stylesheets/start.css.scss:14)):
+    1: <% content_for :header do %>
+    2:   <%= stylesheet_link_tag 'start' %>
+    3: <% end %>
+    4: 
+    5: <div class="img-bg">
+  app/assets/stylesheets/start.css.scss:14
+  app/views/start/index.html.erb:2:in `block in _app_views_start_index_html_erb__3965713120821256100_70267635835100'
+  app/views/start/index.html.erb:1:in `_app_views_start_index_html_erb__3965713120821256100_70267635835100'
+
+
+  Rendered /Users/Jackie/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Jackie/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Jackie/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-16 20:08:25 -0500
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Undefined variable: "$tertiary-color".
+  (in /Users/Jackie/Desktop/myPersonalFitnessTrainer/app/assets/stylesheets/start.css.scss:14)):
+    1: <% content_for :header do %>
+    2:   <%= stylesheet_link_tag 'start' %>
+    3: <% end %>
+    4: 
+    5: <div class="img-bg">
+  app/assets/stylesheets/start.css.scss:14
+  app/views/start/index.html.erb:2:in `block in _app_views_start_index_html_erb__3965713120821256100_70267635835100'
+  app/views/start/index.html.erb:1:in `_app_views_start_index_html_erb__3965713120821256100_70267635835100'
+
+
+  Rendered /Users/Jackie/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Jackie/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Jackie/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+
+
+Started GET "/assets/RiverFitness.jpg" for 127.0.0.1 at 2015-11-16 20:08:38 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (1.5ms)
+  Rendered users/index.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:09:46 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 825ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:09:57 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (1.1ms)
+  Rendered users/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:09:58 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 671ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:10:14 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 491ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (1.3ms)
+  Rendered users/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:10:35 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 380ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:10:51 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:10:52 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 494ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (1.3ms)
+  Rendered users/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:11:00 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 461ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:11:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.7ms)
+  Rendered users/index.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:11:14 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 459ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.7ms)
+  Rendered users/index.html.erb within layouts/application (23.0ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:11:24 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 487ms (Views: 9.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:12:38 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 527ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:12:49 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 579ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:13:38 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:13:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:13:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:13:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:13:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:13:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:13:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:13:38 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:13:39 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:13:39 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:13:39 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 911ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:14:05 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 200 OK in 489ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:14:14 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 473ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:14:22 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:14:23 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 359ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:15:12 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 685ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.7ms)
+  Rendered users/index.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:54 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:15:55 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:15:55 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 380ms (Views: 10.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:16:15 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 712ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:16:28 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:16:29 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 376ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:16:42 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 599ms (Views: 10.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.7ms)
+  Rendered users/index.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:17:04 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 376ms (Views: 10.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:33:38 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 1264ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.6ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:34:28 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 715ms (Views: 10.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:34:40 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 476ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:35:49 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 798ms (Views: 9.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:36:46 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 1105ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (23.1ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:37:07 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 637ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (24.9ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:37:34 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:37:35 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 430ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:38:16 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 1045ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:38:37 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 887ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:39:14 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 642ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:39:55 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.6ms)
+  Rendered users/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:39:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:55 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:39:56 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:56 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:56 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:39:56 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:39:56 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 651ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:40:15 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 512ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:41:28 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 646ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:41:37 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 723ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:41:44 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 420ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-16 20:42:03 -0500
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 41ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:42:03 -0500
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2015-11-16 20:42:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:03 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:04 -0500
+
+
+Started GET "/assets/RiverFitness.jpg" for 127.0.0.1 at 2015-11-16 20:42:04 -0500
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.6ms)
+  Rendered users/index.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:42:51 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 740ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:43:32 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.9ms)
+  Rendered users/index.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:43:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:43:33 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 526ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.6ms)
+  Rendered users/index.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:44:07 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 984ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:39 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:44:40 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 643ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:44:47 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 527ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:45:02 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:45:03 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 518ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:45:40 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 516ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.6ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.7ms)
+  Rendered users/index.html.erb within layouts/application (20.8ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:46:00 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 440ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:07 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:46:08 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 513ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.4ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/assets/api_calls.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/assets/exercise.js?body=1" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+
+
+Started GET "/sessions/generate_user_info" for 127.0.0.1 at 2015-11-16 20:46:38 -0500
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 623ms (Views: 1.2ms | ActiveRecord: 0.4ms)
