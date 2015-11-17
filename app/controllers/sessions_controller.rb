@@ -32,8 +32,8 @@ class SessionsController < ApplicationController
   def generate_user_info
 
     client = Fitgem::Client.new({
-      :consumer_key => ENV['CONSUMER_KEY']
-      :consumer_secret => ENV['CONSUMER_SECRET'],
+      :consumer_key => 'fc54884af296cdf89a4227b8c3f705a0',
+      :consumer_secret => '7b043f3f227dafcf0c7fb83d1fc33079',
       :token => current_user.token,
       :secret => current_user.secret,
       :user_id => current_user.uid})
@@ -49,9 +49,9 @@ class SessionsController < ApplicationController
       "body_start_weight" => current_user.start_weight.to_s,
       "body_weight_today" => (current_user.weight * 2.2046),
       "body_weight" => client.activity_on_date_range(:weight, '2015-07-07', 'today'),
-      "steps" => client.activity_on_date_range(:steps, '2015-07-07', 'today'),
-      "distance" => client.activity_on_date_range(:distance, '2015-07-07', 'today'),
-      "calories" => client.activity_on_date_range(:calories, '2015-07-07', 'today'),
+      # "steps" => client.activity_on_date_range(:steps, '2015-07-07', 'today'),
+      # "distance" => client.activity_on_date_range(:distance, '2015-07-07', 'today'),
+      # "calories" => client.activity_on_date_range(:calories, '2015-07-07', 'today'),
       "meal" => JSON.parse(current_user.daily_meal),
       "user_calorie_goal" => current_user.avg_weekly_cals,
       "user_calorie_intake" => Meal.test_daily(JSON.parse(current_user.daily_meal))
@@ -67,8 +67,8 @@ class SessionsController < ApplicationController
   def avg_cals(user)
 
     client = Fitgem::Client.new({
-      :consumer_key => ENV['CONSUMER_KEY']
-      :consumer_secret => ENV['CONSUMER_SECRET'],
+      :consumer_key => 'fc54884af296cdf89a4227b8c3f705a0',
+      :consumer_secret => '7b043f3f227dafcf0c7fb83d1fc33079',
       :token => user.token,
       :secret => user.secret,
       :user_id => user.uid})
@@ -77,7 +77,6 @@ class SessionsController < ApplicationController
     user.goal = client.body_weight_goal["goal"]["goalType"]
     user.start_weight = client.body_weight_goal["goal"]["startWeight"]
     user.goal_weight = client.body_weight_goal["goal"]["weight"]
-    # user.weight = client.body_weight(:date, 'today')
 
     total_cals = 0
     count = 0

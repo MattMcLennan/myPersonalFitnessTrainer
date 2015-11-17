@@ -5,12 +5,9 @@
 $category-background-colour: #351330;
 $category-font-color: #FFF;
 
-// .diet-table {
-//   margin-top: 20px;
-//   color: black;
-//   border: solid 3px blue;
-//   border-radius: 5px;
-// }
+.diet-table {
+  margin-top: -20px;
+}
 
 .diet-table h3 {
   margin-left: 10px;
@@ -37,11 +34,15 @@ $category-font-color: #FFF;
 .item-cat:hover {
   cursor: pointer;
   cursor: hand;
-  background-color: #424254;
+  background-color: gainsboro;
 }
 
 .extra {
   display: none;
   font-size: 15px;
   font-style: italic;
+}
+
+#goalWeight, #calorieGraph {
+  display: block;
 }
