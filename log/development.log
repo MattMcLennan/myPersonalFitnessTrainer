@@ -1,0 +1,331 @@
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:32:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveExercises (20151116201718)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (8.6ms)[0m  [1mALTER TABLE "exercises" DROP "pullup_reps"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "exercises" DROP "calf_raise_reps"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "exercises" DROP "cable_crunches_reps"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "exercises" DROP "barbell_curl_reps"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "exercises" DROP "tricep_extension_reps"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "exercises" DROP "calf_raise"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "exercises" DROP "cable_crunches"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "exercises" DROP "barbell_curl"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "exercises" DROP "tricep_extension"[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116201718"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to RemovePullups (20151116201954)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "exercises" DROP "pullups"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116201954"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:33:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StartController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 63ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-17 00:33:31 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (1.5ms)
+  Rendered users/index.html.erb within layouts/application (68.0ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 368ms (Views: 324.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:33:32 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:32 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:32 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-17 00:33:32 +0000
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+Completed 200 OK in 12714ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-17 00:33:45 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.6ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.6ms)[0m  [1mUPDATE "users" SET "daily_meal" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["daily_meal", "{\"breakfast\":{\"item1\":{\"name\":\"Eggs\",\"grams\":190,\"calories\":290,\"protein\":20,\"carbs\":0,\"fat\":20},\"item2\":{\"name\":\"Turkey Bacon\",\"grams\":20,\"calories\":80,\"protein\":10,\"carbs\":0,\"fat\":10}},\"snack1\":{\"item1\":{\"name\":\"Plums\",\"grams\":200,\"calories\":90,\"protein\":0,\"carbs\":20,\"fat\":0},\"item2\":{\"name\":\"Cantaloupe\",\"grams\":180,\"calories\":60,\"protein\":0,\"carbs\":10,\"fat\":0}},\"lunch\":{\"item1\":{\"name\":\"Turkey\",\"grams\":180,\"calories\":310,\"protein\":50,\"carbs\":0,\"fat\":10},\"item2\":{\"name\":\"Tangerine\",\"grams\":140,\"calories\":70,\"protein\":0,\"carbs\":20,\"fat\":0}},\"snack2\":{\"item1\":{\"name\":\"Celery\",\"grams\":350,\"calories\":60,\"protein\":0,\"carbs\":10,\"fat\":0},\"item2\":{\"name\":\"Brussel Sprouts\",\"grams\":130,\"calories\":60,\"protein\":0,\"carbs\":10,\"fat\":0}},\"dinner\":{\"item1\":{\"name\":\"Clams\",\"grams\":200,\"calories\":300,\"protein\":50,\"carbs\":10,\"fat\":0},\"item2\":{\"name\":\"Cabbage\",\"grams\":300,\"calories\":80,\"protein\":0,\"carbs\":20,\"fat\":0}},\"snack3\":{\"item1\":{\"name\":\"Blackberry Greek Yogurt\",\"grams\":130,\"calories\":110,\"protein\":10,\"carbs\":20,\"fat\":0}}}"], ["updated_at", "2015-11-17 00:33:45.363790"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 1526ms (Views: 8.9ms | ActiveRecord: 6.3ms)
+
+
+Started DELETE "/session.current" for 10.0.2.2 at 2015-11-17 00:33:46 +0000
+Processing by SessionsController#destroy as 
+  Parameters: {"authenticity_token"=>"04eUKb4JIACPy3vzePwDsKplqiYdPt6CNQlx1R7xgcg="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/session.current" for 10.0.2.2 at 2015-11-17 00:33:46 +0000
+Processing by SessionsController#destroy as 
+  Parameters: {"authenticity_token"=>"04eUKb4JIACPy3vzePwDsKplqiYdPt6CNQlx1R7xgcg="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:33:46 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 196ms (Views: 195.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:47 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:33:47 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:33:47 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:33:47 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:34:03 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 149ms (Views: 148.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:34:04 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:34:04 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:34:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:34:04 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:34:04 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:34:04 +0000
+
+
+Started GET "/assets/RiverFitness.jpg" for 10.0.2.2 at 2015-11-17 00:34:04 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:35:28 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 162ms (Views: 160.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:35:28 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:35:28 +0000
+
+
+Started GET "/assets/RiverFitness.jpg" for 10.0.2.2 at 2015-11-17 00:35:28 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:35:44 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 145ms (Views: 144.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:45 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:45 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:35:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:35:45 +0000
+
+
+Started GET "/assets/RiverFitness.jpg" for 10.0.2.2 at 2015-11-17 00:35:45 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:35:55 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 158ms (Views: 157.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:35:56 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:35:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:35:56 +0000
+
+
+Started GET "/assets/RiverFitness.jpg" for 10.0.2.2 at 2015-11-17 00:35:56 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:36:22 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (44.9ms)
+Completed 200 OK in 140ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:36:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:36:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:36:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:36:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:36:22 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:36:23 +0000
+
+
+Started GET "/assets/RiverFitness.jpg" for 10.0.2.2 at 2015-11-17 00:36:23 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:36:33 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 147ms (Views: 146.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:36:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:36:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:36:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:36:33 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:36:34 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:36:34 +0000
+
+
+Started GET "/assets/RiverFitness.jpg" for 10.0.2.2 at 2015-11-17 00:36:34 +0000
