@@ -2,6 +2,7 @@
   <%= stylesheet_link_tag 'users' %>
   <%= javascript_include_tag 'api_calls' %>
   <%= javascript_include_tag 'exercise' %>
+  <%= javascript_include_tag 'meals' %>
 <% end %>
 
 <div class="section">
@@ -34,3 +35,174 @@
     </div>
   </div>
 </div>
+
+<div id="container2" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
+
+<div style="width: 600px; height: 400px; margin: 0 auto">
+<div id="container-speed" style="width: 300px; height: 200px; float: left"></div>
+
+<div id="container2" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
+
+<div class="diet-table">
+  <div class="row title">
+    <h1 class="col s12">Diet</h1>
+  </div>    
+    <div class="row">
+      <div class="col s12">
+        <h5><span class="cat">BREAKFAST</span></h5>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["breakfast"]["item1"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["breakfast"]["item1"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["breakfast"]["item1"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["breakfast"]["item1"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["breakfast"]["item1"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["breakfast"]["item2"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["breakfast"]["item2"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["breakfast"]["item2"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["breakfast"]["item2"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["breakfast"]["item2"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <h5><span class="cat">MORNING SNACK</span></h5>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["snack1"]["item1"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["snack1"]["item1"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["snack1"]["item1"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["snack1"]["item1"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["snack1"]["item1"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["snack1"]["item2"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["snack1"]["item2"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["snack1"]["item2"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["snack1"]["item2"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["snack1"]["item2"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <h5><span class="cat">LUNCH</span></h5>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["lunch"]["item1"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["lunch"]["item1"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["lunch"]["item1"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["lunch"]["item1"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["lunch"]["item1"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["lunch"]["item2"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["lunch"]["item2"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["lunch"]["item2"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["lunch"]["item2"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["lunch"]["item2"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <h5><span class="cat">AFTERNOON SNACK</span></h5>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["snack2"]["item1"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["snack2"]["item1"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["snack2"]["item1"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["snack2"]["item1"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["snack2"]["item1"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["snack2"]["item2"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["snack2"]["item2"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["snack2"]["item2"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["snack2"]["item2"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["snack2"]["item2"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <h5><span class="cat">DINNER</span></h5>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["dinner"]["item1"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["dinner"]["item1"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["dinner"]["item1"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["dinner"]["item1"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["dinner"]["item1"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["dinner"]["item2"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["dinner"]["item2"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["dinner"]["item2"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["dinner"]["item2"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["dinner"]["item2"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <h5><span class="cat">NIGHT SNACK</span></h5>
+      </div>
+
+      <div class="col s12 item-cat">
+        <p class="col s6"> <%= @meals["snack3"]["item1"]["name"] %></p>
+        <p class="col s6 right-align"> Grams: <%= @meals["snack3"]["item1"]["grams"] %></p>
+        <div class="extra">
+          <p class="col s4"> Protein: <%= @meals["snack3"]["item1"]["protein"] %></p>
+          <p class="col s4"> Carbs: <%= @meals["snack3"]["item1"]["carbs"] %></p>
+          <p class="col s4"> Fat: <%= @meals["snack3"]["item1"]["fat"] %></p>
+          <hr/>
+        </div>
+      </div>
+    </div>
+</div>
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 Started GET "/users" for 10.0.2.2 at 2015-11-17 02:09:59 +0000
@@ -2458,3 +2459,5 @@ Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-11-17 12:21:59 -0500
 
 
 Started GET "/assets/RiverFitness.jpg" for 127.0.0.1 at 2015-11-17 12:21:59 -0500
+=======
+>>>>>>> 1f61d294be982e4ee8f408aba43f4c253a8b3436
