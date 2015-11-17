@@ -765,3 +765,59 @@ Processing by SessionsController#generate_user_info as JSON
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 654ms (Views: 7.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-17 02:37:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.6ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (1.3ms)
+  Rendered users/index.html.erb within layouts/application (149.7ms)
+Completed 500 Internal Server Error in 297ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    43:       </div>
+    44: 
+    45:       <div class="col s12 item-cat">
+    46:         <p class="col s6"> <%= @meals["breakfast"]["item1"]["name"] %></p>
+    47:         <p class="col s6 right-align"> Grams: <%= @meals["breakfast"]["item1"]["grams"] %></p>
+    48:         <div class="extra">
+    49:           <p class="col s4"> Protein: <%= @meals["breakfast"]["item1"]["protein"] %></p>
+  app/views/users/index.html.erb:46:in `_app_views_users_index_html_erb___845643470_93072840'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 05:29:51 +0000
+Processing by StartController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-17 05:29:51 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (105.5ms)
+Completed 500 Internal Server Error in 150ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    43:       </div>
+    44: 
+    45:       <div class="col s12 item-cat">
+    46:         <p class="col s6"> <%= @meals["breakfast"]["item1"]["name"] %></p>
+    47:         <p class="col s6 right-align"> Grams: <%= @meals["breakfast"]["item1"]["grams"] %></p>
+    48:         <div class="extra">
+    49:           <p class="col s4"> Protein: <%= @meals["breakfast"]["item1"]["protein"] %></p>
+  app/views/users/index.html.erb:46:in `_app_views_users_index_html_erb___845643470_93072840'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.0ms)
