@@ -2,6 +2,7 @@
   <%= stylesheet_link_tag 'users' %>
   <%= javascript_include_tag 'api_calls' %>
   <%= javascript_include_tag 'exercise' %>
+  <%= javascript_include_tag 'meals' %>
 <% end %>
 
 <div class="section">
@@ -26,11 +27,16 @@
 
 <div class="section">
   <div class="row">
-    <div class="col s7">
+    <div class="col s6">
       <%= render 'dietplan' %>
     </div>
-    <div class="col s5">
-      <div id="container2" style="width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
+    <div class="col s3">
+      <!-- <div id="container"></div> -->
+      <!-- <div id="container2" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div> -->
+      <div id="container-speed" style="width: 300px; height: 200px"></div>
+    </div>
+    <div class="col s3">
+      <div id="container2" style="width: 310px; max-width: 400px; height: 300px;"></div>
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at 2015-11-17 12:33:48 -0500
@@ -3274,3 +3275,6 @@ Started GET "/assets/meals.css?body=1" for 127.0.0.1 at 2015-11-17 13:37:59 -050
 Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-11-17 13:37:59 -0500
 =======
 >>>>>>> e1b91561a931b58a54ac9fc8a048d39a12aa7de3
+=======
+ 
+>>>>>>> feb367074b57f32d74553571856ab3fed53e7d54
