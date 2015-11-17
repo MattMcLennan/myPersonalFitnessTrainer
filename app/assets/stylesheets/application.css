@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ .menu-cat {
+  background-color: #08c;
+ }
+
 html, body {
   /*background-color: #2a2a2b;*/
 }

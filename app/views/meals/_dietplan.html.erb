@@ -1,0 +1,67 @@
+<h1>Diet</h1> 
+
+<table class="striped">
+  <thead>
+    <tr>
+      <th colspan="2">Daily Menu</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="cat">
+      <td colspan="2" class="menu-cat">Breakfast</td>
+    </tr>
+
+    <tr>
+      <td class="col s12"><%= @meals["breakfast"]["item1"]["name"] %></td>
+      <td class="col s12"><%= @meals["breakfast"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2" class="menu-cat">Morning Snack</td>
+    </tr>
+
+    <tr>
+      <td class="col s12"<%= @meals["snack1"]["item1"]["name"] %></td>
+      <td class="col s12"><%= @meals["snack1"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2" class="menu-cat">Lunch</td>
+    </tr>
+
+    <tr>
+      <td class="col s12"><%= @meals["lunch"]["item1"]["name"] %></td>
+      <td class="col s12"><%= @meals["lunch"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2" class="menu-cat">Afternoon Snack</td>
+    </tr>
+
+    <tr>
+      <td class="col s12"><%= @meals["snack2"]["item1"]["name"] %></td>
+      <td class="col s12"><%= @meals["snack2"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2" class="menu-cat">Dinner</td>
+    </tr>
+
+    <tr>
+      <td class="col s12"><%= @meals["dinner"]["item1"]["name"] %></td>
+      <td class="col s12"><%= @meals["dinner"]["item2"]["name"] %></td>
+    </td>
+
+    <tr>
+      <td colspan="2" class="menu-cat">Night Snack</td>
+    </tr>
+
+    <tr>
+      <td class="col s12"><%= @meals["snack3"]["item1"]["name"] %></td>
+    </td>
+  </tbody>
+</table>
+
+<%= @meals %>
+
