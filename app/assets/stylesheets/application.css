@@ -12,10 +12,16 @@
  *
  *= require_self
  */
-.menu-cat {
-  background-color: #08c;
+
+
+.waves-effect {
+  background-color: #E03C3C;
 }
 
-tspan {
-  text-shadow: none;
+.waves-effect:hover {
+  background-color: #E03C3C;
+}
+
+nav {
+  background-color: #E03C3C;
 }
