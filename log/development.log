@@ -329,3 +329,130 @@ Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:36:34
 
 
 Started GET "/assets/RiverFitness.jpg" for 10.0.2.2 at 2015-11-17 00:36:34 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:41:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 221ms (Views: 199.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:41:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:41:32 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:41:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:41:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:41:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:41:32 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:41:38 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 131ms (Views: 130.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-17 00:42:44 +0000
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 140ms (Views: 139.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:42:44 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:42:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:42:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:42:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:42:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:42:44 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-17 00:43:07 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-17 00:43:07 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=ed5db4b186d34849f97d87f6099ebc7b&oauth_verifier=40fc7f6ed5e038b2f167836de1382fb1" for 10.0.2.2 at 2015-11-17 00:43:09 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"ed5db4b186d34849f97d87f6099ebc7b", "oauth_verifier"=>"40fc7f6ed5e038b2f167836de1382fb1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' LIMIT 1
+  [1m[36mMeal Load (0.5ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "avg_weekly_cals" = $1, "daily_meal" = $2, "secret" = $3, "token" = $4, "updated_at" = $5, "weight" = $6 WHERE "users"."id" = 1  [["avg_weekly_cals", 1640], ["daily_meal", "{\"breakfast\":{\"item1\":{\"name\":\"Eggs\",\"grams\":210,\"calories\":330,\"protein\":30,\"carbs\":0,\"fat\":20},\"item2\":{\"name\":\"Turkey Bacon\",\"grams\":20,\"calories\":80,\"protein\":10,\"carbs\":0,\"fat\":10}},\"snack1\":{\"item1\":{\"name\":\"Bananas\",\"grams\":110,\"calories\":100,\"protein\":0,\"carbs\":30,\"fat\":0},\"item2\":{\"name\":\"Strawberries\",\"grams\":200,\"calories\":70,\"protein\":0,\"carbs\":20,\"fat\":0}},\"lunch\":{\"item1\":{\"name\":\"Trout\",\"grams\":240,\"calories\":330,\"protein\":50,\"carbs\":0,\"fat\":10},\"item2\":{\"name\":\"Bananas\",\"grams\":90,\"calories\":80,\"protein\":0,\"carbs\":20,\"fat\":0}},\"snack2\":{\"item1\":{\"name\":\"Pine Nuts\",\"grams\":10,\"calories\":70,\"protein\":0,\"carbs\":0,\"fat\":10},\"item2\":{\"name\":\"Hazelnuts\",\"grams\":10,\"calories\":60,\"protein\":0,\"carbs\":0,\"fat\":10}},\"dinner\":{\"item1\":{\"name\":\"Clams\",\"grams\":220,\"calories\":330,\"protein\":60,\"carbs\":10,\"fat\":0},\"item2\":{\"name\":\"Celery\",\"grams\":510,\"calories\":80,\"protein\":10,\"carbs\":20,\"fat\":0}},\"snack3\":{\"item1\":{\"name\":\"Blackberry Greek Yogurt\",\"grams\":140,\"calories\":120,\"protein\":10,\"carbs\":20,\"fat\":0}}}"], ["secret", "75006c2f688713f5bd97d5d9f8753974"], ["token", "30b011468bbf3accc61bb1ea651884b4"], ["updated_at", "2015-11-17 00:43:11.042839"], ["weight", 72]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 327ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.5ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (1.3ms)
+  Rendered users/index.html.erb within layouts/application (62.0ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 214ms (Views: 182.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-17 00:43:11 +0000
+Processing by ExercisesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+Completed 200 OK in 431517ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-17 00:50:23 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 571ms (Views: 1.7ms | ActiveRecord: 0.3ms)

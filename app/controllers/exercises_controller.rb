@@ -2,7 +2,6 @@ class ExercisesController < ApplicationController
 
   def index
     @user_exercise = Exercise.find_by(user_id: current_user)
-    binding.pry
     render :json => @user_exercise
   end
 
