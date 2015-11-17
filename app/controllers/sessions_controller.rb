@@ -77,7 +77,6 @@ class SessionsController < ApplicationController
     user.goal = client.body_weight_goal["goal"]["goalType"]
     user.start_weight = client.body_weight_goal["goal"]["startWeight"]
     user.goal_weight = client.body_weight_goal["goal"]["weight"]
-    # user.weight = client.body_weight(:date, 'today')
 
     total_cals = 0
     count = 0

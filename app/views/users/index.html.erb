@@ -2,7 +2,6 @@
   <%= stylesheet_link_tag 'users' %>
   <%= javascript_include_tag 'api_calls' %>
   <%= javascript_include_tag 'exercise' %>
-  <%= javascript_include_tag 'meals' %>
 <% end %>
 
 <div class="section">
@@ -29,6 +28,12 @@
     <div class="col s6">
       <%= render 'dietplan' %>
     </div>
+    <div class="col s6">
+      <div id="goalWeight"></div>
+    </div>
+    <div class="col s6">
+      <div id="calorieGraph"></div>
+    </div>
   </div>
 </div>
 
@@ -36,12 +41,7 @@
 
 <div class="section">
   <div class="row">
-    <div class="col s3">
-      <div id="goalWeight" style="width: 300px; height: 200px"></div>
-    </div>
-    <div class="col s3">
-      <div id="calorieGraph" style="width: 310px; max-width: 400px; height: 300px;"></div>
-    </div>
+
   </div>
 </div>
 
