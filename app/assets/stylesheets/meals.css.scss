@@ -2,34 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.diet-table {
-  margin-top: 20px;
-  color: black;
-  border: solid 3px blue;
-  border-radius: 5px;
+$category-background-colour: #424254;
+$category-font-color: #FFF;
+
+// .diet-table {
+//   margin-top: 20px;
+//   color: black;
+//   border: solid 3px blue;
+//   border-radius: 5px;
+// }
+
+.diet-table h3 {
+  margin-left: 10px;
 }
 
-span {
-  background-color: darkgreen;
+.cat {
+  background-color: $category-background-colour;
   padding-right: 100px;
   padding-left: 20px;
   padding-top:15px;
   padding-bottom:15px;
-  color: white;
+  color: $category-font-color;
 }
 
-h5 {
-  border: 3px solid green;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
+// h5 {
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+// }
 
-p {
-  font-size: 20px;
-}
+// p {
+//   font-size: 20px;
+// }
 
 .item-cat:hover {
-  cursor: pointer; 
+  cursor: pointer;
   cursor: hand;
   background-color: lightgray;
 }
