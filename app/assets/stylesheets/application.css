@@ -10,18 +10,5 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
-
- .menu-cat {
-  background-color: #08c;
- }
-
-html, body {
-  /*background-color: #2a2a2b;*/
-}
-
-tspan {
-  text-shadow: none;
-}
