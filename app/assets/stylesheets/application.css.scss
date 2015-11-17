@@ -13,15 +13,11 @@
  *= require_self
  */
 
+$menu-color: #CC2A41;
+$background-color: #F5F5F5;
 
-.waves-effect {
-  background-color: #E03C3C;
-}
-
-.waves-effect:hover {
-  background-color: #E03C3C;
-}
-
+.waves-effect,
+.waves-effect:hover,
 nav {
-  background-color: #E03C3C;
+  background-color: $menu-color;
 }
