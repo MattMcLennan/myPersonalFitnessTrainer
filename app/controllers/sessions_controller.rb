@@ -30,8 +30,8 @@ class SessionsController < ApplicationController
   end
 
   def generate_user_info
-    @consumer_key = '441b218db31b866a1782ab19ce30bf0d'
-    @consumer_secret = '1c52dd889b8a0b7b813acf810ff5ac2c'
+    @consumer_key = 'afa236cfde4b752007e5bdfff09fcd51'
+    @consumer_secret = '9e232d99682c218ec38ec05a7b010e6d'
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
@@ -47,7 +47,9 @@ class SessionsController < ApplicationController
     current_user.save!
 
     @data = {
-      "body_weight_goal" => client.body_weight_goal,
+      "body_weight_goal" => current_user.goal_weight.to_s,
+      "body_start_weight" => current_user.start_weight.to_s,
+      "body_weight_today" => (current_user.weight * 2.2046),
       "body_weight" => client.activity_on_date_range(:weight, '2015-07-07', 'today'),
       "steps" => client.activity_on_date_range(:steps, '2015-07-07', 'today'),
       "distance" => client.activity_on_date_range(:distance, '2015-07-07', 'today'),
@@ -55,6 +57,7 @@ class SessionsController < ApplicationController
       "meal" => JSON.parse(current_user.daily_meal),
       "user_calorie_goal" => current_user.avg_weekly_cals,
       "user_calorie_intake" => Meal.test_daily(JSON.parse(current_user.daily_meal))
+
 
     }
 
@@ -66,19 +69,21 @@ class SessionsController < ApplicationController
   end
 
   def avg_cals(user)
-    @consumer_key = '441b218db31b866a1782ab19ce30bf0d'
-    @consumer_secret = '1c52dd889b8a0b7b813acf810ff5ac2c'
+    @consumer_key = 'afa236cfde4b752007e5bdfff09fcd51'
+    @consumer_secret = '9e232d99682c218ec38ec05a7b010e6d'
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
       :consumer_secret => @consumer_secret,
       :token => user.token,
       :secret => user.secret,
-      :user_id => user.uid}), 
-      :user_id => user.uid}), 
+      :user_id => user.uid})
 
     get_cals = client.activity_on_date_range(:calories, 1.week.ago.to_date.to_s, "today")
     user.goal = client.body_weight_goal["goal"]["goalType"]
+    user.start_weight = client.body_weight_goal["goal"]["startWeight"]
+    user.goal_weight = client.body_weight_goal["goal"]["weight"]
+    # user.weight = client.body_weight(:date, 'today')
 
     total_cals = 0
     count = 0
@@ -98,6 +103,5 @@ class SessionsController < ApplicationController
     else
       user.avg_weekly_cals = (total_cals/count).round(-1) + 500 
     end
-
   end
 end

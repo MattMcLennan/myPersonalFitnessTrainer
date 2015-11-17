@@ -9,10 +9,14 @@ $( document ).ready(function() {
     });
 
    function success(results) {
-      var cals_in = results.user_calorie_goal
-      var cals_out = results.user_calorie_intake
-      dark_theme();
+      var cals_in = results.user_calorie_goal;
+      var cals_out = results.user_calorie_intake;
+      var body_weight_goal = results.body_weight_goal;
+      var body_start_weight = results.body_start_weight;
+      var body_weight_today = results.body_weight_today;
       calorie_chart(cals_in, cals_out);
+      weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_today);
+
    }
 
    function error() {
@@ -123,205 +127,95 @@ function calorie_chart(cals_in, cals_out) {
     });
 }
 
-// Load the fonts
-function dark_theme() {
-   Highcharts.theme = {
-      colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
-         "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
-      chart: {
-         backgroundColor: {
-            linearGradient: { x1: 0, y1: 0, x2: 0, y2: 0 },
-            stops: [
-               [0, '#2a2a2b'],
-               [1, '#3e3e40']
-            ]
-         },
-         style: {
-            fontFamily: "'Unica One', sans-serif"
-         },
-         plotBorderColor: '#606063'
-      },
-      title: {
-         style: {
-            color: '#E0E0E3',
-            textTransform: 'uppercase',
-            fontSize: '20px'
-         }
-      },
-      subtitle: {
-         style: {
-            color: '#E0E0E3',
-            textTransform: 'uppercase'
-         }
-      },
-      xAxis: {
-         gridLineColor: '#707073',
-         labels: {
-            style: {
-               color: '#E0E0E3'
-            }
-         },
-         lineColor: '#707073',
-         minorGridLineColor: '#505053',
-         tickColor: '#707073',
-         title: {
-            style: {
-               color: '#A0A0A3'
 
-            }
-         }
-      },
-      yAxis: {
-         gridLineColor: '#707073',
-         labels: {
-            style: {
-               color: '#E0E0E3'
-            }
-         },
-         lineColor: '#707073',
-         minorGridLineColor: '#505053',
-         tickColor: '#707073',
-         tickWidth: 1,
-         title: {
-            style: {
-               color: '#A0A0A3'
-            }
-         }
-      },
-      tooltip: {
-         backgroundColor: 'rgba(0, 0, 0, 0.85)',
-         style: {
-            color: '#F0F0F0'
-         }
-      },
-      plotOptions: {
-         series: {
-            dataLabels: {
-               color: '#B0B0B3'
-            },
-            marker: {
-               lineColor: '#333'
-            }
-         },
-         boxplot: {
-            fillColor: '#505053'
-         },
-         candlestick: {
-            lineColor: 'white'
-         },
-         errorbar: {
-            color: 'white'
-         }
-      },
-      legend: {
-         itemStyle: {
-            color: '#E0E0E3'
-         },
-         itemHoverStyle: {
-            color: '#FFF'
-         },
-         itemHiddenStyle: {
-            color: '#606063'
-         }
-      },
-      credits: {
-         style: {
-            color: '#666'
-         }
+function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_today) {
+
+  var gaugeOptions = {
+
+    chart: {
+      type: 'solidgauge'
+    },
+
+    title: null,
+
+    pane: {
+      center: ['50%', '85%'],
+      size: '120%',
+      startAngle: -90,
+      endAngle: 90,
+      background: {
+        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || '#EEE',
+        innerRadius: '60%',
+        outerRadius: '100%',
+        shape: 'arc'
+      }
+    },
+
+    tooltip: {
+      enabled: false
+    },
+
+    // the value axis
+    yAxis: {
+      stops: [
+        [0.1, '#fe951b'], // red
+        [0.5, '#b0e52c'], // yellow 
+        [0.9, '#b0e52c'] // green
+      ],
+      lineWidth: 0,
+      minorTickInterval: null,
+      tickPixelInterval: 400,
+      tickWidth: 0,
+      startOnTick:true,
+      title: {
+        y: -70
       },
       labels: {
-         style: {
-            color: '#707073'
-         }
-      },
+        y: 16
+      }
+    },
 
-      drilldown: {
-         activeAxisLabelStyle: {
-            color: '#F0F0F3'
-         },
-         activeDataLabelStyle: {
-            color: '#F0F0F3'
-         }
-      },
+    plotOptions: {
+      solidgauge: {
+        dataLabels: {
+          y: 5,
+          borderWidth: 0,
+          useHTML: true
+        }
+      }
+    }
+  };
 
-      navigation: {
-         buttonOptions: {
-            symbolStroke: '#DDDDDD',
-            theme: {
-               fill: '#505053'
-            }
-         }
-      },
+  // The speed gauge
+  $('#container-speed').highcharts(Highcharts.merge(gaugeOptions, {
+    yAxis: {
+      min: 0,
+      max: 100,
+      title: {
+        text: 'Goal Weight Progress'
+      }
+    },
 
-      // scroll charts
-      rangeSelector: {
-         buttonTheme: {
-            fill: '#505053',
-            stroke: '#000000',
-            style: {
-               color: '#CCC'
-            },
-            states: {
-               hover: {
-                  fill: '#707073',
-                  stroke: '#000000',
-                  style: {
-                     color: 'white'
-                  }
-               },
-               select: {
-                  fill: '#000003',
-                  stroke: '#000000',
-                  style: {
-                     color: 'white'
-                  }
-               }
-            }
-         },
-         inputBoxBorderColor: '#505053',
-         inputStyle: {
-            backgroundColor: '#333',
-            color: 'silver'
-         },
-         labelStyle: {
-            color: 'silver'
-         }
-      },
+    credits: {
+      enabled: false
+    },
 
-      navigator: {
-         handles: {
-            backgroundColor: '#666',
-            borderColor: '#AAA'
-         },
-         outlineColor: '#CCC',
-         maskFill: 'rgba(255,255,255,0.1)',
-         series: {
-            color: '#7798BF',
-            lineColor: '#A6C7ED'
-         },
-         xAxis: {
-            gridLineColor: '#505053'
-         }
-      },
+    series: [{
+      name: 'Speed',
+      data: [Math.round((1-((body_weight_today - body_weight_goal)/(body_start_weight - body_weight_goal)))*100)],
+      dataLabels: {
+        format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+          ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
+          '<span style="font-size:12px;color:silver">%</span></div>'
 
-      scrollbar: {
-         barBackgroundColor: '#808083',
-         barBorderColor: '#808083',
-         buttonArrowColor: '#CCC',
-         buttonBackgroundColor: '#606063',
-         buttonBorderColor: '#606063',
-         rifleColor: '#FFF',
-         trackBackgroundColor: '#404043',
-         trackBorderColor: '#404043'
       },
+      tooltip: {
+        valueSuffix: ' km/h'
+      }
+    }]
 
-      // special colors for some of the
-      legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
-      background2: '#505053',
-      dataLabelsColor: '#B0B0B3',
-      textColor: '#C0C0C0',
-      contrastTextColor: '#F0F0F3',
-      maskColor: 'rgba(255,255,255,0.3)'
-   };
-   Highcharts.setOptions(Highcharts.theme)
+  }));
+
 }
+
+// Load the fonts

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111221929) do
+ActiveRecord::Schema.define(version: 20151116211205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 20151111221929) do
     t.text     "daily_meal"
     t.string   "gender"
     t.integer  "weight"
+    t.string   "start_weight"
+    t.string   "goal_weight"
   end
 
 end
