@@ -213,7 +213,6 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
         valueSuffix: ' km/h'
       }
     }]
-
   }));
 
 }
