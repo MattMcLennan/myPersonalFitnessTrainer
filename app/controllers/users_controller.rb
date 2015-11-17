@@ -6,8 +6,8 @@ class UsersController < ApplicationController
     if !current_user
       redirect_to root_path, alert: "Log in first!"
     else
-      @users = User.all
       @exercise = Exercise.find_by(user_id: current_user)
+      @meals = JSON.parse(current_user.daily_meal)
     end
   end
 

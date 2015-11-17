@@ -16,6 +16,7 @@ $(document).ready(function() {
       var body_weight_today = results.body_weight_today;
       calorie_chart(cals_in, cals_out);
       weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_today);
+      debugger
 
    }
 
