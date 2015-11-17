@@ -6043,3 +6043,54 @@ Processing by SessionsController#generate_user_info as JSON
   [1m[35m (0.0ms)[0m  BEGIN
   [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 769ms (Views: 0.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-17 01:43:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.0ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (248.3ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+Completed 200 OK in 1974ms (Views: 1621.7ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 01:43:35 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 01:43:36 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 01:43:36 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 01:43:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 01:43:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 01:43:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 01:43:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 01:43:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 01:43:37 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-17 01:43:37 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-17 01:43:38 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-17 01:43:38 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.0ms)[0m  COMMIT
+Completed 200 OK in 1017ms (Views: 28.0ms | ActiveRecord: 4.0ms)

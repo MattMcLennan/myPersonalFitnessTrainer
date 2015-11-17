@@ -1,9 +1,8 @@
 class ExercisesController < ApplicationController
 
   def index
-    respond_to do |format|
-      format.json { render json: Exercise.find_by(user_id: current_user) }
-    end
+    @user_exercise = Exercise.find_by(user_id: current_user)
+    render :json => @user_exercise
   end
 
   def show
@@ -75,21 +74,11 @@ class ExercisesController < ApplicationController
       :squat,
       :overhead_press,
       :barbell_row,
-      :tricep_extension,
-      :barbell_curl,
-      :cable_crunches,
-      :calf_raise,
-      :pullups,
       :bench_reps,
       :deadlift_reps,
       :squat_reps,
       :overhead_press_reps,
-      :barbell_row_reps,
-      :tricep_extension_reps,
-      :barbell_curl_reps,
-      :cable_crunches_reps,
-      :calf_raise_reps,
-      :pullup_reps
+      :barbell_row_reps
     )
   end
 

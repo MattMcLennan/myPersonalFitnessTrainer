@@ -11,35 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20151116211205) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exercises", force: true do |t|
     t.integer  "user_id"
-    t.integer  "bench",                 default: 0
-    t.integer  "deadlift",              default: 0
-    t.integer  "squat",                 default: 0
-    t.integer  "overhead_press",        default: 0
-    t.integer  "barbell_row",           default: 0
-    t.integer  "tricep_extension",      default: 0
-    t.integer  "barbell_curl",          default: 0
-    t.integer  "cable_crunches",        default: 0
+    t.integer  "bench",               default: 0
+    t.integer  "deadlift",            default: 0
+    t.integer  "squat",               default: 0
+    t.integer  "overhead_press",      default: 0
+    t.integer  "barbell_row",         default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "calf_raise",            default: 0
-    t.integer  "pullups",               default: 0
-    t.integer  "bench_reps",            default: 0
-    t.integer  "deadlift_reps",         default: 0
-    t.integer  "squat_reps",            default: 0
-    t.integer  "overhead_press_reps",   default: 0
-    t.integer  "barbell_row_reps",      default: 0
-    t.integer  "tricep_extension_reps", default: 0
-    t.integer  "barbell_curl_reps",     default: 0
-    t.integer  "cable_crunches_reps",   default: 0
-    t.integer  "calf_raise_reps",       default: 0
-    t.integer  "pullup_reps",           default: 0
+    t.integer  "bench_reps",          default: 0
+    t.integer  "deadlift_reps",       default: 0
+    t.integer  "squat_reps",          default: 0
+    t.integer  "overhead_press_reps", default: 0
+    t.integer  "barbell_row_reps",    default: 0
   end
 
   add_index "exercises", ["user_id"], name: "index_exercises_on_user_id", using: :btree

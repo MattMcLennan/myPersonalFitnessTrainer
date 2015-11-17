@@ -1,38 +1,16 @@
 // Place all the styles related to the Start controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.appName {
-  font-size: 3rem;
-  font-family: 'Pacifico', cursive;
-  position: absolute;
-  left: 50%;
-  color: darkgrey;
-  font-style: bold;
+
+html {
+  background: url(RiverFitness.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.main {
-  position: fixed;
-  width: 100%;
-}
-
-.content {
-  position: absolute;
-  max-width: 30%;
-  top: 25%;
-  left: 50%;
-  color: white;
-  font-size: 20px;
-}
-
-.content-footer {
-  position: absolute;
-  left: 50%;
-}
-
-.quote {
-  position: relative;
-  font-style: italic;
+.about-me {
+  color: black;
   font-weight: bold;
-  font-family: "Indie Flower", cursive;
-  font-size: 3rem;
 }

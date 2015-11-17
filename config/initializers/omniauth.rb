@@ -3,4 +3,3 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 
 # https://github.com/tkgospodinov/omniauth-
-

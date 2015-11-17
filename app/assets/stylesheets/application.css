@@ -10,14 +10,18 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
-/*html, body {
-  background-color: #2a2a2b;
-}*/
 
-tspan {
-  text-shadow: none;
+.waves-effect {
+  background-color: #E03C3C;
+}
+
+.waves-effect:hover {
+  background-color: #E03C3C;
+}
+
+nav {
+  background-color: #E03C3C;
 }

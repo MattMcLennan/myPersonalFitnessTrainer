@@ -1,6 +1,14 @@
 <% content_for :header do %>
+  <%= stylesheet_link_tag 'users' %>
   <%= javascript_include_tag 'api_calls' %>
   <%= javascript_include_tag 'exercise' %>
+<% end %>
+
+<% if false %>
+<!-- <h1>Diet</h1>
+<div class="meals">
+  <%= render './meals/dietplan' %>
+</div> -->
 <% end %>
 
 <div class="row">
@@ -28,3 +36,6 @@
 
 <div style="width: 600px; height: 400px; margin: 0 auto">
 <div id="container-speed" style="width: 300px; height: 200px; float: left"></div>
+
+<div id="container2" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto"></div>
+

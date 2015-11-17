@@ -1,12 +1,12 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
-   $.ajax({
-      url: "sessions/generate_user_info",
-      type: "get",
-      dataType : "json",
-      success: success,
-      error: error
-    });
+  $.ajax({
+    url: "sessions/generate_user_info",
+    type: "get",
+    dataType: "json",
+    success: success,
+    error: error
+  });
 
    function success(results) {
       var cals_in = results.user_calorie_goal;
@@ -19,8 +19,7 @@ $( document ).ready(function() {
 
    }
 
-   function error() {
-   }
+  function error() {}
 });
 
 function calorie_chart(cals_in, cals_out) {
@@ -97,7 +96,7 @@ function calorie_chart(cals_in, cals_out) {
         },
         plotBands: [{
           from: 0,
-          to: cals_out -250,
+          to: cals_out - 250,
           color: '#fad60a ' // yellow
         }, {
           from: cals_out - 250,
@@ -122,10 +121,11 @@ function calorie_chart(cals_in, cals_out) {
     // Add some life
     function(chart) {
       if (!chart.renderer.forExport) {
-          var point = chart.series[0].points[0];
+        var point = chart.series[0].points[0];
       }
     });
 }
+
 
 
 function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_today) {
@@ -219,3 +219,4 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
 }
 
 // Load the fonts
+

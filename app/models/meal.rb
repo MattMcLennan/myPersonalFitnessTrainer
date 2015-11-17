@@ -53,7 +53,7 @@ class Meal < ActiveRecord::Base
             grams: 0
           }
         }
-
+        
         find = Meal.where("category LIKE ?", meal_category.to_s.capitalize)
 
         # case needed for unique cases
