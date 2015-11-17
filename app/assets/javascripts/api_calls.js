@@ -16,7 +16,6 @@ $(document).ready(function() {
       var body_weight_today = results.body_weight_today;
       calorie_chart(cals_in, cals_out);
       weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_today);
-      debugger
 
    }
 
@@ -184,6 +183,13 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
           y: 5,
           borderWidth: 0,
           useHTML: true
+        },
+        events: {
+          afterAnimate: function () {
+            $(".highcharts-axis-labels text:nth-child(1)").text(body_start_weight);
+            $(".highcharts-axis-labels text:nth-child(3)").text(body_weight_goal);
+            $(".highcharts-axis-labels text:nth-child(2)").remove();
+          }
         }
       }
     }
