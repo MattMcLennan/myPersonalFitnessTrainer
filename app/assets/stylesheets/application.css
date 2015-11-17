@@ -12,3 +12,15 @@
  *
  *= require_self
  */
+
+.waves-effect {
+  background-color: #E03C3C;
+}
+
+.waves-effect:hover {
+  background-color: #E03C3C;
+}
+
+nav-wrapper {
+  background-color: #E03C3C;
+}
