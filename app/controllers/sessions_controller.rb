@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
     @user.token = auth['credentials'].token
     @user.secret = auth['credentials'].secret
 
-    # Calculating the avg cals for the user 
+    # Calculating the avg cals for the user
     avg_cals(@user)
     @user.daily_meal = daily_meal(@user)
     @user.save
@@ -30,8 +30,8 @@ class SessionsController < ApplicationController
   end
 
   def generate_user_info
-    @consumer_key = '0a3c71e907f0686eeb166f0e1f9c03d0'
-    @consumer_secret = 'cc0561dea905cd5aea34761313aa1e49'
+    @consumer_key = '518847149f7153f988aca36e965bdc82'
+    @consumer_secret = '9064980d0beaec6a3e8dee0416a28629'
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
@@ -66,8 +66,8 @@ class SessionsController < ApplicationController
   end
 
   def avg_cals(user)
-    @consumer_key = '0a3c71e907f0686eeb166f0e1f9c03d0'
-    @consumer_secret = 'cc0561dea905cd5aea34761313aa1e49'
+    @consumer_key = '518847149f7153f988aca36e965bdc82'
+    @consumer_secret = '9064980d0beaec6a3e8dee0416a28629'
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
@@ -93,9 +93,9 @@ class SessionsController < ApplicationController
     end
 
     if user.goal == "LOSE"
-      user.avg_weekly_cals = (total_cals/count).round(-1) - 500 
+      user.avg_weekly_cals = (total_cals/count).round(-1) - 500
     else
-      user.avg_weekly_cals = (total_cals/count).round(-1) + 500 
+      user.avg_weekly_cals = (total_cals/count).round(-1) + 500
     end
 
   end

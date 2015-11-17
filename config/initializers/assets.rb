@@ -9,3 +9,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( api_calls.js )
 Rails.application.config.assets.precompile += %w( exercise.js )
 Rails.application.config.assets.precompile += %w( meals.js )
+Rails.application.config.assets.precompile += %w( start.css )
