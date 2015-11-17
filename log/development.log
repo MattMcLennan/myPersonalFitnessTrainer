@@ -7012,3 +7012,1320 @@ Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:33:03 
 
 
 Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:33:03 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:37:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.7ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.5ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (38.5ms)
+  Rendered meals/index.html.erb within layouts/application (61.8ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 448ms (Views: 363.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:37:10 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (38.9ms)
+  Rendered meals/index.html.erb within layouts/application (51.1ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 271ms (Views: 259.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:38:56 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:39:38 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (37.4ms)
+  Rendered meals/index.html.erb within layouts/application (51.5ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 249ms (Views: 236.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:38 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:38 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:38 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:38 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:38 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:39 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:39 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:39:40 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (14.4ms)
+  Rendered meals/index.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 219ms (Views: 200.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:39:41 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.1ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (14.4ms)
+  Rendered meals/index.html.erb within layouts/application (26.6ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 306ms (Views: 293.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:40:44 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:42:06 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (39.4ms)
+  Rendered meals/index.html.erb within layouts/application (52.9ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 270ms (Views: 257.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:07 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:42:49 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (36.0ms)
+  Rendered meals/index.html.erb within layouts/application (48.4ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 314ms (Views: 302.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:42:50 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (37.6ms)
+  Rendered meals/index.html.erb within layouts/application (52.1ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 246ms (Views: 233.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:43:23 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:55:59 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.9ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (38.4ms)
+  Rendered meals/index.html.erb within layouts/application (52.9ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 329ms (Views: 310.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:00 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:56:14 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.9ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (48.5ms)
+  Rendered meals/index.html.erb within layouts/application (61.7ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 250ms (Views: 236.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:14 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:56:15 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.1ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (14.0ms)
+  Rendered meals/index.html.erb within layouts/application (26.3ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 230ms (Views: 217.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:57:28 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.4ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (34.3ms)
+  Rendered meals/index.html.erb within layouts/application (46.9ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 243ms (Views: 228.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:13 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:59:35 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (36.0ms)
+  Rendered meals/index.html.erb within layouts/application (47.7ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 239ms (Views: 226.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:35 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:35 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:35 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:35 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:36 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:36 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:36 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:59:43 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.7ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.4ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (34.8ms)
+  Rendered meals/index.html.erb within layouts/application (48.1ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 248ms (Views: 235.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:43 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:43 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:43 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:43 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:43 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:44 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:44 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (36.9ms)
+  Rendered meals/index.html.erb within layouts/application (49.1ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 244ms (Views: 231.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-16 23:59:56 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:00:30 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (35.7ms)
+  Rendered meals/index.html.erb within layouts/application (49.1ms)
+  Rendered layouts/_nav.html.erb (0.4ms)
+Completed 200 OK in 248ms (Views: 234.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:30 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:30 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:30 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:30 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:30 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:30 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:30 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:31 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:31 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:00:37 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (42.1ms)
+  Rendered meals/index.html.erb within layouts/application (56.1ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 256ms (Views: 244.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:00:38 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:01:57 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (38.4ms)
+  Rendered meals/index.html.erb within layouts/application (51.7ms)
+  Rendered layouts/_nav.html.erb (5.3ms)
+Completed 200 OK in 323ms (Views: 310.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:01:58 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.9ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (14.7ms)
+  Rendered meals/index.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 303ms (Views: 290.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:02 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:03:31 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (37.8ms)
+  Rendered meals/index.html.erb within layouts/application (51.6ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 248ms (Views: 236.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:32 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:03:57 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.8ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (36.2ms)
+  Rendered meals/index.html.erb within layouts/application (50.6ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 242ms (Views: 228.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:57 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:57 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:57 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:57 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:58 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:03:58 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:58 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:58 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:58 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:03:58 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:05:31 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (13.9ms)
+  Rendered meals/index.html.erb within layouts/application (27.6ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 295ms (Views: 282.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:05:32 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:07:55 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (15.5ms)
+  Rendered meals/index.html.erb within layouts/application (28.5ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 295ms (Views: 283.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:07:56 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:08:15 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.1ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (15.0ms)
+  Rendered meals/index.html.erb within layouts/application (28.4ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 298ms (Views: 285.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:08:16 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:09:25 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (14.2ms)
+  Rendered meals/index.html.erb within layouts/application (28.1ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 297ms (Views: 284.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:09:25 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:09:25 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:09:25 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:09:25 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:09:25 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:09:25 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:09:25 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:09:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:09:26 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:09:26 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:15:48 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.1ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.7ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (14.4ms)
+  Rendered meals/index.html.erb within layouts/application (30.0ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 309ms (Views: 297.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:15:49 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:16:00 +0000
+Processing by MealsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.4ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.3ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  Rendered meals/_dietplan.html.erb (15.0ms)
+  Rendered meals/index.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 326ms (Views: 312.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:16:00 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:16:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:16:00 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:16:00 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:16:00 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:16:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:16:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:16:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:16:01 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:16:01 +0000
+
+
+Started GET "/meals" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+Processing by MealsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')
+  [1m[36mMeal Load (0.2ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')[0m
+  [1m[35mMeal Load (0.1ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')[0m
+  Rendered meals/_dietplan.html.erb (15.1ms)
+  Rendered meals/index.html.erb within layouts/application (29.1ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 235ms (Views: 223.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/exercise.css?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-17 00:21:52 +0000

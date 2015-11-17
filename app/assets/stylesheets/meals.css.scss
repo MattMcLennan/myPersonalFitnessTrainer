@@ -19,7 +19,7 @@ span {
 }
 
 h5 {
-  border: 1px solid green;
+  border: 3px solid green;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -28,6 +28,14 @@ p {
   font-size: 20px;
 }
 
+.item-cat:hover {
+  cursor: pointer; 
+  cursor: hand;
+  background-color: lightgray;
+}
+
 .extra {
   display: none;
+  font-size: 15px;
+  font-style: italic;
 }
