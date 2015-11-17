@@ -1,7 +1,7 @@
 $(function() {
 
   $('.item-cat').click(function () {
-    $(this).children('.extra').fadeIn("slow");
+    $(this).children('.extra').fadeToggle("slow");
   });
 
 });
