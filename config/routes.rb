@@ -5,7 +5,7 @@ root 'start#index'
 # get   '/', :to => 'sessions#new', :as => :/
 # get  '/auth/fitbit', :to => 'sessions#fitbit'
 # get '/auth/:provider/callback', :to => 'sessions#fitbit'
-get 'auth/fitbit/callback', to: 'sessions#fitbit'
+get '/auth/fitbit/callback', to: 'sessions#fitbit'
 post '/auth/failure', :to => 'sessions#failure'
 get 'sessions/generate_user_info', :to => 'sessions#generate_user_info'
 

@@ -31,7 +31,7 @@ class SessionsController < ApplicationController
 
   def generate_user_info
     @consumer_key = '10c780512cf30750c716e8523c718155'
-    @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
+    @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68  '
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,

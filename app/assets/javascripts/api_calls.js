@@ -11,6 +11,7 @@ $( document ).ready(function() {
    function success(results) {
       var cals_in = results.user_calorie_goal
       var cals_out = results.user_calorie_intake
+      dark_theme();
       calorie_chart(cals_in, cals_out);
    }
 
@@ -19,7 +20,6 @@ $( document ).ready(function() {
 });
 
 function calorie_chart(cals_in, cals_out) {
-   dark_theme();
   $('#container2').highcharts({
 
       chart: {
@@ -32,6 +32,9 @@ function calorie_chart(cals_in, cals_out) {
 
       title: {
         text: 'Calories In vs Out'
+      },
+      credits: {
+        enabled: false
       },
 
       pane: {
@@ -122,12 +125,6 @@ function calorie_chart(cals_in, cals_out) {
 
 // Load the fonts
 function dark_theme() {
-   Highcharts.createElement('link', {
-      href: '//fonts.googleapis.com/css?family=Unica+One',
-      rel: 'stylesheet',
-      type: 'text/css'
-   }, null, document.getElementsByTagName('head')[0]);
-
    Highcharts.theme = {
       colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
          "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
