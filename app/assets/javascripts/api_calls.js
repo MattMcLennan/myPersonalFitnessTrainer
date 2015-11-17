@@ -24,7 +24,7 @@ $(document).ready(function() {
 });
 
 function calorie_chart(cals_in, cals_out) {
-  $('#container2').highcharts({
+  $('#calorieGraph').highcharts({
 
       chart: {
         type: 'gauge',
@@ -137,7 +137,9 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
       type: 'solidgauge'
     },
 
-    title: null,
+    title: {
+      text: 'Goal Weight Progress'
+    },
 
     pane: {
       center: ['50%', '85%'],
@@ -160,7 +162,7 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
     yAxis: {
       stops: [
         [0.1, '#fe951b'], // red
-        [0.5, '#b0e52c'], // yellow 
+        [0.5, '#b0e52c'], // yellow
         [0.9, '#b0e52c'] // green
       ],
       lineWidth: 0,
@@ -188,13 +190,10 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
   };
 
   // The speed gauge
-  $('#container-speed').highcharts(Highcharts.merge(gaugeOptions, {
+  $('#goalWeight').highcharts(Highcharts.merge(gaugeOptions, {
     yAxis: {
       min: 0,
-      max: 100,
-      title: {
-        text: 'Goal Weight Progress'
-      }
+      max: 100
     },
 
     credits: {
@@ -218,6 +217,3 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
   }));
 
 }
-
-// Load the fonts
-

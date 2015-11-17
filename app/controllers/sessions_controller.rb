@@ -31,12 +31,9 @@ class SessionsController < ApplicationController
 
   def generate_user_info
 
-    @consumer_key = 'afa236cfde4b752007e5bdfff09fcd51'
-    @consumer_secret = '9e232d99682c218ec38ec05a7b010e6d'
-
     client = Fitgem::Client.new({
-      :consumer_key => @consumer_key,
-      :consumer_secret => @consumer_secret,
+      :consumer_key => ENV['CONSUMER_KEY']
+      :consumer_secret => ENV['CONSUMER_SECRET'],
       :token => current_user.token,
       :secret => current_user.secret,
       :user_id => current_user.uid})
@@ -58,8 +55,6 @@ class SessionsController < ApplicationController
       "meal" => JSON.parse(current_user.daily_meal),
       "user_calorie_goal" => current_user.avg_weekly_cals,
       "user_calorie_intake" => Meal.test_daily(JSON.parse(current_user.daily_meal))
-
-
     }
 
     render :json => @data
@@ -71,13 +66,9 @@ class SessionsController < ApplicationController
 
   def avg_cals(user)
 
-    @consumer_key = 'afa236cfde4b752007e5bdfff09fcd51'
-    @consumer_secret = '9e232d99682c218ec38ec05a7b010e6d'
-
-
     client = Fitgem::Client.new({
-      :consumer_key => @consumer_key,
-      :consumer_secret => @consumer_secret,
+      :consumer_key => ENV['CONSUMER_KEY']
+      :consumer_secret => ENV['CONSUMER_SECRET'],
       :token => user.token,
       :secret => user.secret,
       :user_id => user.uid})
