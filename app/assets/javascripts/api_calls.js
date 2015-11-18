@@ -173,7 +173,7 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
         y: -70
       },
       labels: {
-        y: 16
+        y: 35
       }
     },
 
@@ -186,8 +186,8 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
         },
         events: {
           afterAnimate: function () {
-            $(".highcharts-axis-labels text:nth-child(1)").text(body_start_weight);
-            $(".highcharts-axis-labels text:nth-child(3)").text(body_weight_goal);
+            $(".highcharts-axis-labels text:nth-child(1)").text(body_start_weight + " lbs").css({"font-size": "160%"});
+            $(".highcharts-axis-labels text:nth-child(3)").text(body_weight_goal + " lbs").css({"font-size": "160%"});
             $(".highcharts-axis-labels text:nth-child(2)").remove();
           }
         }
