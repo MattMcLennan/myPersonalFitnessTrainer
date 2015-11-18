@@ -147,7 +147,7 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
       } else {
         return Math.round((1-(Math.abs(body_weight_today - body_weight_goal)/Math.abs(body_start_weight - body_weight_goal)))*100);
       }
-    }  
+    }
   }
 
   var gaugeOptions = {
@@ -206,8 +206,8 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
         },
         events: {
           afterAnimate: function () {
-            $(".highcharts-axis-labels text:nth-child(1)").text(body_start_weight);
-            $(".highcharts-axis-labels text:nth-child(3)").text(body_weight_goal);
+            $(".highcharts-axis-labels text:nth-child(1)").text(body_start_weight + " lbs");
+            $(".highcharts-axis-labels text:nth-child(3)").text(body_weight_goal + " lbs");
             $(".highcharts-axis-labels text:nth-child(2)").remove();
           }
         }
