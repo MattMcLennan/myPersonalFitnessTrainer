@@ -130,6 +130,26 @@ function calorie_chart(cals_in, cals_out) {
 
 function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_today) {
 
+  function data_calc(body_start_weight, body_weight_goal, body_weight_today) {
+    if (body_weight_goal > body_start_weight) {
+      if (body_weight_today >= body_weight_goal) {
+        return 100;
+      } else if (body_weight_today <= body_start_weight) {
+        return 0;
+      } else {
+        return Math.round((1-(Math.abs(body_weight_today - body_weight_goal)/Math.abs(body_start_weight - body_weight_goal)))*100);
+      }
+    } else {
+      if (body_weight_today <= body_weight_goal) {
+        return 100;
+      } else if (body_weight_today >= body_start_weight) {
+        return 0;
+      } else {
+        return Math.round((1-(Math.abs(body_weight_today - body_weight_goal)/Math.abs(body_start_weight - body_weight_goal)))*100);
+      }
+    }
+  }
+
   var gaugeOptions = {
 
     chart: {
@@ -194,7 +214,6 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
       }
     }
   };
-
   // The speed gauge
   $('#goalWeight').highcharts(Highcharts.merge(gaugeOptions, {
     yAxis: {
@@ -208,7 +227,7 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
 
     series: [{
       name: 'Speed',
-      data: [Math.round((1-((body_weight_today - body_weight_goal)/(body_start_weight - body_weight_goal)))*100)],
+      data: [data_calc(body_start_weight, body_weight_goal, body_weight_today)],
       dataLabels: {
         format: '<div style="text-align:center"><span style="font-size:25px;color:' +
           ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
@@ -219,7 +238,6 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
         valueSuffix: ' km/h'
       }
     }]
-
   }));
 
 }

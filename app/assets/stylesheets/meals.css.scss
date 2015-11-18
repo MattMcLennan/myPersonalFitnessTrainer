@@ -22,15 +22,6 @@ $category-font-color: #FFF;
   color: $category-font-color;
 }
 
-// h5 {
-//   padding-top: 15px;
-//   padding-bottom: 15px;
-// }
-
-// p {
-//   font-size: 20px;
-// }
-
 .item-cat:hover {
   cursor: pointer;
   cursor: hand;
@@ -41,8 +32,4 @@ $category-font-color: #FFF;
   display: none;
   font-size: 15px;
   font-style: italic;
-}
-
-#goalWeight, #calorieGraph {
-  display: block;
 }
