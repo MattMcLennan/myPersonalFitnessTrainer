@@ -3,10 +3,10 @@
   <% if current_user %>
     <% if current_user.goal == "GAIN" %>
     <h2>Your current goal is: Weight Gain</h2>
-    <% else %>
+  <% else %>
     <h2>Your current goal is: Weight Loss</h2>
-    <% end %>
-    <p>Fill out the form below to generate your new template:</p>
+  <% end %>
+  <p>Fill out the form below to generate your new template:</p>
 
     <%= form_for @exercise do |f| %>
       <div class="row">

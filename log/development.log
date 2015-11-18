@@ -1873,3 +1873,239 @@ Processing by SessionsController#generate_user_info as JSON
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
   [1m[35m (0.1ms)[0m  COMMIT
 Completed 200 OK in 188ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-11-18 20:45:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 282ms (Views: 259.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-18 20:45:39 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-18 20:45:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-18 20:45:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-18 20:45:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-18 20:45:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-18 20:45:39 +0000
+
+
+Started GET "/assets/start.css?body=1" for 10.0.2.2 at 2015-11-18 20:45:39 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-18 21:03:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-18 21:03:23 +0000
+
+
+Started GET "/auth/fitbit" for 10.0.2.2 at 2015-11-18 21:03:24 +0000
+
+
+Started GET "/auth/fitbit/callback?oauth_token=fa731586649399f03b7272c0d04f2d6b&oauth_verifier=2855eace5bb032f5578e3ff38eebaf7d" for 10.0.2.2 at 2015-11-18 21:03:31 +0000
+Processing by SessionsController#fitbit as HTML
+  Parameters: {"oauth_token"=>"fa731586649399f03b7272c0d04f2d6b", "oauth_verifier"=>"2855eace5bb032f5578e3ff38eebaf7d"}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '3KMJZM' LIMIT 1
+  [1m[36mMeal Load (2.7ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Breakfast')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack1')
+  [1m[36mMeal Load (0.3ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Lunch')
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack2')[0m
+  [1m[35mMeal Load (0.2ms)[0m  SELECT "meals".* FROM "meals"  WHERE (category LIKE 'Snack3')
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "avg_weekly_cals" = $1, "daily_meal" = $2, "goal_weight" = $3, "start_weight" = $4, "updated_at" = $5 WHERE "users"."id" = 1  [["avg_weekly_cals", 1600], ["daily_meal", "{\"breakfast\":{\"item1\":{\"name\":\"Eggs\",\"grams\":210,\"calories\":330,\"protein\":30,\"carbs\":0,\"fat\":20},\"item2\":{\"name\":\"Turkey Bacon\",\"grams\":20,\"calories\":80,\"protein\":10,\"carbs\":0,\"fat\":10}},\"snack1\":{\"item1\":{\"name\":\"Raspberries\",\"grams\":180,\"calories\":100,\"protein\":0,\"carbs\":20,\"fat\":0},\"item2\":{\"name\":\"Peaches\",\"grams\":160,\"calories\":60,\"protein\":0,\"carbs\":20,\"fat\":0}},\"lunch\":{\"item1\":{\"name\":\"Veal\",\"grams\":190,\"calories\":330,\"protein\":50,\"carbs\":0,\"fat\":20},\"item2\":{\"name\":\"Mango\",\"grams\":130,\"calories\":80,\"protein\":0,\"carbs\":20,\"fat\":0}},\"snack2\":{\"item1\":{\"name\":\"Cabbage\",\"grams\":240,\"calories\":60,\"protein\":0,\"carbs\":10,\"fat\":0},\"item2\":{\"name\":\"Broccoli\",\"grams\":180,\"calories\":60,\"protein\":0,\"carbs\":10,\"fat\":10}},\"dinner\":{\"item1\":{\"name\":\"Sardines\",\"grams\":150,\"calories\":310,\"protein\":40,\"carbs\":0,\"fat\":20},\"item2\":{\"name\":\"Carrots\",\"grams\":200,\"calories\":80,\"protein\":0,\"carbs\":20,\"fat\":0}},\"snack3\":{\"item1\":{\"name\":\"Protein Shake\",\"grams\":30,\"calories\":120,\"protein\":10,\"carbs\":0,\"fat\":0}}}"], ["goal_weight", 149.9], ["start_weight", 176.3], ["updated_at", "2015-11-18 21:03:32.675062"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 976ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-18 21:03:32 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (3.6ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/_template.html.erb (1.9ms)
+  Rendered users/_dietplan.html.erb (74.3ms)
+  Rendered users/index.html.erb within layouts/application (201.3ms)
+  Rendered layouts/_nav.html.erb (1.3ms)
+Completed 200 OK in 507ms (Views: 471.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-18 21:03:33 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 234ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercises/1/edit" for 10.0.2.2 at 2015-11-18 21:03:50 +0000
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/edit.html.erb within layouts/application (26.3ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 203ms (Views: 199.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/exercises/1" for 10.0.2.2 at 2015-11-18 21:04:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ExercisesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ez9exgks/L3nL6xSDvJLXjfxYyop4HG/SgzCV/N+IM=", "exercise"=>{"squat"=>"175", "squat_reps"=>"10", "deadlift"=>"200", "deadlift_reps"=>"5", "bench"=>"150", "bench_reps"=>"5", "overhead_press"=>"70", "overhead_press_reps"=>"10", "barbell_row"=>"100", "barbell_row_reps"=>"10"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 110ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-18 21:04:06 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered exercises/_template.html.erb (1.1ms)
+  Rendered users/_dietplan.html.erb (55.2ms)
+  Rendered users/index.html.erb within layouts/application (168.1ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 426ms (Views: 422.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/meals.css?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/assets/meals.js?body=1" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+
+
+Started GET "/sessions/generate_user_info" for 10.0.2.2 at 2015-11-18 21:04:07 +0000
+Processing by SessionsController#generate_user_info as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 219ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/exercises/1/edit" for 10.0.2.2 at 2015-11-18 21:04:12 +0000
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/edit.html.erb within layouts/application (28.3ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 214ms (Views: 210.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exercises/1/edit" for 10.0.2.2 at 2015-11-18 21:05:45 +0000
+Processing by ExercisesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mExercise Load (0.3ms)[0m  SELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1
+  Rendered exercises/edit.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 200ms (Views: 156.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-18 21:05:46 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-18 21:05:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-18 21:05:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-18 21:05:46 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-18 21:05:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-18 21:05:46 +0000
+
+
+Started PATCH "/exercises/1" for 10.0.2.2 at 2015-11-18 21:05:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ExercisesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ez9exgks/L3nL6xSDvJLXjfxYyop4HG/SgzCV/N+IM=", "exercise"=>{"squat"=>"175", "squat_reps"=>"10", "deadlift"=>"200", "deadlift_reps"=>"5", "bench"=>"150", "bench_reps"=>"5", "overhead_press"=>"70", "overhead_press_reps"=>"10", "barbell_row"=>"100", "barbell_row_reps"=>"10"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "goal" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["goal", "GAIN"], ["updated_at", "2015-11-18 21:08:17.491889"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed   in 1085682ms
