@@ -36,19 +36,23 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.find_by(user_id: current_user.id)
 
     if @exercise.update(exercise_params)
+      @user = User.find_by(id: current_user.id)
+
       date = DateTime.now.in_time_zone('Eastern Time (US & Canada)')
       year = date.year
       month = date.month
       day = date.day
       get_weight = params["exercise"]
 
-      current_user.squat.push([year, month, day, get_weight["squat"].to_i])
-      current_user.deadlift.push([year, month, day, get_weight["deadlift"].to_i])
-      current_user.bench.push([year, month, day, get_weight["bench"].to_i])
-      current_user.overhead_press.push([year, month, day, get_weight["overhead_press"].to_i])
-      current_user.barbell_row.push([year, month, day, get_weight["barbell_row"].to_i])
+      @user.squat.push([year, month, day, get_weight["squat"]])
+      @user.deadlift.push([year, month, day, get_weight["deadlift"]])
+      @user.bench.push([year, month, day, get_weight["bench"]])
+      @user.overhead_press.push([year, month, day, get_weight["overhead_press"]])
+      @user.barbell_row.push([year, month, day, get_weight["barbell_row"]])
 
-      current_user.save!
+      @user.save!
+
+      binding.pry
 
       redirect_to users_path
     else
@@ -73,6 +77,19 @@ class ExercisesController < ApplicationController
       @exercise.save!
 
       current_user.update_attributes(template_chosen: true)
+
+      date = DateTime.now.in_time_zone('Eastern Time (US & Canada)')
+      year = date.year
+      month = date.month
+      day = date.day
+      get_weight = params["exercise"]
+
+      current_user.squat.push([year, month, day, get_weight["squat"].to_i])
+      current_user.deadlift.push([year, month, day, get_weight["deadlift"].to_i])
+      current_user.bench.push([year, month, day, get_weight["bench"].to_i])
+      current_user.overhead_press.push([year, month, day, get_weight["overhead_press"].to_i])
+      current_user.barbell_row.push([year, month, day, get_weight["barbell_row"].to_i])
+
       current_user.save!
 
       redirect_to users_path
