@@ -6,8 +6,6 @@ $(function(){
     datatype: 'json'
   }).then(function(results){
 
-    debugger
-
     var barbell_row = [],
         bench = [],
         deadlift = [],
@@ -25,7 +23,7 @@ $(function(){
         squat.push([utc, results[i].squat]);
     }
 
-    $('#container').highcharts({
+    $('#weightProgression').highcharts({
       chart: {
         type: 'spline'
       },

@@ -6,31 +6,31 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first
 
-require 'csv'
-
-csv_text = File.read('Paleo Diet - Sheet1.csv')
-csv = CSV.parse(csv_text, :headers => true)
-csv.each do |row|
-  Meal.create!(row.to_hash)
-end
-
+# require 'csv'
+#
+# csv_text = File.read('Paleo Diet - Sheet1.csv')
+# csv = CSV.parse(csv_text, :headers => true)
+# csv.each do |row|
+#   Meal.create!(row.to_hash)
+# end
+#
 # bench = 115
 # deadlift = 180
 # squat = 150
 # overhead_press = 40
 # barbell_row = 75
-
+#
 # 30.times do
 #   bench += 2
 #   deadlift += 3
 #   squat += 3
 #   overhead_press += 1
 #   barbell_row += 1
-
+#
 #   Exercise.create!(
 #     user_id: 1,
 #     bench: bench,
-#     deadlift: deadlift, 
+#     deadlift: deadlift,
 #     squat: squat,
 #     overhead_press: overhead_press,
 #     barbell_row: barbell_row,
@@ -38,10 +38,10 @@ end
 #     deadlift_reps: 5,
 #     squat_reps: 5,
 #     overhead_press_reps: 5,
-#     barbell_row_reps: 5   
+#     barbell_row_reps: 5
 #   )
 # end
-
+#
 # i = 31
 # Exercise.all.each do |exercise|
 #   i -= 1
