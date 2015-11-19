@@ -1,2 +1,0 @@
-# CONSUMER_KEY = '8bb7cc93f392e7c8a43e4ef2ab89ea6c'
-# CONSUMER_SECRET = 'ffdedac4a0d38cf674ce787f138ba7ef'

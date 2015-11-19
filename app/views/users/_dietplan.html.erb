@@ -12,7 +12,7 @@
 
     <div class="col s12 item-cat">
       <p class="col s6"> <%= @meals["breakfast"]["item1"]["name"] %></p>
-      <p class="col s6 right-align"> Grams: <%= @meals["breakfast"]["item1"]["grams"] %></p>
+      <p class="col s6 right-align"> Number of Eggs: <%= @meals["breakfast"]["item1"]["grams"]/50 %></p>
       <div class="extra">
         <p class="col s4"> Protein: <%= @meals["breakfast"]["item1"]["protein"] %></p>
         <p class="col s4"> Carbs: <%= @meals["breakfast"]["item1"]["carbs"] %></p>
@@ -23,7 +23,7 @@
 
     <div class="col s12 item-cat">
       <p class="col s6"> <%= @meals["breakfast"]["item2"]["name"] %></p>
-      <p class="col s6 right-align"> Grams: <%= @meals["breakfast"]["item2"]["grams"] %></p>
+      <p class="col s6 right-align"> Slices of Turkey Bacon: <%= @meals["breakfast"]["item2"]["grams"]/15 %></p>
       <div class="extra">
         <p class="col s4"> Protein: <%= @meals["breakfast"]["item2"]["protein"] %></p>
         <p class="col s4"> Carbs: <%= @meals["breakfast"]["item2"]["carbs"] %></p>
