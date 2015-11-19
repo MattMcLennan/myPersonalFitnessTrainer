@@ -208,9 +208,9 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
         },
         events: {
           afterAnimate: function () {
-            $(".highcharts-axis-labels text:nth-child(1)").text(body_start_weight).css({"font-size": "155%"});
-            $(".highcharts-axis-labels text:nth-child(3)").text(body_weight_goal).css({"font-size": "155%"});
-            $(".highcharts-axis-labels text:nth-child(2)").remove();
+            $("#goalWeight .highcharts-axis-labels text:nth-child(1)").text(body_start_weight + " lbs").css({"font-size": "155%"});
+            $("#goalWeight .highcharts-axis-labels text:nth-child(3)").text(body_weight_goal + " lbs").css({"font-size": "155%"});
+            $("#goalWeight .highcharts-axis-labels text:nth-child(2)").remove();
 
           }
         }
