@@ -34,7 +34,8 @@ function calorie_chart(cals_in, cals_out) {
       },
 
       title: {
-        text: 'Calories In vs Out'
+        text: 'Calories In vs Out',
+        y: 5
       },
       credits: {
         enabled: false
@@ -126,8 +127,6 @@ function calorie_chart(cals_in, cals_out) {
     });
 }
 
-
-
 function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_today) {
 
   function data_calc(body_start_weight, body_weight_goal, body_weight_today) {
@@ -157,7 +156,9 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
     },
 
     title: {
-      text: 'Goal Weight Progress'
+      text: 'Goal Weight Progress',
+      font-family: "Roboto",
+
     },
 
     pane: {
@@ -181,7 +182,7 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
     yAxis: {
       stops: [
         [0.1, '#fe951b'], // red
-        [0.5, '#b0e52c'], // yellow
+        [0.5, '#b0e52c'], // green
         [0.9, '#b0e52c'] // green
       ],
       lineWidth: 0,
@@ -190,25 +191,26 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
       tickWidth: 0,
       startOnTick:true,
       title: {
-        y: -70
+        y: -20
       },
       labels: {
-        y: 35
+        y: 30
       }
     },
 
     plotOptions: {
       solidgauge: {
         dataLabels: {
-          y: 5,
+          y: -75,
           borderWidth: 0,
           useHTML: true
         },
         events: {
           afterAnimate: function () {
-            $(".highcharts-axis-labels text:nth-child(1)").text(body_start_weight + " lbs").css({"font-size": "160%"});
-            $(".highcharts-axis-labels text:nth-child(3)").text(body_weight_goal + " lbs").css({"font-size": "160%"});
+            $(".highcharts-axis-labels text:nth-child(1)").text(body_start_weight).css({"font-size": "155%"});
+            $(".highcharts-axis-labels text:nth-child(3)").text(body_weight_goal).css({"font-size": "155%"});
             $(".highcharts-axis-labels text:nth-child(2)").remove();
+
           }
         }
       }
@@ -231,13 +233,14 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
       dataLabels: {
         format: '<div style="text-align:center"><span style="font-size:25px;color:' +
           ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-          '<span style="font-size:12px;color:silver">%</span></div>'
+          '<span style="font-size:16px;color:silver">%</span></div>'
 
       },
       tooltip: {
         valueSuffix: ' km/h'
       }
     }]
+
   }));
 
 }
