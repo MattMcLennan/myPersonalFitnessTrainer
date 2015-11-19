@@ -17367,3 +17367,573 @@ Processing by ExercisesController#index as */*
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
   [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
 Completed 200 OK in 56ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-19 03:13:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (126.5ms)
+  Rendered layouts/_nav.html.erb (1.6ms)
+Completed 200 OK in 866ms (Views: 763.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-19 03:13:48 +0000
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.1ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 51ms (Views: 1.6ms | ActiveRecord: 1.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 170], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.823023"], ["diet_name", "Paleo"], ["fat", 5], ["food", "Turkey"], ["per_grams", 100], ["protein", 29], ["updated_at", "2015-11-19 03:16:32.823023"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 165], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.831033"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Chicken breast"], ["per_grams", 100], ["protein", 31], ["updated_at", "2015-11-19 03:16:32.831033"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 143], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.832874"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Pork tender loin"], ["per_grams", 100], ["protein", 26], ["updated_at", "2015-11-19 03:16:32.832874"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 157], ["carbs", 1], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.834656"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Porkchops"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-19 03:16:32.834656"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 194], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.836608"], ["diet_name", "Paleo"], ["fat", 9], ["food", "Steak"], ["per_grams", 100], ["protein", 28], ["updated_at", "2015-11-19 03:16:32.836608"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 172], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.838536"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Veal"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-19 03:16:32.838536"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 242], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.840833"], ["diet_name", "Paleo"], ["fat", 14], ["food", "Pork"], ["per_grams", 100], ["protein", 27], ["updated_at", "2015-11-19 03:16:32.840833"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 332], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.842937"], ["diet_name", "Paleo"], ["fat", 30], ["food", "Ground beef"], ["per_grams", 100], ["protein", 14], ["updated_at", "2015-11-19 03:16:32.842937"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 177], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.844813"], ["diet_name", "Paleo"], ["fat", 8], ["food", "Chicken thigh"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-19 03:16:32.844813"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 239], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.846622"], ["diet_name", "Paleo"], ["fat", 14], ["food", "Chicken leg"], ["per_grams", 100], ["protein", 27], ["updated_at", "2015-11-19 03:16:32.846622"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 294], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.848229"], ["diet_name", "Paleo"], ["fat", 21], ["food", "Lamb"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-19 03:16:32.848229"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 99], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.849959"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Shrimp"], ["per_grams", 100], ["protein", 24], ["updated_at", "2015-11-19 03:16:32.849959"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 89], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.851755"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Lobster"], ["per_grams", 100], ["protein", 19], ["updated_at", "2015-11-19 03:16:32.851755"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 148], ["carbs", 5], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.854026"], ["diet_name", "Paleo"], ["fat", 2], ["food", "Clams"], ["per_grams", 100], ["protein", 26], ["updated_at", "2015-11-19 03:16:32.854026"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 208], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.855794"], ["diet_name", "Paleo"], ["fat", 13], ["food", "Salmon"], ["per_grams", 100], ["protein", 20], ["updated_at", "2015-11-19 03:16:32.855794"]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 294], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.857187"], ["diet_name", "Paleo"], ["fat", 21], ["food", "Lambchops"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-19 03:16:32.857187"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 173], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.859019"], ["diet_name", "Paleo"], ["fat", 4], ["food", "Rabbit"], ["per_grams", 100], ["protein", 33], ["updated_at", "2015-11-19 03:16:32.859019"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 155], ["carbs", 1], ["category", "Breakfast"], ["created_at", "2015-11-19 03:16:32.860875"], ["diet_name", "Paleo"], ["fat", 11], ["food", "Eggs"], ["per_grams", 100], ["protein", 13], ["updated_at", "2015-11-19 03:16:32.860875"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 184], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.862660"], ["diet_name", "Paleo"], ["fat", 6], ["food", "Tuna"], ["per_grams", 100], ["protein", 30], ["updated_at", "2015-11-19 03:16:32.862660"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 208], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.864291"], ["diet_name", "Paleo"], ["fat", 11], ["food", "Sardines"], ["per_grams", 100], ["protein", 25], ["updated_at", "2015-11-19 03:16:32.864291"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 138], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.865991"], ["diet_name", "Paleo"], ["fat", 5], ["food", "Trout"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-19 03:16:32.865991"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 83], ["carbs", 0], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.867814"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Crab"], ["per_grams", 100], ["protein", 18], ["updated_at", "2015-11-19 03:16:32.867814"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 20], ["carbs", 4], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.870295"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Asparagus"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-19 03:16:32.870295"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 160], ["carbs", 9], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.872053"], ["diet_name", "Paleo"], ["fat", 15], ["food", "Avocado"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-19 03:16:32.872053"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 43], ["carbs", 9], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.873169"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Brussel Sprouts"], ["per_grams", 100], ["protein", 3], ["updated_at", "2015-11-19 03:16:32.873169"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 41], ["carbs", 10], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.874937"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Carrots"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.874937"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 23], ["carbs", 4], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.876689"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Spinach"], ["per_grams", 100], ["protein", 3], ["updated_at", "2015-11-19 03:16:32.876689"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 16], ["carbs", 3], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.878519"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Celery"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.878519"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 34], ["carbs", 7], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.880886"], ["diet_name", "Paleo"], ["fat", 3], ["food", "Broccoli"], ["per_grams", 100], ["protein", 0], ["updated_at", "2015-11-19 03:16:32.880886"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 25], ["carbs", 6], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.882758"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Cabbage"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.882758"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 86], ["carbs", 20], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.884503"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Sweet Potato"], ["per_grams", 100], ["protein", 2], ["updated_at", "2015-11-19 03:16:32.884503"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 576], ["carbs", 22], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.886407"], ["diet_name", "Paleo"], ["fat", 49], ["food", "Almonds"], ["per_grams", 100], ["protein", 21], ["updated_at", "2015-11-19 03:16:32.886407"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 553], ["carbs", 30], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.888198"], ["diet_name", "Paleo"], ["fat", 44], ["food", "Cashews"], ["per_grams", 100], ["protein", 18], ["updated_at", "2015-11-19 03:16:32.888198"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 654], ["carbs", 14], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.890424"], ["diet_name", "Paleo"], ["fat", 65], ["food", "Walnuts"], ["per_grams", 100], ["protein", 15], ["updated_at", "2015-11-19 03:16:32.890424"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 628], ["carbs", 17], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.892989"], ["diet_name", "Paleo"], ["fat", 61], ["food", "Hazelnuts"], ["per_grams", 100], ["protein", 15], ["updated_at", "2015-11-19 03:16:32.892989"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 690], ["carbs", 14], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.895061"], ["diet_name", "Paleo"], ["fat", 72], ["food", "Pecans"], ["per_grams", 100], ["protein", 9], ["updated_at", "2015-11-19 03:16:32.895061"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 673], ["carbs", 13], ["category", "Snack2"], ["created_at", "2015-11-19 03:16:32.896874"], ["diet_name", "Paleo"], ["fat", 68], ["food", "Pine Nuts"], ["per_grams", 100], ["protein", 14], ["updated_at", "2015-11-19 03:16:32.896874"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 52], ["carbs", 14], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.898825"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Apple"], ["per_grams", 100], ["protein", 0], ["updated_at", "2015-11-19 03:16:32.898825"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 43], ["carbs", 10], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.900590"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Blackberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.900590"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 39], ["carbs", 10], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.902409"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Peaches"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.902409"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 46], ["carbs", 11], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.904161"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Plums"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.904161"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 60], ["carbs", 15], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.905942"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Mango"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.905942"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 57], ["carbs", 14], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.907753"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Blueberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.907753"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 67], ["carbs", 17], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.909329"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Grapes"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.909329"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 33], ["carbs", 8], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.911728"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Strawberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.911728"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 30], ["carbs", 8], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.913127"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Watermelon"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.913127"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 53], ["carbs", 12], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.914865"], ["diet_name", "Paleo"], ["fat", 1], ["food", "Raspberries"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.914865"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 34], ["carbs", 8], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.916636"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Cantaloupe"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.916636"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 53], ["carbs", 13], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.918511"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Tangerine"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.918511"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 47], ["carbs", 12], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.920223"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Oranges"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.920223"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 89], ["carbs", 23], ["category", "Snack1"], ["created_at", "2015-11-19 03:16:32.922326"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Bananas"], ["per_grams", 100], ["protein", 1], ["updated_at", "2015-11-19 03:16:32.922326"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 382], ["carbs", 3], ["category", "Breakfast"], ["created_at", "2015-11-19 03:16:32.924157"], ["diet_name", "Paleo"], ["fat", 28], ["food", "Turkey Bacon"], ["per_grams", 100], ["protein", 30], ["updated_at", "2015-11-19 03:16:32.924157"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 120], ["carbs", 25], ["category", "Lunch"], ["created_at", "2015-11-19 03:16:32.926060"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Basmati Rice"], ["per_grams", 100], ["protein", 4], ["updated_at", "2015-11-19 03:16:32.926060"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["calories", 130], ["carbs", 21], ["category", "Snack3"], ["created_at", "2015-11-19 03:16:32.929050"], ["diet_name", "Paleo"], ["fat", 0], ["food", "Blackberry Greek Yogurt"], ["per_grams", 150], ["protein", 11], ["updated_at", "2015-11-19 03:16:32.929050"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "meals" ("calories", "carbs", "category", "created_at", "diet_name", "fat", "food", "per_grams", "protein", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["calories", 120], ["carbs", 4], ["category", "Snack3"], ["created_at", "2015-11-19 03:16:32.930833"], ["diet_name", "Paleo"], ["fat", 2], ["food", "Protein Shake"], ["per_grams", 29], ["protein", 7], ["updated_at", "2015-11-19 03:16:32.930833"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 76], ["barbell_row_reps", 5], ["bench", 117], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.955661"], ["deadlift", 183], ["deadlift_reps", 5], ["overhead_press", 41], ["overhead_press_reps", 5], ["squat", 153], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.955661"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 77], ["barbell_row_reps", 5], ["bench", 119], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.959165"], ["deadlift", 186], ["deadlift_reps", 5], ["overhead_press", 42], ["overhead_press_reps", 5], ["squat", 156], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.959165"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 78], ["barbell_row_reps", 5], ["bench", 121], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.961509"], ["deadlift", 189], ["deadlift_reps", 5], ["overhead_press", 43], ["overhead_press_reps", 5], ["squat", 159], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.961509"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 79], ["barbell_row_reps", 5], ["bench", 123], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.963709"], ["deadlift", 192], ["deadlift_reps", 5], ["overhead_press", 44], ["overhead_press_reps", 5], ["squat", 162], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.963709"], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 80], ["barbell_row_reps", 5], ["bench", 125], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.965409"], ["deadlift", 195], ["deadlift_reps", 5], ["overhead_press", 45], ["overhead_press_reps", 5], ["squat", 165], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.965409"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 81], ["barbell_row_reps", 5], ["bench", 127], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.967697"], ["deadlift", 198], ["deadlift_reps", 5], ["overhead_press", 46], ["overhead_press_reps", 5], ["squat", 168], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.967697"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 82], ["barbell_row_reps", 5], ["bench", 129], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.970438"], ["deadlift", 201], ["deadlift_reps", 5], ["overhead_press", 47], ["overhead_press_reps", 5], ["squat", 171], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.970438"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 83], ["barbell_row_reps", 5], ["bench", 131], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.972362"], ["deadlift", 204], ["deadlift_reps", 5], ["overhead_press", 48], ["overhead_press_reps", 5], ["squat", 174], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.972362"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 84], ["barbell_row_reps", 5], ["bench", 133], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.974640"], ["deadlift", 207], ["deadlift_reps", 5], ["overhead_press", 49], ["overhead_press_reps", 5], ["squat", 177], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.974640"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 85], ["barbell_row_reps", 5], ["bench", 135], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.976840"], ["deadlift", 210], ["deadlift_reps", 5], ["overhead_press", 50], ["overhead_press_reps", 5], ["squat", 180], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.976840"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 86], ["barbell_row_reps", 5], ["bench", 137], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.985474"], ["deadlift", 213], ["deadlift_reps", 5], ["overhead_press", 51], ["overhead_press_reps", 5], ["squat", 183], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.985474"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 87], ["barbell_row_reps", 5], ["bench", 139], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.987643"], ["deadlift", 216], ["deadlift_reps", 5], ["overhead_press", 52], ["overhead_press_reps", 5], ["squat", 186], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.987643"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 88], ["barbell_row_reps", 5], ["bench", 141], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.990199"], ["deadlift", 219], ["deadlift_reps", 5], ["overhead_press", 53], ["overhead_press_reps", 5], ["squat", 189], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.990199"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 89], ["barbell_row_reps", 5], ["bench", 143], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.992314"], ["deadlift", 222], ["deadlift_reps", 5], ["overhead_press", 54], ["overhead_press_reps", 5], ["squat", 192], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.992314"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 90], ["barbell_row_reps", 5], ["bench", 145], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.994444"], ["deadlift", 225], ["deadlift_reps", 5], ["overhead_press", 55], ["overhead_press_reps", 5], ["squat", 195], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.994444"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 91], ["barbell_row_reps", 5], ["bench", 147], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.996328"], ["deadlift", 228], ["deadlift_reps", 5], ["overhead_press", 56], ["overhead_press_reps", 5], ["squat", 198], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.996328"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 92], ["barbell_row_reps", 5], ["bench", 149], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:32.998446"], ["deadlift", 231], ["deadlift_reps", 5], ["overhead_press", 57], ["overhead_press_reps", 5], ["squat", 201], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:32.998446"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 93], ["barbell_row_reps", 5], ["bench", 151], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.000322"], ["deadlift", 234], ["deadlift_reps", 5], ["overhead_press", 58], ["overhead_press_reps", 5], ["squat", 204], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.000322"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 94], ["barbell_row_reps", 5], ["bench", 153], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.002510"], ["deadlift", 237], ["deadlift_reps", 5], ["overhead_press", 59], ["overhead_press_reps", 5], ["squat", 207], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.002510"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 95], ["barbell_row_reps", 5], ["bench", 155], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.004324"], ["deadlift", 240], ["deadlift_reps", 5], ["overhead_press", 60], ["overhead_press_reps", 5], ["squat", 210], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.004324"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 96], ["barbell_row_reps", 5], ["bench", 157], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.006440"], ["deadlift", 243], ["deadlift_reps", 5], ["overhead_press", 61], ["overhead_press_reps", 5], ["squat", 213], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.006440"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 97], ["barbell_row_reps", 5], ["bench", 159], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.009211"], ["deadlift", 246], ["deadlift_reps", 5], ["overhead_press", 62], ["overhead_press_reps", 5], ["squat", 216], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.009211"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 98], ["barbell_row_reps", 5], ["bench", 161], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.011284"], ["deadlift", 249], ["deadlift_reps", 5], ["overhead_press", 63], ["overhead_press_reps", 5], ["squat", 219], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.011284"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 99], ["barbell_row_reps", 5], ["bench", 163], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.013402"], ["deadlift", 252], ["deadlift_reps", 5], ["overhead_press", 64], ["overhead_press_reps", 5], ["squat", 222], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.013402"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 100], ["barbell_row_reps", 5], ["bench", 165], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.015580"], ["deadlift", 255], ["deadlift_reps", 5], ["overhead_press", 65], ["overhead_press_reps", 5], ["squat", 225], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.015580"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 101], ["barbell_row_reps", 5], ["bench", 167], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.017437"], ["deadlift", 258], ["deadlift_reps", 5], ["overhead_press", 66], ["overhead_press_reps", 5], ["squat", 228], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.017437"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 102], ["barbell_row_reps", 5], ["bench", 169], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.019850"], ["deadlift", 261], ["deadlift_reps", 5], ["overhead_press", 67], ["overhead_press_reps", 5], ["squat", 231], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.019850"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 103], ["barbell_row_reps", 5], ["bench", 171], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.022577"], ["deadlift", 264], ["deadlift_reps", 5], ["overhead_press", 68], ["overhead_press_reps", 5], ["squat", 234], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.022577"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["barbell_row", 104], ["barbell_row_reps", 5], ["bench", 173], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.024688"], ["deadlift", 267], ["deadlift_reps", 5], ["overhead_press", 69], ["overhead_press_reps", 5], ["squat", 237], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.024688"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "exercises" ("barbell_row", "barbell_row_reps", "bench", "bench_reps", "created_at", "deadlift", "deadlift_reps", "overhead_press", "overhead_press_reps", "squat", "squat_reps", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["barbell_row", 105], ["barbell_row_reps", 5], ["bench", 175], ["bench_reps", 5], ["created_at", "2015-11-19 03:16:33.026756"], ["deadlift", 270], ["deadlift_reps", 5], ["overhead_press", 70], ["overhead_press_reps", 5], ["squat", 240], ["squat_reps", 5], ["updated_at", "2015-11-19 03:16:33.026756"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mExercise Load (0.7ms)[0m  [1mSELECT "exercises".* FROM "exercises"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 1[0m  [["created_at", "2015-10-20 02:16:33.029635"], ["updated_at", "2015-11-19 03:16:33.030613"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 2  [["created_at", "2015-10-21 02:16:33.032667"], ["updated_at", "2015-11-19 03:16:33.033389"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 3[0m  [["created_at", "2015-10-22 02:16:33.034668"], ["updated_at", "2015-11-19 03:16:33.035364"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 4  [["created_at", "2015-10-23 02:16:33.036627"], ["updated_at", "2015-11-19 03:16:33.037307"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 5[0m  [["created_at", "2015-10-24 02:16:33.038605"], ["updated_at", "2015-11-19 03:16:33.039296"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 6  [["created_at", "2015-10-25 02:16:33.040662"], ["updated_at", "2015-11-19 03:16:33.041297"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 7[0m  [["created_at", "2015-10-26 02:16:33.042577"], ["updated_at", "2015-11-19 03:16:33.043223"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 8  [["created_at", "2015-10-27 02:16:33.044388"], ["updated_at", "2015-11-19 03:16:33.045045"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 9[0m  [["created_at", "2015-10-28 02:16:33.046323"], ["updated_at", "2015-11-19 03:16:33.046963"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 10  [["created_at", "2015-10-29 02:16:33.048137"], ["updated_at", "2015-11-19 03:16:33.048800"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 11[0m  [["created_at", "2015-10-30 02:16:33.050116"], ["updated_at", "2015-11-19 03:16:33.050758"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 12  [["created_at", "2015-10-31 02:16:33.052060"], ["updated_at", "2015-11-19 03:16:33.052754"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 13[0m  [["created_at", "2015-11-01 02:16:33.053991"], ["updated_at", "2015-11-19 03:16:33.054626"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 14  [["created_at", "2015-11-02 03:16:33.055966"], ["updated_at", "2015-11-19 03:16:33.056365"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 15[0m  [["created_at", "2015-11-03 03:16:33.057533"], ["updated_at", "2015-11-19 03:16:33.058404"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 16  [["created_at", "2015-11-04 03:16:33.059687"], ["updated_at", "2015-11-19 03:16:33.060368"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 17[0m  [["created_at", "2015-11-05 03:16:33.061610"], ["updated_at", "2015-11-19 03:16:33.062276"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 18  [["created_at", "2015-11-06 03:16:33.063530"], ["updated_at", "2015-11-19 03:16:33.064216"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 19[0m  [["created_at", "2015-11-07 03:16:33.065905"], ["updated_at", "2015-11-19 03:16:33.066581"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 20  [["created_at", "2015-11-08 03:16:33.067859"], ["updated_at", "2015-11-19 03:16:33.068450"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 21[0m  [["created_at", "2015-11-09 03:16:33.069702"], ["updated_at", "2015-11-19 03:16:33.070370"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 22  [["created_at", "2015-11-10 03:16:33.071614"], ["updated_at", "2015-11-19 03:16:33.072291"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 23[0m  [["created_at", "2015-11-11 03:16:33.073535"], ["updated_at", "2015-11-19 03:16:33.074216"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 24  [["created_at", "2015-11-12 03:16:33.075522"], ["updated_at", "2015-11-19 03:16:33.076157"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 25[0m  [["created_at", "2015-11-13 03:16:33.077631"], ["updated_at", "2015-11-19 03:16:33.078275"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 26  [["created_at", "2015-11-14 03:16:33.079618"], ["updated_at", "2015-11-19 03:16:33.080255"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 27[0m  [["created_at", "2015-11-15 03:16:33.081634"], ["updated_at", "2015-11-19 03:16:33.082261"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 28  [["created_at", "2015-11-16 03:16:33.083573"], ["updated_at", "2015-11-19 03:16:33.084220"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 29[0m  [["created_at", "2015-11-17 03:16:33.085373"], ["updated_at", "2015-11-19 03:16:33.085999"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "exercises" SET "created_at" = $1, "updated_at" = $2 WHERE "exercises"."id" = 30  [["created_at", "2015-11-18 03:16:33.087328"], ["updated_at", "2015-11-19 03:16:33.087983"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-19 03:16:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.5ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (72.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 424ms (Views: 316.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-19 03:16:43 +0000
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 68ms (Views: 25.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-19 03:17:08 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-19 03:17:08 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-19 03:17:39 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.4ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (73.3ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 221ms (Views: 217.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-19 03:17:39 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-19 03:17:40 +0000
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.7ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (82.3ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 241ms (Views: 237.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-19 03:22:39 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-19 03:22:40 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-19 03:22:40 +0000
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.3ms)[0m  [1mSELECT  "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = 1 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (101.5ms)
+  Rendered layouts/_nav.html.erb (0.5ms)
+Completed 200 OK in 254ms (Views: 250.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+
+
+Started GET "/assets/main.js?body=1" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+
+
+Started GET "/assets/api_calls.js?body=1" for 10.0.2.2 at 2015-11-19 03:27:22 +0000
+
+
+Started GET "/assets/exercise.js?body=1" for 10.0.2.2 at 2015-11-19 03:27:23 +0000
+
+
+Started GET "/exercises" for 10.0.2.2 at 2015-11-19 03:27:23 +0000
+Processing by ExercisesController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mExercise Load (0.2ms)[0m  [1mSELECT "exercises".* FROM "exercises"  WHERE "exercises"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.4ms)

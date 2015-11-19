@@ -6,6 +6,8 @@ $(function(){
     datatype: 'json'
   }).then(function(results){
 
+    debugger
+
     var barbell_row = [],
         bench = [],
         deadlift = [],
@@ -14,12 +16,13 @@ $(function(){
 
     for (var i = 0; i < results.length; i++) {
         date = new Date(results[i].created_at);
+        utc = Date.UTC(date.getFullYear(),date.getMonth(),date.getDate());
 
-        barbell_row.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].barbell_row]);
-        bench.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].bench]);
-        deadlift.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].deadlift]);
-        overhead_press.push([Date.UTC(date.getFullYear()+1,date.getMonth(),date.getDate()), results[i].overhead_press]);
-        squat.push([Date.UTC(date.getFullYear(),date.getMonth()+1,date.getDate()), results[i].squat]);
+        barbell_row.push([utc, results[i].barbell_row]);
+        bench.push([utc, results[i].bench]);
+        deadlift.push([utc, results[i].deadlift]);
+        overhead_press.push([utc, results[i].overhead_press]);
+        squat.push([utc, results[i].squat]);
     }
 
     $('#container').highcharts({
