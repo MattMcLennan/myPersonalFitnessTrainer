@@ -14,10 +14,37 @@ csv.each do |row|
   Meal.create!(row.to_hash)
 end
 
-# 30.times do
-#   User.create!(
-#     name: Faker::Name.name,
-#     email: Faker::Internet.email,
-#     password: Faker::Internet.password
-#   )
-# end
+bench = 115
+deadlift = 180
+squat = 150
+overhead_press = 40
+barbell_row = 75
+
+30.times do
+  bench += 2
+  deadlift += 3
+  squat += 3
+  overhead_press += 1
+  barbell_row += 1
+
+  Exercise.create!(
+    user_id: 1,
+    bench: bench,
+    deadlift: deadlift, 
+    squat: squat,
+    overhead_press: overhead_press,
+    barbell_row: barbell_row,
+    bench_reps: 5,
+    deadlift_reps: 5,
+    squat_reps: 5,
+    overhead_press_reps: 5,
+    barbell_row_reps: 5   
+  )
+end
+
+i = 31
+Exercise.all.each do |exercise|
+  i -= 1
+  exercise.created_at = (i).days.ago
+  exercise.save!
+end

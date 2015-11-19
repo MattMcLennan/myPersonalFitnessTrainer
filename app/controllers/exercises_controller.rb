@@ -61,8 +61,6 @@ class ExercisesController < ApplicationController
       current_user.update_attributes(template_chosen: true)
       current_user.save!
 
-      binding.pry
-
       redirect_to users_path
     end
   end
