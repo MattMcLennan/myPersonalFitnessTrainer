@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118212505) do
+ActiveRecord::Schema.define(version: 20151116211205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,11 +64,6 @@ ActiveRecord::Schema.define(version: 20151118212505) do
     t.integer  "weight"
     t.string   "start_weight"
     t.string   "goal_weight"
-    t.text     "squat",           default: [],    array: true
-    t.text     "deadlift",        default: [],    array: true
-    t.text     "bench",           default: [],    array: true
-    t.text     "overhead_press",  default: [],    array: true
-    t.text     "barbell_row",     default: [],    array: true
   end
 
 end
