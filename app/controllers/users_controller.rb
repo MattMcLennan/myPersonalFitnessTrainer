@@ -13,12 +13,6 @@ class UsersController < ApplicationController
 
   def new
      @user = User.find(params[:id])
-
-    # if !current_user
-    #   redirect_to root_path, alert: "Log in first!"
-    # else
-    #   @user = User.find(params[:id])
-    # end
   end
 
   def update

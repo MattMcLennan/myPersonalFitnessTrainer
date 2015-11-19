@@ -21,7 +21,6 @@ class SessionsController < ApplicationController
     @user.save
 
     session[:user_id] = @user.id
-    # redirect_to new_user_path(id: @user.id)
     if current_user.email != nil
       redirect_to users_path
     else
@@ -49,9 +48,6 @@ class SessionsController < ApplicationController
       "body_start_weight" => current_user.start_weight.to_s,
       "body_weight_today" => (current_user.weight * 2.2046),
       "body_weight" => client.activity_on_date_range(:weight, '2015-07-07', 'today'),
-      # "steps" => client.activity_on_date_range(:steps, '2015-07-07', 'today'),
-      # "distance" => client.activity_on_date_range(:distance, '2015-07-07', 'today'),
-      # "calories" => client.activity_on_date_range(:calories, '2015-07-07', 'today'),
       "meal" => JSON.parse(current_user.daily_meal),
       "user_calorie_goal" => current_user.avg_weekly_cals,
       "user_calorie_intake" => Meal.test_daily(JSON.parse(current_user.daily_meal))

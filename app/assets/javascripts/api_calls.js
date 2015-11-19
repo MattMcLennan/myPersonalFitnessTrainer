@@ -9,6 +9,7 @@ $(document).ready(function() {
   });
 
    function success(results) {
+      debugger
       var cals_in = results.user_calorie_goal;
       var cals_out = results.user_calorie_intake;
       var body_weight_goal = results.body_weight_goal;
@@ -157,7 +158,7 @@ function weight_goal_gauge(body_start_weight, body_weight_goal, body_weight_toda
 
     title: {
       text: 'Goal Weight Progress',
-      font-family: "Roboto",
+      fontFamily: "Roboto"
 
     },
 
