@@ -1,4 +1,9 @@
+// We need to figure out how to
+bench = [], squat = [], deadlift = [], barbell_row = [], overhead_press = []
+var count = 0;
+
 $(function(){
+
   $.ajax({
     type: 'get',
     url: '/exercises',
@@ -20,20 +25,15 @@ $(function(){
         updateYear = update.getFullYear(),
         updateExercise = current_user_data;
 
-    var bench = {update: []},
-        squat = {update: []},
-        deadlift = {update: []},
-        barbell_row = {update: []},
-        overhead_press = {update: []};
-
     if (update != temp){
-      bench["update"].push([updateYear, updateMonth, updateDay, updateExercise.bench]);
-      squat["update"].push([updateYear, updateMonth, updateDay, updateExercise.squat]);
-      deadlift["update"].push([updateYear, updateMonth, updateDay, updateExercise.deadlift]);
-      barbell_row["update"].push([updateYear, updateMonth, updateDay, updateExercise.barbell_row]);
-      overhead_press["update"].push([updateYear, updateMonth, updateDay, updateExercise.overhead_press]);
-      debugger
+      bench.push([Date.UTC(updateYear, updateMonth, updateDay), updateExercise.bench]);
+      squat.push([Date.UTC(updateYear, updateMonth, updateDay), updateExercise.squat]);
+      deadlift.push([Date.UTC(updateYear, updateMonth, updateDay), updateExercise.deadlift]);
+      barbell_row.push([Date.UTC(updateYear, updateMonth, updateDay), updateExercise.barbell_row]);
+      overhead_press.push([Date.UTC(updateYear, updateMonth, updateDay), updateExercise.overhead_press]);
     }
+    count ++;
+    debugger
 
     $('#container').highcharts({
       chart: {
@@ -60,7 +60,7 @@ $(function(){
           text: 'Weight (lbs)'
         },
         min: 0,
-        max: 1000
+        max: 300
       },
       tooltip: {
         headerFormat: '<b>{series.name}</b><br>',
@@ -76,34 +76,19 @@ $(function(){
       },
       series: [{
         name: 'Bench',
-        data: [
-          [Date.UTC(minYear, minMonth, minDay), current_user_data.bench],
-          [Date.UTC(bench["update"][0], bench["update"][1], bench["update"][2]), bench["update"][3]],
-        ]
+        data: bench
       }, {
         name: 'Squat',
-        data: [
-          [Date.UTC(minYear, minMonth, minDay), current_user_data.squat],
-          [Date.UTC(squat["update"][0], squat["update"][1], squat["update"][2]), squat["update"][3]],
-        ]
+        data: squat
       }, {
         name: 'Overhead Press',
-        data: [
-          [Date.UTC(minYear, minMonth, minDay), current_user_data.overhead_press],
-          [Date.UTC(overhead_press["update"][0], overhead_press["update"][1], overhead_press["update"][2]), overhead_press["update"][3]],
-        ]
+        data: overhead_press
       }, {
         name: 'Barbell Row',
-        data: [
-          [Date.UTC(minYear, minMonth, minDay), current_user_data.barbell_row],
-          [Date.UTC(barbell_row["update"][0], barbell_row["update"][1], barbell_row["update"][2]), barbell_row["update"][3]],
-        ]
+        data: barbell_row
       }, {
         name: 'Deadlift',
-        data: [
-          [Date.UTC(minYear, minMonth, minDay), current_user_data.deadlift],
-          [Date.UTC(deadlift["update"][0], deadlift["update"][1], deadlift["update"][2]), deadlift["update"][3]],
-        ]
+        data: deadlift
       }]
     });
   });
@@ -111,3 +96,4 @@ $(function(){
   $(".button-collapse").sideNav();
 
 });
+
