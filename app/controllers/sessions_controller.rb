@@ -30,8 +30,8 @@ class SessionsController < ApplicationController
   end
 
   def generate_user_info
-    @consumer_key = '10c780512cf30750c716e8523c718155'
-    @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
+    @consumer_key = '441b218db31b866a1782ab19ce30bf0d'
+    @consumer_secret = '1c52dd889b8a0b7b813acf810ff5ac2c'
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
@@ -52,7 +52,10 @@ class SessionsController < ApplicationController
       "steps" => client.activity_on_date_range(:steps, '2015-07-07', 'today'),
       "distance" => client.activity_on_date_range(:distance, '2015-07-07', 'today'),
       "calories" => client.activity_on_date_range(:calories, '2015-07-07', 'today'),
-      "meal" => JSON.parse(current_user.daily_meal)
+      "meal" => JSON.parse(current_user.daily_meal),
+      "user_calorie_goal" => current_user.avg_weekly_cals,
+      "user_calorie_intake" => Meal.test_daily(JSON.parse(current_user.daily_meal))
+
     }
 
     render :json => @data
@@ -63,15 +66,16 @@ class SessionsController < ApplicationController
   end
 
   def avg_cals(user)
-    @consumer_key = '10c780512cf30750c716e8523c718155'
-    @consumer_secret = '6b53840b9c9113f7a45eb514b5eb6e68'
+    @consumer_key = '441b218db31b866a1782ab19ce30bf0d'
+    @consumer_secret = '1c52dd889b8a0b7b813acf810ff5ac2c'
 
     client = Fitgem::Client.new({
       :consumer_key => @consumer_key,
       :consumer_secret => @consumer_secret,
       :token => user.token,
       :secret => user.secret,
-      :user_id => user.uid})
+      :user_id => user.uid}), 
+      :user_id => user.uid}), 
 
     get_cals = client.activity_on_date_range(:calories, 1.week.ago.to_date.to_s, "today")
     user.goal = client.body_weight_goal["goal"]["goalType"]

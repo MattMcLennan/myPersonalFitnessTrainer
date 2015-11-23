@@ -184,8 +184,9 @@ class Meal < ActiveRecord::Base
 
     daily_meal.each do |menu_category, value|
       value.each do |key, value|
-        daily_cals += value[:calories]
+        daily_cals += value["calories"].to_i
       end
     end
+    return daily_cals
   end
 end
