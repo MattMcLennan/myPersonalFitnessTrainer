@@ -1,6 +1,6 @@
 // We need to figure out how to
-bench = [], squat = [], deadlift = [], barbell_row = [], overhead_press = []
-var count = 0;
+
+bench = [], squat = [], deadlift = [], barbell_row = [], overhead_press = [];
 
 $(function(){
 
@@ -24,6 +24,10 @@ $(function(){
         updateMonth = update.getMonth(),
         updateYear = update.getFullYear(),
         updateExercise = current_user_data;
+    debugger
+
+    bench["update"]=[]
+    current_user_data.name = "hello"
 
     if (update != temp){
       bench.push([Date.UTC(updateYear, updateMonth, updateDay), updateExercise.bench]);
@@ -32,8 +36,6 @@ $(function(){
       barbell_row.push([Date.UTC(updateYear, updateMonth, updateDay), updateExercise.barbell_row]);
       overhead_press.push([Date.UTC(updateYear, updateMonth, updateDay), updateExercise.overhead_press]);
     }
-    count ++;
-    debugger
 
     $('#container').highcharts({
       chart: {

@@ -1,9 +1,9 @@
 class ExercisesController < ApplicationController
 
   def index
-    respond_to do |format|
-      format.json { render json: Exercise.find_by(user_id: current_user) }
-    end
+    @user_exercise = Exercise.find_by(user_id: current_user)
+    binding.pry
+    render :json => @user_exercise
   end
 
   def show
